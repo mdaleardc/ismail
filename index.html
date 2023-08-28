@@ -1,0 +1,5132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<title> JavaScript Project</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="keywords" content="JavaScript, Learn JavaScript, JavaScript class"/>
+<meta name="author" content="Ismail"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="JavaScript is easy and fun to learn but should be a hard worker."/>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto:ital,wght@0,300;0.5,500&display=swap" rel="stylesheet">
+<style type="text/css" media="all">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #f0ffff;
+        width: 99%;
+        scroll-behavior: smooth;
+    }
+    body {
+        margin: 0;
+        padding: 5px;
+        font-family: 'Roboto', sans-serif;
+        /*background-image:url("/storage/emulated/0/Download/istockphoto-1142857528-612x612.jpg");
+    background-position:top;s
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 100%;*/
+        width: 100%;
+        /*background: linear-gradient( #000, #b8860b);*/
+        background: #0c1022;
+    }
+    section {
+        text-align: left;
+        width: 100%;
+        word-break: break-word;
+        background:url("https://1drv.ms/i/s!AhiYcLIzA0mSgzyYNqlzhTVM5aPy");
+    }
+    div.home-link {
+        margin-left: 30%;
+        border-radius: 5px;
+        width: fit-content;
+        height: 20px;
+        bottom: 0;
+    }
+    div.home-link a {
+        text-decoration: none;
+        color: #FF0013;
+        padding: 5px;
+    }
+    li {
+        font-weight: 700;
+        font-size: 1em;
+        head
+        color: #58FF00;
+        list-style-position: inside;
+        padding-left: 100px;
+    }
+    h1 {
+        color: #FF0056;
+        font-weight: 600;
+        text-align: center;
+        display: block;
+    }
+    h2 {
+        color: #FD00FF;
+        font-weight: 400;
+        text-align: center;
+        display: block;
+    }
+    i * , i {
+        color: #FB0;
+        background: #000;
+        border-radius: 7px;
+    }
+    b *, b {
+        background: #000;
+        color: #fff;
+        border-radius: 5px;
+    }
+    /* button {
+        text-transform: uppercase;
+        padding-top: 10px;
+        color: #15f4ee;
+        border: none;
+        font-size: 1em;
+        background: transparent
+    } */
+    button:hover {
+        color: #15f4ee;
+        letter-spacing: 2px;
+
+    }
+    /* div.btn {
+        overflow: hidden;
+        width: 120px;
+        height: 45px;
+        margin: auto;
+        padding: auto;
+        background: #000;
+        border: 5px solid #15f4ee;
+        border-radius: 100px;
+        transform: translate(-50% -50%);
+        cursor: pointer;
+        transition: 1.5s;
+    } */
+    button:hover {
+        padding-top: 1px;
+        background: #000;
+        box-shadow: 0 5px 30px #15f4ee inset, 0 5px 30px #15f4ee;
+        box-shadow: 0 5px 30px #15f4ee, 0 5px 30px #15f4ee outset;
+    }
+    #rnv {
+        text-align: left;
+    }
+    pre {
+        font-weight: 200;
+        font-size: 1em;
+    }
+    .table1, th, td {
+        color: #fff;
+        border: 0.3em groove #f0ff00;
+        border-collapse: collapse;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: 400;
+        margin: auto;
+        padding: 5px 5px;
+        width: auto;
+        height: auto;
+    }
+    .table1 thead th, table thead th {
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+    table, th, td {
+        border-collapse: collapse;
+        word-break: none;
+        word-wrap: none;
+        margin: auto;
+        text-align: center;
+        padding: 3px;
+    }
+    
+    .menu-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  max-height: 100vh; /* Maximum height of viewport */
+  overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
+  background-color:#BFFF00;
+  box-shadow: 3px 3px 3px rgba(34, 140, 104, 0.9);
+  z-index: 1000; /* Ensure the menu stays on top of other content */
+  border-radius: 0 7px 7px 7px;
+}
+
+.menu-list {
+    position: relative;
+    left: 0;
+ display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+  align-items:left;
+  gap: 5px;
+  margin: 0 auto;
+  height:93px;
+  
+}
+.menu-list li {
+    text-align: center;
+    position: relative;
+  list-style-type: none;
+  /*object-fit: cover;*/
+  padding:3px;
+  background: #00FFE3;
+width: 180px;
+  left: 0;
+  border: 1px outset #C800FF;
+}
+
+.menu-list li:last-child {
+  border-bottom: none;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-list li:hover {
+  background-color: #f5f5f5;
+}
+    
+    div#wrapper {
+        margin: 25px auto 0px auto;
+        width: 75%;
+    }
+    div#wrapper h1 {
+        display: block;
+        background-color: #Af0Aff;
+        text-align: center;
+        line-height: 40px;
+        color: #fff000;
+        border-radius: 20px 20px 0px 0px;
+        width: 100%;
+    }
+    div#wrapper img {
+        width: 100%;
+        border-radius: 0px 0px 15px 15px;
+        cursor: pointer;
+
+    }
+    div#block1, div#block2 {
+        width: 100%;
+        margin-top: 25px;
+    }
+    textarea, input {
+        outline-color: #fff;
+        width: 70%;
+        height: 50px;
+        color: #000;
+    }
+    textarea#area, {
+        width: 75%;
+        border: none;
+        background: black;
+    }
+    span {
+        color: #008080;
+    }
+    select#countries, select#fruits {
+        outline: none;
+        max-width: 150px;
+        color: #000;
+        height: 30px;
+        background: #fff;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    a {
+        text-decoration: none;
+        color: #00008b;
+    }
+    svg {
+        height: 22px;
+        width: 20px;
+    }
+    em {
+        font-size: 18px;
+        color: #c0c0c0;
+    }
+    button {
+        margin-left:35%;
+        padding: 5px;
+        width: fit-content;
+        background:#A300FF;
+        border: 2px solid green;
+        box-sizing: border-box;
+        border-radius: 9px;
+        text-transform: uppercase;
+    }
+    </style>
+    </head>
+    <body>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+    
+    $(document).ready(function() {
+    
+    $("#flip").click(function() {
+    
+    $("#panel").slideToggle("slow");
+    
+        
+    });
+    
+        
+    });
+    </script>
+    
+    <style>
+    
+    #panel, #flip {
+    
+    padding: 5px;
+    
+    text-align: center;
+    
+    background-color: #de45a3;
+    
+    border: solid 1px #c3c3c3;
+    
+        
+    }
+    
+    #panel {
+    
+    padding: 50px;
+    
+    display: none;
+    
+        
+    }
+    </style>
+    
+    <main>
+    <header>
+    <div class="menu-ctn" id="Home">Menu</div>
+    <div class="menu-bar">
+        <ul class="menu-list">
+            
+            <div>
+    <li><a href="#JS-Output"> JS-Output </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-Statment"> JS-Statment </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-Syntax"> JS-Syntax </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Comments"> JS Comments </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Variables"> JS_Variables </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-DetaType"> JS-DetaType </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Operator"> JS_Operator </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-Arithmetic-O"> JS-Arithmetic-O </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-Assigment-O"> JS-Assigment-O </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-String-M"> JS-String-M </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-Logical-O"> JS-Logical-O </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-Comparison-O"> JS-Comparison-O </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-Function"> JS-Function </a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-Object"> JS-Object </a></li>
+                
+            </div>
+            <div>
+                
+    <li><a href="#JS-String"> JS-String </a></li>
+            </div>
+            <div>
+                
+    <li><a href="#JS-Number"> JS-Number </a></li>
+            </div>
+            <div>
+    <li><a href="#JS_Number_M">JS_Number_M</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Arrays">JS_Arrays</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Array_M">JS_Array_M</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Array_S">JS_Array_S</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Array_I">JS_Array_I</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Events">JS_Events</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Math_Ob">JS_Math_Ob</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#Js_Math_R">Js_Math_R</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#Js_if...else">Js_if...else</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Bit_Operator">JS_Bit_Operator</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Reg_Ex">JS_Reg_Ex</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Exception_Handle">JS_Exception_Handle</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Var_Scope">JS_Var_Scope</a></li>
+                
+            </div>
+            <div>
+                
+    <li><a href="#JS_Var_Hoisting">JS_Var_Hoisting</a></li>
+            </div>
+            <div>
+    <li><a href="#JS_Strict_Mode">JS_Strict_Mode</a></li>
+                
+            </div>
+            <div>
+                
+    <li><a href="#JS_let_Statement">JS_let_Statement</a></li>
+            </div>
+            <div>
+    <li><a href="#JS_const_Statement">JS_const_Statement</a></li>
+                
+            </div>
+            <div>
+                
+    <li><a href="#JS_Date">JS_Date</a></li>
+            </div>
+            <div>
+    <li><a href="#JS_Datef_Format">JS_Datef_Format</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Date_Get_Method">JS_Date_Get_Method</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Date_Set_Method">JS_Date_Set_Method</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS-this_Keyword">JS_this_Keyword</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Arrow_Function">JS_Arrow_Function</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Class">JS_Class</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_JSON">JS_JSON</a></li>
+                
+            </div>
+            <div>
+    <li><a href="#JS_Forms">JS_Forms</a></li>
+                
+            </div>
+    </ul>
+    </div>
+    </header>
+    
+    <section id="JS-Output">
+    <h1> JavaScript Displaying Output</h1>
+    <ol>
+      <li>
+      Output using console.
+      </li>
+ <figcaption> By using console.log()fantion, we can write into the browser's developer console</figcaption>
+  
+  <li>
+    Output using dialog box or Alert funtion.
+  </li>
+    <figcaption> By using //alert() funtion, we can output data on the dialog box.</figcaption>
+    <br>
+    <div class="btn">
+    <button type="button" onclick="myFun()">Show</button>
+    </div>
+    <li> Writing to HTML Element</li>
+    <br/>
+    <figcaption> By using the innerHTML property, we can chenge the content or text of the selected element.We can use <i>document.getElementById() function</i> to select the element.</i></figcaption>
+    <p id="demo"></p>
+  <div class="btn">
+   <button type="button" onclick="myFun1()"> Write</button>
+  </div>
+   <p><i>You can also write into the next line if it is too long.</i></p>   
+   <h5 id="demo1" style="color:white"></h5>
+   
+   <li> Writing to The Browser Window</li>
+   <figcaption> By using document.Write()function, we can write to the content of the document.</figcaption>
+   <br>
+   <div class="btn">
+   <button id="demo2" type="button" onclick="myFun2()">write        </button>
+   </div>
+    </ol>
+    </section>
+    
+    <section id="JS-Statment">
+  <h1> JavaScript Statements </h1>
+  <ol>
+    <li id="sl">Single Line Statment</li>
+    <br />
+    <li id="ml"> Multiple-Line Stament</li>
+    <h2>Grouping JavaScript Stalments</h2>
+    <figcaption> JavaScript Statement can be grouped inside the curly brackets { ....}.
+    <br /> These are called <b>Code Block.</b><br>
+    Code Block are used to make statments execute together. <em>They are commonly used in functions.</em>
+    </figcaption>
+    <p id="JGS">This is JavaScript Code Block statment.</p>
+    <div class="btn">
+    <button type="button" onclick="myFun3()">write</button>
+    </div>
+    <h2> JavaScript Keyword</h2>
+    <figcaption>
+      JavaScript Statements usually start with a keyword.
+      <em>Each keyword in JavaScript Statement has its own spicial meaning.</em>
+      for example: we use <b>var</b> to declare the variables.
+    </figcaption>
+  </ol>
+  </section>
+  
+  <section id="JS-Syntax">
+    <h1>JS Syntax</h1>
+  <figcaption>
+  JS follows a set of rules 
+  call<em> <b>syntax</b></em>.
+  JS syntax should be followed to create
+  correctly-constructed programs.
+    </figcaption>
+    <ol>
+      <li> Variables Declaration</li>
+  <figcaption> This is called declaring variables. To declare variables, use the var keyword to create it, and then an equal sign <b>=</b> to assign a value.</figcaption>
+  <p id="VD">variables declaration</p>
+  <li>JS is Case-Sensitive</li>
+  <figcaption>JS identifiers are sensitively-cased.
+  <br /> In this example variables num and Num are different.</figcaption>
+  <p id="cs">Case-Sensitive</p>
+    </ol>
+  </section>
+  
+  <section id="JS_Comments">
+    <h1>JavaScript Comments </h1>
+    <figcaption>JavaScript comments are used to make programming easier to read and understand.
+      Comments are not executed by the browser.
+      Comments can be used to add notes, suggestions and hints to a JavaScript code.
+      There are two types of comments in JavaScript, the <b>single-line</b> and the <b>multi line</b>.
+    </figcaption>
+      <ol>
+        <li>Single-Line Comments </li>
+      <figcaption onclick="myFun4()">What is JavaScript Single-Line Comment? <em>click me</em></figcaption>
+      <li>Multiple-Line Comment</li>
+    <figcaption> We can make multiple-line using /*.....*/, all the contents between asterisks will be comments. </figcaption>
+    </ol>
+    </section>
+    
+    <section id="JS_Variables">
+      <h1>JavaScript Variables
+      </h1>
+    <figcaption>
+      In programming or even in algebra, we use variables to hold values.
+      In JavaScript, variables are used to storedata. The data stored could be a text, a number or others.
+      <i> use of variables in JavaScript is very easy </i>. Here is how:
+      </figcaption>
+      <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="image loading err cause of internet " />
+      <ol>
+  <li> Declaring a Variable</li>
+      <p id="JSV">As you can expect: <br>
+• The text "Mohammed" is stored/assigned to firstName.<br>
+• The text "Ismail" is stored/assigned tolastName.<br>
+• The number 24 is stored/assigned to age.</p>
+ <div class="btn">
+ <button type="button" onclick="myFun5()">Variable</button>
+ </div>
+ <p id="dvf"></p>
+ <p><b><i>Note</i></b>: If you don't assign a value to the variable the value will be undefined.</p>
+ <li> Declaring Multiple Variables In One Statment</li>
+ <figcaption> It is possible to declare multiple variables at once, using a single-statment.
+ <i>Simply seperate the variables with a comma   <span>&nbsp;&nbsp;,&nbsp;&nbsp;</span>.</i></figcaption>
+ <p id="MV"></p>
+ <li> Naming Variables</li>
+ <p id="nv"></p>
+ <li> Rules for Naming Variables</li>
+ <p id="rnv"></p>
+ </ol>
+    </section>
+    
+    <section id="JS-DetaType">
+      <h1>JavaScript Data Types</h1>
+   <b><p id="JSDT1"></p> </b>
+  <p id="subd"></p>
+  <ol>
+  <li> String data type</li>
+  <figcaption id="sdt"></figcaption>
+  <figcaption id="sdt1"></figcaption>
+   <p id="did"></p>
+   <li> Number Data Types</li>
+   <p>The <i>number</i> data type is an <em>integer</em> or a <em>floating number (number with decimal)</em></p>
+   <p id="did1"></p>
+   <li> Combining String and Number</li>
+   <p>
+Combining a string and a string
+returns a string.
+
+Combining a number and a number
+returns a number.
+
+Combining a string and a number
+returns a string.</p>
+<br>
+<p>Since JavaScript evaluates from left to right, different sequences produce different results.</p>
+   <p id="did2"></p>
+   <li> Boolean Data Types</li>
+   <p>Boolean data type is a logical data type that can only have <i><b>true</b></i> or<i> <b>false</b></i> as value. Booleans are mainly used for conditional testing. <br><br> Booleans are the output of <b>comparison operator</b></p>
+   <strong> The <b>==</b> is comparison operator tests if two values are equal or the same.</strong>
+   <p id="did3"></p>
+   <li>The Undefined Data Types</li>
+   <p>If a value has no assigned value, The valve is undefined.</p>
+   <p>In the example below, the <b>title1</b> variable has declared, but is not assigned to any value.</p>
+   <p>Therefore, the value is <b>undefined </b>.</p>
+   <p id="did4"></p>
+   <li>The Null Data Type</li>
+   <p>The <b>null</b> data type is spicial data type denoting a null value— meaning it's not empty string <b>" "</b> or <b>0</b>.<br /> It simply means <em>nothing</em>.</p>
+   <div class="btn">
+     <button type="button" onclick="myFun6()">write</button>
+   </div>
+   <li>Primitive Data </li>
+   <p>Primitive data are data that are not object and has no methods. There are 4 basic primitive data types:
+   <ul>
+     <li>string</li>
+     <li>number</li>
+     <li>boolean</li>
+     <li>undefined</li>
+     </ul>
+  All these primitive data types can be returned by the typeof operator.
+  </p>
+  <li>Complex Data </li>
+  <p>There are two complex data types, both can be returned by the typeof operator:
+  <ul>
+  <li>object</li>
+  <li>function</li>
+  </ul>
+  </p>
+  <p id="did7"></p>
+  </ol>
+    </section>
+    
+     <section id="JS_Operator">
+       <h1>JavaScript Operator</h1>
+       <p> JS operators are used to perform particular actions.
+       
+        They can use to assign values, combine values, perform arithmetic operations and more.
+       </p>
+       <p>JavaScript operators are symbols (or set of symbols) or keywords</p>
+       <ol>
+         <li> Arithmetic Operators</li>
+         <li> Assignment Operators</li>
+         <li> String Operators</li>
+         <li> Comparison Operators</li>
+         <li> Logical Operators</li>
+         <li> Bitwise Operators</li>
+         <p>These all will be explained later.</p>
+       </ol>
+     </section>
+     
+      <section id="JS-Arithmetic-O">
+        <h1> JavaScript Arithmetic Operators</h1>
+        <p><b>Arithmetic Operators</b> take numerical values as thier operand and return a single numerical value.</p>
+        <p>In JavaScript there are 8 basic arithmetic operators.</p>
+        <table class="table1" id="table">
+          <thead>
+            <th> Operator</th>
+            <th> Description</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b> + </b></td>
+              <td> Addition</td>
+            </tr>
+            <tr>
+              <td><b> - </b></td>
+              <td> Subtraction</td>
+            </tr>
+            <tr>
+              <td><b> * </b></td>
+              <td> Multiplication</td>
+            </tr>
+            <tr>
+              <td><b> / </b></td>
+              <td> Devision</td>
+            </tr>
+            <tr>
+              <td><b> ** </b></td>
+              <td> Exponentiation</td>
+            </tr>
+            <td><b> % </b></td>
+              <td> Remainder</td>
+            </tr>
+            <tr>
+              <td><b> ++ </b></td>
+              <td> Increment</td>
+            </tr>
+            <tr>
+              <td><b> -- </b></td>
+              <td> Decrement</td>
+            </tr>
+          </tbody>
+        </table>
+     <h2>Addition  (+)</h2>
+     <p>The addition operator (<b> + </b>) returns the sum of its numerical operands.</p>
+     <p id="did8"></p>
+     <p id="did9"></p>
+     <h2>Subtraction (-)</h2>
+     <p>The subtraction operator (<b> - </b>) returns the difference of its operands.</p>
+     <p id="did10"></p>
+     <h2> Multiplication (*)</h2>
+     <p>The multiplication operator (<b> * </b>) returns product of its numerical operands.</p>
+     <p id="did11"></p>
+     <h2>Division (/)</h2>
+     <p>The division operator (<b> / </b>) returns quotient of its numerical operands.</p>
+     <p>Where the left operand is the dividend and the right operand is the divisor.</p>
+     <p id="did12"></p>
+     <h2>Exponentiation (**)</h2>
+     <p>The exponentiation operator (<b> ** </b>) returns the result of raising its first operands to the power of its second operands.</p>
+     <p id="did13"></p>
+     <h2> Increment (++)</h2>
+     <p>The increment operator (<b> ++ </b>) add<b> 1 </b> to its operand and returns a value.</p>
+     <p id="did14"></p>
+     <h2>Decrement (--)</h2>
+     <p>The decrement operator (<b> -- </b>) deduct<b> 1 </b> from its operand and returns a value</p>
+     <p id="did15"></p>
+     <em><h2>Operator Sequense</h2></em>
+     <p>The operator sequence describes the order of performed operation in an arithmetic expression.</p>
+     <p id="did16"></p>
+     <p>JS follows the <b>MDAS</b> pattern in math, where <b>multiplication</b> is performed first, <b>division</b> is second, <b>addition</b> is third and <b>deduction</b> deduction is fourth or last.</p>
+     <br/>
+     <p style="font-style:italic">But what if we need certain operation to be performed first? <br/><br>
+     For example, what if we want addition to be performed first in our previous example?
+     </p>
+     <br>
+     <p>We can use grouping to do that, grouped expressions are performed first before the others. </p>
+     <p>Use parentheses <b>( )</b> to group expressions.</p>
+     <p id="did17"></p>
+    </section>
+    
+    <section id="JS-Assigment-O">
+      <h1> JavaScript Assignment Operator</h1>
+      <p>An assignment operator assigns value to its left operand based on the value of ite right operand.</p>
+      <p>In javascript, there are <b>7<sup>th</sup> basic assignment operators.</b></p>
+      <table class="table1" id="table1">
+        <thead>
+          <th>Name</th>
+          <th> Operator</th>
+          <th> Meaning</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td> Assignment</td>
+            <td><b> x = y </b></td>
+            <td><b> x=y </b></td>
+          </tr>
+          <tr>
+            <td>Addition Assignment</td>
+            <td><b>x += y</b></td>
+            <td><b>x = x + y</b></td>
+          </tr>
+          <tr>
+            <td> Subtraction Assignment</td>
+            <td><b>x -= y</b></td>
+            <td><b>x = x - y</b></td>
+          </tr>
+          <tr>
+            <td> Multiplication Assigment</td>
+            <td><b>x *= y</b></td>
+            <td><b>x = x * y</b></td>
+          </tr>
+          <tr>
+            <td> Division Assigment</td>
+            <td><b>x /= y</b></td>
+            <td><b>x = x / y</b></td>
+          </tr>
+          <tr>
+            <td> Remainder Assigment</td>
+            <td><b>x %= y</b></td>
+            <td><b>x = x % y</b></td>
+          </tr>
+          <tr>
+            <td> Exponentiation Assignment</td>
+            <td><b>x **= y</b></td>
+            <td><b>x = x ** y</b></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Assignment (<b> = </b>)</h2>
+      <p>The simple assignment operator or the assignment operator assigns a value to a variable.</p>
+      <p id="did18"></p>
+      <h2>Addition Assignment (<b> += </b>)</h2>
+      <p>The addition assignment add the value of the left and right operand then assigns the sum to left operand.</p>
+      <p id="did19"></p>
+      <p id="did20"></p>
+      <h2>Substraction Assignment (<b> -= </b>)</h2>
+      <p id="did21"></p>
+      <h2> Multiplication Assignment (<b> *= </b>)</h2>
+      <p id="did22"></p>
+      <h2>Devision Assignment (<b> /= </b> )</h2>
+      <p id="did23"></p>
+      <h2> Remainder Assignment (<b> %= </b>)</h2>
+      <p id="did24"></p>
+      <h2> Exponentiation (<b> **= </b>)</h2>
+      <p id="did25"></p>
+      <h1>Advanced Assignment Operators</h1>
+      <p>Here are the other assignment operators:</p>
+      <table class="table1" id="table2">
+        <thead>
+          <th>Name</th>
+          <th>Operator</th>
+          <th>Meaning</th>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Left shift assignment</td>
+            <td><b>x <<= y</b></td>
+            <td><b>x = x << y</b></td>
+          </tr>  
+          <tr>
+            <td> Right shift assignment</td>
+            <td><b>x >>= y</b></td>
+            <td><b>x = x >> y</b></td>
+          </tr>  
+          <tr>
+            <td>Unsigned right shift assignment</td>
+            <td><b>x >>>= y</b></td>
+            <td><b>x = x >>> y</b></td>
+          </tr>  
+          <tr>
+            <td>Bitwise AND assignment</td>
+            <td><b>x &= y</b></td>
+            <td><b>x = x & y</b></td>
+          </tr>  
+          <tr>
+            <td>Bitwise XOR assignment</td>
+            <td><b>x ^= y</b></td>
+            <td><b>x = x ^ y</b></td>
+          </tr>  
+          <tr>
+            <td>Bitwise OR assignment</td>
+            <td><b>x |= y</b></td>
+            <td><b>x = x | y</b></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+    
+    <section id="JS-Comparison-O">
+      <h1> JavaScript Comparison Operators</h1>
+      <p>A comparison operator compares its operands and returns a Boolean based on whether the comparison is <b>true</b> or <b>false</b>.</p>
+      <br>
+      <p>It can be used to compare strings, numbers, Booleans (logical), or object values.</p>
+      <br>
+      <p>In JavaScript, there are <b>8 comparison operators </b>: </p>
+      <table class="table1" id="table3">
+        <thead>
+          <th> Name</th>
+          <th> Operator</th>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Equality Operator</td>
+            <td><b>==</b></td>
+          </tr>
+          <tr>
+            <td>Inequality operator</td>
+            <td><b>!=</b></td>
+          </tr>
+          <tr>
+            <td>Identity operator</td>
+            <td><b>===</b></td>
+          </tr>
+          <tr>
+            <td>Non-identity operator</td>
+            <td><b>!==</b></td>
+          </tr>
+          <tr>
+            <td>Greater than operator</td>
+            <td><b> > </b></td>
+          </tr>
+          <tr>
+            <td> Greater than or equal operator</td>
+            <td><b>>=</b></td>
+          </tr>
+          <tr>
+            <td> Less than operator</td>
+            <td><b> < </b></td>
+          </tr>
+          <tr>
+            <td> Less than or equal operator</td>
+            <td><b> <= </b></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Equality  operator (<b> == </b>)</h2>
+      <p>The equality operation (==) returns<b> true, </b> if its operands are equal otherwise<b> false </b></p>
+      <p id="did26"></p>
+      <h2>The inequality operator (<b> != </b>)</h2> 
+      <p>returns true if its operands are not equal, otherwise false. <i>totally opposit of equality operator.</i></p>
+      <p id="did27"></p>
+      
+      <h2>Identity Operator (<b> === </b>)</h2>
+      <p>The identity operator (=== ), also known as strict equality operator, returns true if its operands are equal and of the same type.</p>
+      <p>The example below returns true because the two operands are equal and are of the same type.</p>
+      <p id="did28"></p>
+      <p>The example below returns false because the two operands are equal but are not of the same type.</p>
+      <p id="did29"></p>
+      <h2>Non-identity Operator (<b> !== </b>)</h2>
+      <p>The non-identity operator ( !== ), also known as strict inequality operator, returns true if its operands are of the not of the same type and/or not equal. </p>
+      <p>The example below returns true because the two operands are equal and are not of the same type.</p>
+      <p id="did30"></p>
+      <p>The example below returns false because the two operands are equal and are of the same type.</p>
+      <p id="did31"></p>
+      <h2>Greater than Operator (<b> > </b>) </h2>
+      <p>The greater than operator (>) returns true if the left operand is greater than the right operand. </p>
+      <p id="did32"></p>
+      <h2>Greater than or equal (<b> >= </b></h2>
+      <p>The greater than or equal operator (<b> >= </b>) returns true if the left operand is greater than or equal to the right operand.</p>
+      <p id="did33"></p>
+      <h2>Less than Operator (<b> < </b>)</h2>
+      <p>The less than operator (<) returns true if the left operand is less than the right operand.</p>
+      <p id="did34"></p>
+      <h2>Less than or Equal Operator (<b> <= </b>)</h2>
+      <p>The less than or equal operator (<=) returns true if the left operand is less than or equal to the right operand.</p>
+      <p id="did35"></p>
+      <h1>How can it be used?</h1>
+      <p>Comparison operators are mostly use in <i>conditional statement</i>.</p>
+      <p>The most basic conditional statement is<b> if </b> statement.</p>
+      <p id="did36"></p>
+      <p id="did37"></p>
+      </section>
+      
+      <section id="JS-Logical-O">
+      <h1> JavaScript Logical Operators</h1>
+      <p><i>Logical operators</i> are commonly used with<b> boolean </b>.</p>
+      <br>
+      <p><i>In JavaScript there are 3 logical operators</i>:</p>
+      <table class="table1" id="table4">
+        <thead>
+          <th>Name</th>
+          <th>Operator</th>
+          <th>Usage</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Logical AND</td>
+            <td><b> && </b></td>
+            <td><b>expression1 && expression2</b></td>
+          </tr>
+          <tr>
+            <td> Logical OR</td>
+            <td><b> || </b></td>
+            <td><b>expression1 || explanation</b></td>
+          </tr>
+          <tr>
+            <td> Logical NOT</td>
+            <td><b> ! </b></td>
+            <td><b>!expression</b></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Logical AND (<b> && </b>)</h2>
+      <p>The logical AND (<i> && </i>) operator returns<i> true </i> if both operands (which are expressions) are <i>true</i>.</p>
+      <p id="did38"></p>
+      <h2> Logical OR (<b> || </b>)</h2>
+      <p>The logical OR (<i> || </i>) returns true if either of th operand is<i> true </i>.</p>
+      <p id="did39"></p>
+      <h2> Logical NOT (<b> ! </b>)</h2>
+      <p> The logical NOT (<i> ! </i>) operator returns<i> true </i>if the operand is<i> not true </i>.</p>
+      <p id="did40"></p>
+      <h1>Using Logical Operator with Conditional Statement</h1>
+      <p>Logical operators are commonly used with conditional ctatement.</p>
+      <p id="did41"></p>
+      <p id="did42"></p>
+      <h2> JavaScript Conditional or (Ternary) Operator</h2>
+      <p>The conditional or ternary operator is the only operator that takes three operands.</p>
+      <p><b>condition ? value1 : value2</b></p>
+      <p>If the<b> condition </b>is true, the operator returns<b> value1 </b>otherwise it returns<b> value2  </b>.</p>
+      <p>This commonly used with a variable.</p>
+      <p id="did43"></p>
+      <br>
+      <p><em>Since the testScore is more than 75, then the value "Passed" was assigned to the testResult variable.
+      <br/>
+      <br/>
+      If the testScore is less than 75, the value "Failed" will be assigned instead.</em></p>
+      
+    </section>
+    
+    <section id="JS-Function">
+    <h1>JavaScript Functions</h1>
+    <p><em>Functions are one of the fundamental building blocks of JavaScript. <br> A function is a <i>javascript method </i></em>. <br> It is a set of statements that performs a task or produces a value.
+     <br>
+     It is executed when it is invoked (called) by something.</p>
+
+    <h2><i>Function Definition</i></h2>
+  <p>A JavaScript function is defined or declared using the function keyword, followed by:
+  <br>
+<br>
+ <i>The name of the function</i>.
+<br>
+<br>
+ <i>A list of parameters (optional) enclosed in parentheses (). Multiple parameters are separated by commas (,) </i>.
+<br>
+<br>
+ <i>The block of codes or the statements enclosed in curly braces {} </i>.
+<br>
+<br>
+<em>Here is the syntax</em>:</p>
+   <p><span style="color:#C90939">function</span> <span style="color:#FFC100">functionName</span><span style="color:#fff">(</span><span style="color:#FFC100">parameters1</span><span style="color:#fff">, </span><span style="color:#FFC100">parameters2</span><span style="color:#fff">, </span><span style="color:#FFC100">parameters3</span><span style="color:#fff">) {</span><br><span style="color:#969696">// codes or statements to be executed</span><br><span style="color:#fff">}</span> parameters act as<i> placeholder variables </i>inside the function.</p>
+   <br>
+   <p>When the function is called, the variables are assigned to the <i>arguments </i>(values) provided when the function is called.</p>
+   <p id="did44"></p>
+   <br>
+   <p>The example below, the function's task is to add tow numbers then print the sum.</p>
+   <p id="did45"></p>
+   <br>
+   <h2>Calling a Function</h2>
+   <p>Functions will only be executed when they are called or invoked
+   <br>
+   <br>
+   A function can be called inside a JavaScript program, just like what we did in the previous examples.
+   <br>
+   <br>
+   A function can be called when an event happens, most commonly when a button is clicked.</p>  
+   <p id="did46">Sum will be printed here.</p>
+   <div class="btn">
+     <button type="button" onclick="addNumber1(4, 5)">Print Sum</button>
+   </div>
+   <br>
+   <p>Before we move on, please be reminded that functions don't require parameters.
+   In the example below, the function's only task is to show a dialog box. </p>
+      <div class="btn">
+     <button type="button" onclick="showDailog()">show</button>
+     </div>
+     <h1>The Return Statement</h1>
+     <p>The <i>return </i> statement is used in a function to <em>stop</em> its execution and to return a value to the <em>function caller </em>.</p>
+     <br>
+     <p>For example, the<i> addNumbers() </i>function below returns the<b> sum </b>of its argument to the function caller.</p>
+     <p>Then, function caller prints the returned value to an element.</p>
+     <p id="did47"></p>
+     <p>The example below assigns the returned value to a variable, the variable is then used in a statement.</p>
+     <p id="did48"></p>
+     <h1> Function Scope</h1>
+     <p>The variables declared inside a function are called<b> local variable </b>.</p>
+     
+     <br>
+     <p>Local variables can only be used inside the function where it was declared.
+     <br>
+     <br>
+     If a local variable is used outside, the value's data type is<i> undefined </i>.</p>
+     <br>
+     <br>
+      <i><p id="did49"> I am the paragraph with "<b>did49</b>" id. </p></i>
+     <p>Notice that nothing will be printed on the paragraph element with the<i> did50 </i>id, because the name variable cannot be used outside the function.</p>
+     
+   <p id="did50"> I am the paragraph with "<b>did50</b>" id. My value is not changed because the <b>fullName</b> variable is <b>undefined</b> when used outside the function scope. </p>
+   <div class="btn">
+   <button type="button" onclick="getAge(23)">Call F</button>
+   </div>
+   <h2>Globle Variable</h2>
+   <p> Globle variable can be used by any function. <br>
+   For example, the<i> fruit </i>variable below is declared outside the function.<br><em>Therefore it can be used by any function</em>.</p>
+   <p id="did51"></p>
+   <div class="btn">
+     <button type="button" onclick="myFunc()">call F</button>
+   </div>
+   <h2>Why Use Function?</h2>
+   <p>Function in JavaScript are just like tools in real life. The make coding easier.<br>
+   Instead of writing a block of codes over and over again, we can reuse the same code many times.<br><br> The function below converts<i> Kilometer to Miles </i>.</p>
+   <p id="did52"></p>
+    </section>
+    
+    <section id="JS-Object">
+      <h1>What is an Object? </h1>
+      <p>An object is a collection of related data and/or functionality.
+      <br><br>Most of the time, creating an object begins with defining a variable.</p>
+      <br>
+      <br>
+      <p>As you can see, the syntax of an object is pretty simple.
+      <br>
+      The person object contains properties.
+      <br>
+      Each property has a name (e.g. fullName, age) and a value (e.g. "Mohammed Ismail", 24).
+      <br>
+      Properties are separated by commas (, ). The name and value pair are separated by a colon ( : ). Methods in an Object An object can also contain functions (methods).</p>
+      <p id="did53"></p>
+      <h2> Methods In An Object</h2>
+      <p>An object can also contains<b> functions </b>(method).</p>
+      <p id="did54"></p>
+      
+      <br>
+      <p><b> Note </b>: An<i> object </i> is a collection of<i> properties </i>and/or<i> methods </i>.</p>
+      <p id="did55"></p>
+      <h2>Accessing Object's Properties</h2>
+      <p>There are two ways to access object's members (properties or methods).</p>
+      <h2> Tho Dot Notation</h2>
+      <p>The<i> dot </i>notation uses a dot (<b> . </b>) to access an object's members.<br><br> First write the<b> variable </b>, then<b> name </b>of a property or method.</p>
+      <p id="did56"></p>
+      
+      <h2>The Bracket Notation</h2>
+      <p>We can also use<b> Square Bracket </b>to access object's members.</p>
+      <p id="did57"></p>
+      
+      <h2> The<b> this </b>keyword</h2>
+      <p>This may look strange, but don't worry, it's easy. <br> The<i> this </i>keyword refers to the current object.</p>
+      
+      <p> In this example, the <b>person1.showDetails()</b> method is called when the button below is clicked. </p>
+      <div class="btn">
+   <button onclick="person1.showDetails()"> Show Details </button>
+   </div>
+   <p>In this case,<b> this </b>is equivalent to the<b> person1 </b>object.</p>
+   <h2>An Object In An Object </h2>
+   <p>Yes! It's possible to put objects inside an object.</p>
+   <p id="did58"></p>
+    </section>
+    
+    <section id="JS-String">
+      <h1> JavaScript String</h1>
+      <p>In JavaScript, strings are pieces of text. <br><br>A<i> string </i> is set of characters enclosed in qoutes, like (<b> "abc" </b>or<b> 'abc' </b>).</p>
+      <script type="text/javascript" charset="utf-8">
+        var str ="Hello "; // double qoute
+            str1 ='world.';
+            document.write(str+str1);
+      </script>
+      <h2>Concatenating String</h2>
+      <p>To concatenate string, use the<i> addition operator (+)</i>. Like above example.</p>
+      
+      <br>
+      <p>We can also concatenate using<i> addition assignment operator (+=)</i>.</p>
+      <p id="did59"></p>
+      <br>
+      <p> You can add as many strings as you want.</p>
+      <p id="did60"></p>
+      
+      <br>
+      <h2>Concatenation Contractual Example</h2>
+      <p>In this example, we will create a programe that greets the user concatenating string.<br><br> Also we will use the<b> window.prompt() </b>to ask the user's name.</p>
+      <div class="btn">
+        <button type="button" onclick="greeting()">greeting</button>
+      </div>
+      <h2>Escaping Characters</h2>
+        <p>Escaping characters is crucial in handling strings.
+        <br>
+        It helps us make sure that our strings are recognized as pieces of text, not as part of the code.
+        <br>
+        To escape characters, use a backslash(<b> \ </b>)right before the charater.</p>
+      <p id="did61"></p>
+    </section>
+    
+    <section id="JS-String-M">
+      <h1> JavaScript String Methods</h1>
+      <h2>String as Object</h2>
+      <p>Almost everything in javascript is object.<br><br> When you create string.</p>
+      <p>Your variable become a <i>string</i> object instance.</p>
+      <h2>Getting String length</h2>
+      <p>To get the length or numbers of characters use<b> length </b> property.</p>
+      <p id="did62"></p>
+      <h2> Retrieving a Character</h2>
+      <p>We can retrieve a character from a string using<i> square bracket [ ] notation </i>.<br><br> Simply put<i> square brockets [ ] </i>after the variable name and write a number inside them.</p>
+      <p id="did63"></p>
+      <h2>Finding a Substring In a String</h2>
+      <p>Sometimes, it is usful to check if a smaller string (<em>substring</em>) is posent in a string.<br><br> This can be done using the <i> indexOf( ) </i></p>
+      
+      <br>
+      <p>It returns the index of <em>first</em> occurrence of a substring in a string. </p>
+      <p id="did64"></p>
+      <br>
+      <p>The <i>lastIndexOf( )</i> method returns the index of the last occurrence of substrings in a string.</p>
+      <p id="did65"></p>
+      
+      <br>
+      <p><em>Both the <i>indexOf()</i> and the <i>lastIndexOf()</i> methods return <i>-1</i> if there is no occurrence found.</em></p>
+      <p id="did66"></p>
+      <p id="did67"></p>
+      
+   <h3>The<b> search() </b> Method</h3>
+   <p>The<i> search() </i> method works similarly with the<i> indexOf()</i> method.</p>
+   <p>It returns the index of the first occurrence of a text in a string.</p>
+   <p id="did68"></p>
+   <p>The <i>search( )</i> method returns<i> -1 </i> if the text is not found in the string.</p>
+   <p id="did69"></p>
+   <h2> Extracting a Strings</h2>
+   <p>We can extract a substring from a string using the following methods.</p>
+   <ul>
+     <li><i>slice(start, end)</i></li>
+     <li><i>substring(start, end)</i></li>
+     <li><i>substr(start, length)</i></li>
+   </ul>
+   <h2>The<i> slice( ) </i>method</h2>
+   <p>The slice( ) method extract a section of a string and returns as a new string.<br><br> It takes two numerical parameters: <i>the start index (position), the end index</i>.</p>
+   <p id="did70"></p>
+   
+   <br>
+   <p>The <i>slice( )</i> method can take nagative values.<br><br> Nagative value start counting from end of the string.</p>
+   <p id="did71"></p>
+   <h2>The <i>substring( )</i></h2>
+   <p>The substring( ) method works the way as <i>slice( ) </i> method.</p>
+   <p id="did72"></p>
+   <br>
+   <p> The only difference between the <i>substring( )</i> and <i>slice( )</i> methods is that <i>substring( )</i> method cannot take the <i>nagative values</i>.</p>
+   <br>
+   <h2>The<i> substr( ) </i> method</h2>
+   <p>The substr() method extracts a section of a string, starting from a specified index and extending for a given length afterward.</p>
+   <br>
+   <p>It takes two numerical parameters: the starting index, the length - number of characters to extract</p>
+   
+   <p id="did73"></p>
+   <br>
+  <h2>Ommiting the Second Value</h2>
+  <p>If you omit the second value of the <i>slice( ), substring( ) and substr( )</i>, they will return the rest of the string.</p>
+  <br>
+  <p id="did74"></p>
+  <h2> Replacing a String inside a String</h2>
+  <p>The<b> replace( ) </b> method replaces a specific text inside a string and returns a new string.</p>
+  <p>It dosen't modify the orginal string.</p>
+  <p>It takes two parameters: the <i>string to replace,</i> the <i> string replacement</i>.</p>
+   
+   <p id="did75"></p>
+   <p id="did76"></p>
+   <p id="did77"></p>
+   
+   <h2> Trimming a String</h2>
+   <p>Trimming means removing the extra whitespace from the both end of the string.</p>
+   <p id="did78"></p>
+   <h2>Converting to Upper and Lower case</h2>
+   <p>The<I> toUpperCase( ) </I>method converts the string to UpperCase.</p>
+   <p id="did79"></p>
+   
+   <p>The<i> toLowerCase( )</i>method converts the string to lower-case.</p>
+   <p id="did80"></p>
+   <p><em>These don't modify the orginal string.</em></p>
+   <h2>The<b> concat( ) </b>Method</h2>
+   <p>The <i>concat( )</i> method adds the string argument to the function calling string without modifying the original string.
+   <br>
+   It takes two arguments: the text that would separate the strings, the string to add.
+   </p>
+   <p id="did81"></p>
+    </section>
+    
+  <section id="JS-Number">
+    <h1>JS Number</h1>
+    <p>In javascript, there are two types of numbers.
+    <br>
+    <b> • Integer </b>— Number without decimal.<br>
+    <b> • Floating Point </b>— Number with decimal.</p>
+    <p id="did82"></p>
+    <p id="did83"></p>
+    <br>
+    <p>Very larg or small numbers can be written using<i> e-notation </i>(exponent notation).</p>
+    <p id="did84"></p>
+    <h2>Strings as Numbers</h2>
+    <p> JavaScript will try to convert<i> numbers</i> as much as possible.</p>
+    <p id="did85"></p>
+    <p id="did86"></p>
+    <p id="did87"></p>
+    <br>
+    <p>However, adding numbers as strings <i>doesn't work in addition</i>. Instead, the addition operator will concatenate the as strings.</p>
+    <p id="did88"></p>
+    <h2> Performing Operation on Numbers and Strings</h2>
+    <p>Again, JavaScript will to convert numbers as much as possibly can.</p>
+    <p id="did89"></p>
+    <p id="did90"></p>
+    <p id="did91"></p>
+    <br>
+    <p><i>string + number, number + string</i></p>
+    <p id="did92"></p>
+    <p id="did93"></p>
+    <h2>Hexadecimal Numbers</h2>
+    <p>Hexadecimal numbers use leading a<b> 0 </b>followed by a letter<b> x </b>.<br> Then followed by characters Inside the range of (<b> 0123456789ABCDEF </b>).</p>
+    <p id="did94"></p>
+    <h2><i>&nbsp;NaN&nbsp;</i> Not a Number</h2>
+    <p> NaN means <i>not-a-number.</i> It is a property representing an illegal number.<br>
+    Performing arithmetic operations with non-numeric data will return NaN</p>
+    <p id="did95"></p>
+    <p> although represent invalid numbers, its data type is still number. </p>
+    <p id="did96"></p>
+    <h2>The<i> isNaN( ) </i>method.</h2>
+    <p>The isNaN( ) method returns true if its argument is not a legal number, otherwise false.</p>
+    <p id="did97"></p>
+  </section>
+  
+  <section id="JS_Number_M">
+    <h1>JS Number Method</h1>
+    <p>The <i>Number</i> object provides methods that allow to work with numerical value.</p>
+    
+    <h2>The <i>Number.isInteger( )</i> Method.</h2>
+    <p>The Number.isIntege( ) method returns true if the passed argument(value) is integer.</p>
+    <p id="did98"></p>
+    <h2>The <i>parseInt( )</i> Method.</h2>
+    <p>The <em>praseInt( )</em>method takes a string argument (value) and returns an integer based on the given value.</p>
+    <p id="did99"></p>
+    <h2>The <i> parseFloat( ) </i> method</h2>
+    <p>The parseFloat( ) method takes a string argument  (value) and returns a floating point number.</p>
+    <p id="did100"></p>
+    
+    <h2>The <i>toExponential( )</i> Methood</h2
+    <p>The <em>toExponential( )</em> method returns a string in exponential notation base on the given floating point.</p>
+    <p id="did101"></p>
+    
+    <h2> The <b> toString( )</b> Method</h2>
+    <p>The <em>toString( )</em> method returns a string representing the specified number.</p>
+    <p id="did102"></p>
+  </section>
+  
+  <section id="JS_Arrays">
+  <h1> JavaScript Arrays</h1>
+  <p>JavaScript<i> Arrays </i> are list-like objects.
+  <br>
+  A single arry can store multiple data.</p>
+  <h2>Create an Array</h2>
+  <p> Arrays are created with square bracket<i> [ ] </i>and datas are sperated with commas (<i> , </i>).</p>
+  <br>
+  <p id="did103"></p>
+  <p>Another way of creating an array is using<i>Array( )</i> constructor.</p>
+   <br>
+  <p id="did104"></p>
+  
+  <h2>Access An Array Items</h2>
+  <p> Array items are accessed using <i>integer</i>.
+  <br>
+  Arrays are <i>zero-indexed</i>.
+  <br>
+  This means count started from<b> 0 </b> not from<b> 1 </b>.</p>
+   <br>
+  <p id="did105"></p>
+  
+  <h2>Add Items to an Array</h2>
+  <p>The <i>push( )</i> method adds one or more elements (items) to the <i>end</i> an array.</p>
+   <br>
+  <p id="did106"></p>
+  <br>
+  <p id="did107"></p>
+  <br>
+  <p>The <b>unshift( )</b>method adds one or more elements (items) to the <i>front </i> of an array.</p>
+   <br>
+  <p id="did108"></p> <!-- Single item -->
+  <br>
+  <p id="did109"></p> <!-- Multiple items -->
+  
+  <h2> Remove Items From an Array</h2>
+  <p>The <i>pop( )</i> method remove the <i>last element</i> (items) of an array.</p>   
+  <br>
+  <p id="did110"></p>
+  <br>
+  <p>The <i> shift( )</i> method remove the <i>first element</i> (item) of an array.</p>
+  <br>
+  <p id="did111"></p>
+  <br>
+  <h2>Get the Length of an Array</h2>
+  <p>The <i>length</i> of an array represent its number of elements
+  <br>
+  The <i>length</i> property returns the numbers of elements of an array.</p>
+  <p id="did112"></p>
+  <br>
+  <h2>Access the Last Item of an Array</h2>
+  <p>To access the item of an array, deduct <i>1</i> from its length.</p>
+  <p id="did113"></p>
+  <br>
+  <h2>Loop Over an Array</h2>
+  <p> Looping over an array means accessing its data individually.
+  <br>
+  We can use the<b> for </b>loop to loop over an array.</p>
+  <br>
+  <p id="did114"></p>
+  <br>
+  <p><em>Notice that we used the addition assignment (<i> += </i>) operator with the innerHTML property.
+  <br>
+  This makes sure that the printed elements do not get overwritten.</em></p>
+  <h2>Arrays are Objects</h2>
+  <p>The data type of an array is <i> object </i>.
+  <br>
+  This can be shown using the typeof operator.</p>
+  <br>
+  <p id="did115"></p>
+  <br>
+  </section>
+  
+  <section id="JS_Array_M">
+    <h1> JavaScript Arrays Methods</h1>
+    <h2>The <i>forEach( )</i> method</h2>
+    <p>The <i>forEach( )</i> method is another way to loop over an array or access each element's data.</p>
+    <br>
+    <p>It execute a <i>callback funtion</i> for each element's data.</p>
+    <br>
+    <script type="text/javascript" charset="utf-8">
+      var person2 = ["Ismail"," Noor", " Mohammed", "Imran"];
+        person2.forEach(function(val, i, arr) {
+          /*document.getElementById("did116").innerHTML = */ document.write(i + ": " + val + "<br>");
+        });
+    </script>
+    <br>
+    <p><em>The callback function is invoked with <i>3</i> arguments.</em>
+    <br>
+    (1). The <i>value</i> of the elements.<br>
+    (2). The <i>index </i> of the elements.<br>
+    (3). The <i>array</i> of the elements.</p>
+    <br>
+    <h2> Arrays to Strings</h2>
+    <p>The <i>join( )</i> method creates and returns a new string by combining all the elements.</p>
+    <br>
+    <p>The elements are separated by the specified separetor character.</p>
+    <br>
+    <p><em>If none is specified, it separates the elements with conamas</em>.</p>
+    <br>
+    <p id="did117"></p>
+    <br>
+    <p id="did118"></p>
+    <br>
+    <p><s>you can use any characters you want</s>.</p>
+    <br>
+    <h2>String to Arrays</h2>
+    <p>It is also possible to convert a <i>string</i> into an <i>array</i> this can be done using <b> split( ) </b> method.</p>
+    <br>
+    <p>The split( ) method takes a <i>separator</i> string as its argument.</p>
+    <br>
+    <p>The method split the string at each point, where the <em>separator</em> occurs.</p>
+    <br>
+    <p id="did119"></p>
+    <br>
+    <p id="did120"></p>
+    <br>
+    <h2> Margin Arrays</h2>
+    <p>The <i> concat( )</i> method marge one or more arrays.</p>
+    <p id="did121"></p>
+    <br>
+    <p>To concatenate three more arrays, separate the arrays with comma.</p>
+    <p id="did122"></p>
+    <h2>Searching an Item</h2>
+    <p>The <i>indexOf( )</i> method returns the index of the first occurrence of item  (element)of in an array.</p>
+    <br>
+    <p id="did123"></p>
+    <br>
+    <p> The <i>lastIndexOf( )</i>method returns the last index of the item (element) in an array.</p>
+    <br>
+    <p id="did124"></p>
+    <h2>The <i>includes( )</i> method</h2>
+    <p>To check if a value exists in an array, use the <i> includ( )</i> method.</p>
+    <p>The <i> includes( )</i> method returns <i>true</i> if a certain value is included in an array. Otherwise <i>false </i>.</p>
+    <br>
+    <p id="did125"> </p>
+    <p id="did126"></p>
+    <br>
+    <h2>Slicing an Array</h2>
+    <p>The <i>slice( ) </i> method returns a new copy of a section of an array.
+    <br>
+    It takes two arguments:
+    <br>
+    1• <i>begin </i>——the index where the extraction begins <br>
+    2• <i>end </i>——the index where the extraction should end (it is not included in the new array)</p>
+    <br>
+    <p id="did127"></p>
+    <p id="did128"></p>
+    <br>
+    <h2>Splicing an Array</h2>
+    <p>The <i>splice( )</i> method changes the contents of an array by removing or replacing existed element and/or adding new elements in place.
+    <br>
+    <em>It takes three or more<i> arguments </i></em>:</p>
+    <p>1• <i>start </i>—the index where the changing begins.
+    <br>2• <i>delateCount </i> —the number of the elements to remove and replace from the start.
+    <br> <i>element1, element2, .... </i>— the elements to add to the array.
+    </p>
+    <br>
+    <p id="did129"></p>
+    <br>
+    <h2> Removing an array Item</h2>
+    <p>The <i>splice( )</i> method can also be used to remove an array items.
+    <br>
+    To remove item/s, omit the third arguement.</p>
+    <p id="did130"></p>
+    <br>
+    <p id="did131"></p>
+    <br>
+    <h2> Replacing an Item's Value</h2>
+    <br>
+    <p><em>A much easier way to replace a single item's value is to access the item and assign a new value.
+    <br>
+    To access array's items, use their index number.
+    <br>
+    In the example below, we will replace "January" with "December".</em></p>
+    <br>
+    <p id="did132"></p>
+  </section>
+  
+   <section id="JS_Array_S">
+     
+     <h1> JavaScript Array Method</h1>
+     <h2>The<i> sort( ) </i>Method</h2>
+     <p>The sort( ) method sort the elements of an array. <i> ascending</i> is the default sort order.</p>
+     <p>In the example below the array is sorted <i>alphabetically </i>.</p>
+     <p id="did133"></p>
+     
+     <h2>The Compare Funtion</h2>
+     <p>The <i> compareFuntion( ) </i> come with two arguement <em>a and b </em>.
+     <br>
+     if a and b are being compared, then;</p>
+     <p>1) If compareFuntion<i>(a,b)</i> returns less than <i>0, a</i> comes first.<br>
+     2) If compareFuntion<i>(a,b)</i> returns <i>0, a</i> be unchanged. <br>
+     3) If compareFuntion<i>(a,b)</i> returns greater than <i> 0, b </i> comes first.</p>
+     <p><em>The example below use compare function.</em></p>
+     
+     <h2>Sorting Numbers</h2>
+     <p>To sort numbers in an array, we should use <i> compareFuntion </i> <br>
+    In The example below the numbers are sorted in <i>ascending order</i>.</p>
+     <p id="did134"></p>
+     
+     <p> <em> you can also seperate the compareFuntion.</em></p>
+     <p id="did135"></p>
+     
+     <p><em>In The example below the numbers are sorted in <i>descending order</i>.</em></p>
+     <p id="did136"></p>
+     
+     
+     <h2>Get the <i>Highest</i> or <i>Lowest</i> value.</h2>
+     <p>To get the highest value in an array of numbers, sort the elements in descending order, then get the first value.</p>
+     <p id="did137"></p>
+     
+     <p>To get lowest value in an array of neembers, sort the elements in ascending order, then get the value.</p>
+     <p id="did138"></p>
+     
+     <h2>Sorting The Array of Objects</h2>
+     <p>To sort an array of objects, simply compare the objects's numerical properties.</p>
+     <p id="did139"></p>
+     
+     <p id="did140"></p>
+     
+     <h2> Reversing Aa Array</h2>
+     <p>The <i>reverse() </i> method reverse an array.</p>
+     <p id="did141"></p>
+     
+   </section>
+   <hr>
+   <br>
+   <br>
+   
+    <section id="JS_Array_I">
+      <h1> JavaScript Array Iteration</h1>
+    <p><i>Iterating over an array</i> means performing an operation for each array element.</p>
+    <p>Performed operations usually consist of accessing the value of each array element.</p>
+      <h2> Using <i> for </i> Loop</h2>
+      <p><em>The <i>for</i> loop can be used to iterate over an array.<br>here is an example.</em></p>
+      
+      <p id="did142"></p>
+      
+       <h2>Using <i>forEach()</i> Method</h2>
+      <p>The <i>forEach()</i> method execute the provided function once for each array element.</p>
+      <p>It has one parameter a <i>callback function</i>.</p>
+      <br>
+      <p>The callback function eccepts one to three arguments.</p>
+      <br>
+      <p>• <i>value</i>_The current element being processed.</p>
+      <br>
+      <p>• <i>index</i>_The index of the current element.</p>
+      <br>
+      <p>• <i>array</i>_the array itself.</p>
+      <p>The <i>index </i> and <i>array</i> variables can be omitted.</p>
+      <p><b>Note:</b>You can name the variables the way you like, as long as the names are not a less <i>reserved keyword</i>.</p>
+      <p>He's an example.</p>
+      <p id="did143"></p>
+      
+      <h2> Using <i>map( ) </i> method</h2>
+      
+     <p>The <i>map( )</i> function creates a new array.
+     <br>
+     <br>
+     Each element in the new array is changed using the logic in the provided function.</p>
+     <p>The <i>provided function</i> accept one to three arguments.</p>
+     
+       <br>
+      <p>• <i>value </i>_The current element being processed.</p>
+      <br>
+      <p>• <i>index </i>_The index of the current element.</p>
+      <br>
+      <p>• <i>array </i>_the array itself.</p>
+      <p>The <i>index </i> and <i> array</i> arguments can be omitted.</p>
+      <p>In this example, each element in the <i> numbers </i> array multiplied by <i> 2 </i>.</p>
+      
+      <p id="did144"></p>
+      <br>
+      <p id="did145"></p>
+      <br>
+      
+      <h2> Using <i> filter() </i> method</h2>
+      <p>The filter() method creates a new array.
+      <br>
+      The new array only contains the elements that passed the test implemented by provided <b>  provided function </b>.
+     <br>
+     <br>
+     The provided function accepts one to three argument.</p>
+     <p>• <i>value </i>_The current element being processed.</p>
+      <br>
+      <p>• <i>index </i>_The index of the current element.</p>
+      <br>
+      <p>• <i>array </i>_the array itself.</p>
+      <p>the index and array arguments can be ommitted.</p>
+      
+      <p>in this example, only the numbers less than 4 are passed to the new array</p>
+      <br>
+      <p id="did146"></p>
+      
+    </section>
+    <br>
+    <br>
+    
+    <section id="JS_Events">
+      <h1>JavaScript Events</h1>
+      
+      <p>Events are <i> action </i> that happened in the system you are programming.</p>
+      <br>
+      <p>The system fires a signal when events happen,so we can do something when they do.</p>
+      <br>
+      <p>For example, we can perform a task when a button is clicked</p>
+      <div class="btn">
+      <button id="btn"> Click Me </button>
+      </div>
+      
+      <p>the block of code that execute when an even fires is called <i> event handler </i>.<br><br>
+      It's also called <i> event listener </i>.</p>
+      <br>
+      <br>
+      <h2> Inline Event Handlers</h2>
+      <p>we can also write even handler inside an HTML element.<br><br>
+      It can be done using <i> event handler attributes.</i></p>
+      <div class="btn">
+        <button onclick='////alert("Hello there, the button was clicked and the task is to show this dialogue box.");'> Click me</button>
+      </div>
+      <p>another example,when the button is clicked the function will be called</p>
+      <div class="btn">
+        <button onclick="myFunc()">Click me</button>
+      </div>
+      
+      <h2>The <b> addEventListener()</b> Method</h2>
+      <p>The <b> addEventListener()</b> method Sets up a function that will be called when event happens.
+      <br>
+      <br>
+      Syntax:<b> element.addEventListener(eventType,listenerFunction) </b></p>
+      <br>
+              <p><b>1) EventType</b>— a string representing the event type.</p>
+        <p><b>2) listenerFunction</b>— a listener function, It will be called when the event fires.</p>
+      
+      
+      <div class="btn">
+       <button id="btn2">Chick me</button>
+      </div>
+      
+      <br>
+      
+      <h2> More Event Types</h2>
+      <p>in JavaScript, there are many event types here some of the most useful:</p>
+      <h3>The<b> change </b>event</h3>
+      <p>The change event fires when the value of the <i>&#60textarea&#62 </i>, <i>&#60select&#62</i> and <i>&#60input&#62</i> elements change</p>
+      
+      <br>
+      
+      <label><b> Choose Country: </b>
+      <select name="countries" id="countries">
+        <option value="Myanmar">Myanmar</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Thailand">Thailand</option>
+        <option value="Malaysia">Malaysia</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="Poland">Poland</option>
+        <option value="Netherland">Netherland</option>
+        <option value="Denmark">Denmark</option>
+        <option value="Iceland">Iceland</option>
+        <option value="Morocco">Morocco</option>
+        <option value="Saudi Arabia">Saudi Arabia</option>
+        <option value="Dubai">Dubai</option>
+      </select>
+      <p>Your country is: <span id="did147"></span></p>
+      </label>
+      
+      <br>
+      
+      <h3> The <i>mouseover</i> Event</h3>
+      <p>The <i>mouseover</i> event fires at an element when the mouse is moved onto the element.</p>
+    <div id="wrapper">
+      <div id="block1">
+        <h1> Don't GiveUp</h1>
+        <img src="/storage/emulated/0/Download/you-have-come-this-far-dont-give-up-now-quote-1.jpg" id="img1"/>
+      
+      <div id="block2">
+        <h1>Keep Learning</h1>
+        <img src="/storage/emulated/0/Download/Slide204.jpg" id="img2"/>
+      </div>
+      </div>
+      </div>
+      <br>
+      <p id="did148">When you put your mouse over me my value will change.</p>
+      
+      <br>
+      <h3>The <i>keypress</i> Event</h3>
+      <p>The <i>keypress</i> event fires when the key is pressed</p>
+      
+    <textarea id="area" rows="3" cols="5"placeholder="Type your message here..."></textarea>
+    <p> The value is: <span id="did149"></span></p>
+    
+    <br>
+    
+    <h3>The <i>focus</i> Event</h3>
+    <p>The <i>focus </i> event fires when an element is foused</p>
+    <textarea id="area1" rows="3" placeholder="Type your message here..."></textarea>
+    
+    <br>
+    <br>
+    <h3>The <b>blur</b> Event</h3>
+    <p>The <i>blur</i> events fires when an element <i>lost focus</i>.</p>
+    <textarea id="area2" rows="3" placeholder="Type your message here..."></textarea>
+      <br>
+      <br>
+    <h3> The <b> resize </b> Event</h3>
+    <p>The <i>resize</i> event fires when the window is resized.</p>
+    <br>
+    <p>Window Width: <span id="winWidth"></span></p>
+    <p>Window Height: <span id="winHeight"></span></p>
+    <br>
+    <br>
+    <h1 id="JS_Math_Ob"> JavaScript <b>Math</b> Object</h1>
+    <br>
+    <p>The <i>Math</i> object, is a <i> built-in </i>JavaScript object.</p>
+    <br>
+    <p>The <i>Math</i> object contains <i>properties</i> and <i>methods</i> that allow us to do mathematical tasks.</p>
+    <br>
+    <h2>The <b>Math.ceil( )</b> Method</h2>
+    <p>The Math.ceil( ) method rounds up a number to the nearest whole number or integer.</p>
+    <br>
+    <p id="did150"></p>
+    <br>
+    
+    <h2>The <b>Math.floor( )</b> Method</h2>
+    <p>The Math.floor( ) method rounds down a member to the nearest whole number or interger.</p>
+    <br>
+    <p id="did151"></p>
+    
+    <br>
+    
+   <h2>The <b>Math.round( )</b> Method</h2>
+     <p>The Math.round( ) method rounds a number to the nearest whole neember or integer.</p>
+     <br>
+     <p id="did152"></p>
+     
+     <br>
+     
+     <h2>The <b>Math.sqrt( )</b> Method</h2>
+     <p>The Math.sqrt( ) method returns square root of a number.</p>
+     <br>
+     <p><em>The Math.sqrt( ) method returns <i>NaN</i> when the given number is negative </em>. </p>
+     <p id="did153"></p>
+     
+     <br>
+     
+     <h2>The <b>Math.cbrt( ) Method</b></h2>
+     <br>
+     <p>The Math.cbrt( ) method returns cube root of a number.</p>
+     <br>
+     <p id="did154"></p>
+     
+     <br>
+     <br>
+     
+      <h2>The <b>Math.abs( )</b> Method</h2>
+     <p>The Math.abs( ) method returns the absolute value of a number.</p>
+     <br>
+     <p id="did155"></p>
+     
+     <br>
+     <br>
+     
+     <h2>The <b>Math.max( )</b> Method</h2>
+     <p>The Math.max( ) method returns the largest number from a given array of numbers.</p>
+     <br>
+     <p id="did156"></p>
+     
+     <br>
+     <br>
+     
+     <h2>The <b>Math.min( )</b> Method</h2>
+     <p>The Math.min( ) method returns the smallest number from a given array of numbers.</p>
+     <br>
+     
+     <p id="did157"></p>
+    <br>
+    <br>
+    
+    <h2>The <b>Math.pow( )</b> Mothod</h2>
+    <br>
+    <p>The Math.pow( ) method returns the <i>base</i> to the <i>exponent</i> power.</p>
+    <br>
+    <p>It takes 2 (two) arguments: base, exponent. </p>
+    <br>
+    <p id="did158"></p>
+    
+    </section>
+    
+    <br>
+    <br>
+    
+    <section id="Js_Math_R">
+    <h1>JavaScript Math Random.</h1>
+    <p>In this lesson, you will learn how to generate a random number.</p>
+    <br>
+    
+    <h2>The <b>random( )</b> Method</h2>
+    <br>
+    
+    <p>The <i>Math.random( )</i> method returns random floating-point (number with decimal) between <i>0</i> (included) and <i>1</i> (excluded).</p>
+    <br>
+    <p id="did159"></p>
+    <br>
+    <br>
+    
+    <h2>Get Random Integer Between Two Numbers</h2>
+    <br>
+    <p>What if we need a random <i>integer</i> between two specific integer? Here is how.</p>
+    <br>
+    <!--minimum is included -->
+    <p>Between 1 to 9: <span id="did160"></span></p>
+    <br>
+  <div class="btn">
+    <button onclick="getRandomInt(1,10)">Click</button>
+  </div>
+<br>
+  <!--minimum is included -->
+  <p>In 6 degit: <span id="did161"></span></p>
+  <br>
+  <div class="btn">
+    <button onclick="getRandomInt1(100000, 999999)">Click</button>
+  </div>
+<br>
+ <p>To get a random number that also include the <span> maximum number</span>, use this function.</p>
+ <br>
+ <!-- minimum and maximum are included -->
+ <p>Between 1 to 10: <span id="did162"></span></p>
+ <br>
+ <div class="btn">
+    <button onclick="getRandomInt2(1,10)">Click</button>
+  </div>
+  
+  <br>
+  <p>Between 1 to 10: <span id="did163"></span></p>
+ <br>
+ <div class="btn">
+    <button onclick="getRandomInt3(1,20)">Click</button>
+  </div>
+  
+  </section>
+  <br>
+  <br>
+  
+  <section id="Js_if...else">
+<h1>Javascript <b>&nbsp;if...else&nbsp;</b> Statement</h1>
+    <br>
+    <p><span>Conditional statement are used to execute codes based on different condition.</span></p>
+    <br>
+    
+  <h2>The <b>&nbsp;if&nbsp;</b> Statement</h2>
+    <p>The <b> if </b> statement execute a block of code if the given condition is <b>true</b>.</p>
+    <br>
+    
+<pre><b><em>Syntax:</em></b>
+  if(condition) {
+    <!-- block of code to execute when the given condition is tree -->
+    }
+    </pre>
+    <br>
+    
+  <h2>The <b>&nbsp;if...else &nbsp;</b> Statement</h2>
+  <br>
+  <p>The <i>else</i> statement execute a block of code when the given condition to <i>if</i> is false.</p>
+  <br>
+<pre><b><em>Syntax:</em></b>
+  if(condition) {
+    <!-- block of code to execute when the given condition is true -->
+    }
+    else {
+    <!-- block of code to execute when the given condition is false -->
+    }
+    </pre>
+    <br>
+    
+    <form>
+      <label> How old are you?<input type="number" name="Age" id="Age"/> <div class="btn"><button type="button" id="submit">Submit</button></div></label>
+    </form>
+    <br>
+    
+    <h2>The <b>&nbsp;else...if&nbsp;</b> Statement</h2>
+    <p>The <i>else...if </i> statement executes a block of code if its <em>specified condition </em> is true and first condition is false.</p>
+    <br>
+    
+    <form>
+  <label>What's value of x?<input type="number" name="x" id="x"/> <div class="btn"><button type="button" id="submit1">Submit</button></div></label>
+    </form>
+    <p><span id="did164"></span></p>
+    <br>
+    
+    <p><span id="did165"></span></p>
+    <br>
+    
+    <p><span id="did166"></span></p>
+  
+    
+  </section>
+  <br>
+  <br>
+  
+  <section id="JS_Switch_St">
+    <h1>JavaScript <b>&nbsp;Switch&nbsp;</b> Statement</h1>
+    <br>
+    <p>Instead of writing multiple <i>if</i> statements, we can shorten with the <i>switch</i> statements. <em>But both work the same way.</em></p>
+    <br>
+<pre><span>Syntax:</span>
+  switch(expression){  
+case value1:  
+ code to be executed;  
+ break;  
+case value2:  
+ code to be executed;  
+ break;  
+......  
+  
+default:   
+ code to be executed if 
+ above values are not 
+ matched;  
+}  </pre>
+      <br>
+  
+  <p id="did167"></p>
+ <br>
+ 
+ <p id="did168"></p>
+ <br>
+ 
+ <p>The <span> switch </span> statement matches an expression against the specified <span> value</span> in the <span> case</span> clause.</p>
+ <br>
+ 
+ <p id="did169"></p>
+ <br>
+ 
+ <h2>The <span>default</span> Clause </h2>
+
+<p>The <i>default</i> clause is executed if the <i>expression</i> does not match any <i>case </i>.
+<br>
+Here is a simple example: </p>
+<br>
+ <p id="did170"></p>
+ <br>
+ 
+ <h2>Illustrative Example</h2>
+
+  <p>In this example, when the user choose from the dropdown menu the price of the selected fruit will be printed.
+<br><em>
+If a <i>fruit</i> is not available, the program will tell the user</em>.</p>
+ <label>Choose a fruit:
+ <select id="fruits" onchange="checkPrice()">
+   <option value="apple">apple</option>
+   <option value="mango">mango</option>
+   <option value="orange">orange</option>
+   <option value="cherry">cherry</option>
+   <option value="banana">banana</option>
+   <option value="strawberry">strawberry</option>
+   <option value="pineapple">pineapple</option>
+ </select>
+ </label>
+ <p><span id="did171"></span></p>
+    <br>
+    
+   <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></svg><b>Note!</b> The <span>switch</span> statement uses the <span>identity operator</span> to match the <i>expression</i> against the value of the <i>case</i> clauses.
+  </section>
+  <hr>
+  <br>
+  
+  <section id="Js_Foor-Loop">
+    <h1> JavaScript <b>&nbsp; for &nbsp;</b> Loop</h1>
+    <p>When programming, there are times that we need to run the <em>same statement</em> over and over again.</p>
+    <br>
+    
+    <p id="did172"></p>
+    <br>
+   <p><i>The code above can be shortened using the <b>for</b> loop</i>.</p>
+   <br>
+   <p id="did173"></p>
+   <br>
+   
+   <h2>What's a <span> for&nbsp;</span> Loop?</h2>
+   <p>A <i>for</i> loop executes statements <i>repeatedly</i> as long as the specified condition is met.</p>
+   <br>
+   <pre><b>Syntax:</b>
+   <p><span> for(initialExpression;
+   condition;
+   incrementEpression) {
+   statements or 
+   block of cod
+   }</span></p></pre>
+   
+   <p id="did174"></p>
+   <br>
+   <p>In the example above, the loop is initialized with <span>i = 0.</span>
+<br>
+Next, the <span>condition</span> is defined, and <span>i</span> must be less than <span>5</span> for the loop to continue to run.
+
+Then, the <span>i++ </span> increments the counter everytime the code blocks are executed.
+
+   <br>
+   
+   <p>The <i>for</i> loop is commonly used with arrays.</p>
+   <br>
+   <p id="did175"></p>
+    
+  </section>
+ <hr />
+ <br />
+ 
+ 
+ <section id="Js_For_Of_Loop">
+   <h1>JavaScript <b>for...of</b> Loop</h1>
+   <br />
+   <p>The <span>for...of</span> statement loops over <span>iterable objects</span>.
+<br>
+The most basic iterable objects are arrays and strings.
+<br>
+<span>Syntax:</span>
+<br>
+for (variable of iterable) {<br />
+<em>//statements or code blocks</em><br />
+}
+<br />
+<i>&nbsp;• <b>variable</b> on each iteration the value of the property is assigned to variable
+<br>
+&nbsp;• <b>iterable</b> the iterable object being iterated over
+</i>
+<br>
+<em>Here is an example of looping through the values of an array</em>:</p>
+<br>
+<script type="text/javascript" charset="utf-8">
+  var school =["Twinkle-1","Twinkle-2","Twinkle-3","Twinkle-4"];
+  for(value of school) {
+    document.write(value+"<br>");
+  };
+  
+  document.write("<br>");
+  var letters = "Amotur Rohim";
+  for(value of letters) {
+    document.write(value + "<br>")
+  };
+</script>
+<br>
+<p id="did176"></p>
+ </section>
+ <hr />
+<br>
+
+<section id="Js_While_Loop">
+  <br>
+  <h1>JavaScript <b>While</b> Loop</h1>
+  <p>The <span>while loop</span> executes statements as long as the given condition evaluates to  <span>true</span>.</p>
+  <br>
+  <p><span>syntax:</span><br>
+  <i>while(condition) {
+  <br>statements or code block
+  <br>}</i></p>
+  <br>
+  <p>♥ <b>condition</b> — the expression evaluated, if it evaluates to <b>true</b>, the code blocks are executed. If <b>false</b>, the loop stops
+  <br>
+♥ <b>statements</b> — the code blocks to be executed as long as the <b>condition</b> is <b>true</b>
+<br>
+Here is a basic example:</p>
+<br>
+<script>
+  var i = 0;
+ while(i < 3) {
+  document.write("<p> Hello World! </p>");i++;
+      }
+      document.write("<br>");
+  var v=0;
+  while(v<8) {
+    document.write("<p>Hello programmer!</p>");v++;
+  }
+   </script>
+   <br>
+   <p id="did177"></p>
+     <br>
+  <h2> Looping Over an Array Using <b> while</b> Loop</h2>
+  <p>To loop over an array, decalre a variable that holds the <b>lenght </b> of the <b> array</b>.</p>
+ <p>Then use it in the <b> condition</b>.</p>
+ <br>
+ <p id="did178"></p>
+ <br>
+ 
+ <h2><b>do...while</b> Loop</h2>
+ <p>The <i>do...while</i> loop executes statements until the test condition evaluates to false.
+<br>
+<span> Syntax:</span>
+<br>
+do { <br>
+// statements or code blocks } while(condition);
+<br>
+• <span>statements</span> - the code blocks executed and is re-executed each time the condition is <span> true</span>
+<br>
+• condition - the expression evaluated, if it evaluates to true, the code blocks re-execute. If false, the loop stops
+
+Here is a basic example:</p>
+
+  <br>
+   <p id="did179"></p>
+   <br>
+   
+   <h2> Looping Over An Array Using <b>do....while</b> Loop</h2>
+   <p>We can also use the <i>do.....while</i> loop to loop over an array.</p>
+   <br>
+   
+   <p id="did180"></p>
+</section>
+<br>
+
+<section id="JS_Br_Co">
+  <h1> JavaScript Break and Continue</h1>
+  <p>The <i>break</i> and <i>continue </i> statement are often used in <span> loops</span>.</p>
+  <br>
+  
+  <h2>The <span>break </span> Statement</h2>
+  <p>The <i>break</i> statement terminates the execution of the current loop.</p>
+  <p>After termination, The execution proceeds to the next statement following the loop. </p>
+  <br>
+  <p id="did181"></p>
+  <br>
+  
+  <p>As you may notice, instead of printing 10 numbers, only 5 numbers were printed.<br>
+It is because when i became equal to 5 the next iteration was stopped using the break statement.<br>
+After that, the program executed the following statement that printed the html string, instead of adding more strings to the html variable. </p>
+<h2>The <i>continue </i> Statement </h2>
+<p>The continue statement terminates execution of the statements in the current iteration of the current loop. <br>
+And continues the execution of the loop with the next iteration.</p> <br>
+<p id="did182"></p>
+<br>
+ <p>As you may notice, in the example above, only "Number 5" was missing. <br>
+It is because the continue statement terminated the execution of the current iteration when i became equal to 5.<br>
+After that, the program continued the execution of the next iteration.</p>
+</section>
+<br>
+
+ <section id=JS_TimeOut/Interval>
+   <h1>JavaScript Timeout and Interval</h1>
+   <p>JavaScript allows us to execute codes at specified time intervals. <br>
+This is useful when you want to delay executing a piece of code or repeatedly run the same code.
+<h2>JavaScript Timeout </h2>
+The <i>setTimeout() </i> method sets a timer which executes a function once the timer expires. <br>
+<br>
+
+<b>Syntax: </b><br>
+<span style="color:#FF2900">var</span> <span style="color:#FFC428; font-weight: 360"> timeoutID </span>= setTimeout(<span style="color:#FF2400;font-weight: 360">function</span>( ) { <br>
+<span style="color:gray;font-weight: 360">// codes</span><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;}, delay);
+<br>
+<br>
+function - will be executed when the timer expires <br>
+
+delay the time in milliseconds, 1 the timer should wait before executing the function
+<br>
+In this example, a pop-up dialog will be shown after 3 seconds (3000 milliseconds).</p>
+<br>
+<p>That can also be sperated the function</p>
+<br>
+   
+      <p id="did183"></p>
+      <br>
+   <script type="text/javascript" charset="utf-8">
+     var timeOut=setTimeout(function() {
+       ////alert("Sorry for late to pop up!")
+    }, 14000);
+
+var text10 = "Hello world!";
+ function myFunc1() {
+  document.getElementById("did183").innerHTML = text10;
+ }
+ var myTimeOut = setTimeout(myFunc1, 8000);
+ 
+   </script>
+   <br>
+   <button> <a href="https://m.me/zobihullah14" id="did184"></a></button>
+   
+<script type="text/javascript" charset="utf-8">
+var button = "Tell Us";
+  function myFunc2() {
+    document.getElementById("did184").innerHTML = button;
+  }
+  var myTimeout1 = setTimeout(myFunc2, 9000);
+  
+</script>
+
+<h1>Canceling a Tmeout</h1>
+ <p>The <i>clearTimeout()</i> method cancel timeOut function specified by <i>setTimeout()</i> methods. Simply specify the timeoutID() of the timeout you want. </p>
+ <br>
+ 
+ <p id="msg">Click the button before 15 seconds to stop pop-up dialog from showing.</p>
+ <button onclick="cancelTimeout()">Cancel Timeout</button>
+ <script type="text/javascript" charset="utf-8">
+   var myTimeout2= setTimeout(function() {
+   ////alert('JavaScript Timeout Function');
+   }, 15000);
+   
+   function cancelTimeout() {
+     clearTimeout(myTimeout2);
+     document.getElementById("msg").innerHTML="<b>Mytimeout</b> has been canceled, the pop-up dialog will not be shown."
+   };
+ </script>
+ <br>
+ <h2>JavaScript Interval </h2>
+ <p>The <i>dtInterval()</i> method rpeatedly called a function.</p>
+ <span>syntax:</span>
+ <p><span style="color:#FF0094">var </span> <span style="color:#FFAC00">intervalID</span>= setInterval(<span style="color:#FF0094">function</span>() { <br>
+ }, dalay);</p>
+ <br>
+<p id="did186">1</p>
+<br>
+<p id="did187">0</p>
+ 
+ <script type="text/javascript" charset="utf-8">
+   var xy = 0;
+   var intervalID = setInterval(function() {
+       xy += 1;
+   
+   document.getElementById("did186").innerHTML= xy;},1000);
+
+var xy1 = 0;
+
+var intervalID1 = setInterval(function() {
+  xy1 += 1;
+   
+
+  document.getElementById("did187").innerHTML=xy1;
+},60000);
+ </script>
+ 
+ </section>
+    
+    <br>
+    <h2>Stopping an Interval</h2>
+      <p>The  <i>clearInterval()</i> method <span>stop</span> a timed function specified by the  <i>setInterval()</i> method.
+Simply specify the intervalID of the interval you want to stop.
+In this example, myInterval will be stopped when you press the button.
+</p>
+<br>
+<p id="did188">10</p>
+<button type="button" onclick="stopInterval()">Stop Interval</button>
+  <script type="text/javascript" charset="utf-8">
+        var xy2 = 10;
+    var myInterval1 = setInterval(function() {
+    xy2+=1;
+    document.getElementById("did188").innerHTML=xy2;
+    }, 1000);
+    function stopInterval() {
+      clearInterval(myInterval1);
+    };
+      </script>
+    <br>
+    <section id="JS_Bit_Operator">
+      <h1>JavaScript Bitwise Operator</h1>
+      <p>Bitwise operators treat their rperands as a sequense of 32 bit (zeros and ones ), rather than as numbers. 
+      <br> 
+      For example, the decimal number 5 h a binary represention of 101. 
+      <br>
+      Bitwise operators return numerrical values.</p>
+      <br>
+      <h2>Bitwise AND (&) Operator</h2>
+      <p>Perform the AND operator on each pair of bits. It returns 1 only of both a and b are 1.</p>
+      <br>
+      <p id="did189"></p>
+      <br>
+      
+      <h2>Bitwise OR ( | ) Operator</h2>
+      <p>Performe the OR operation on each pair of bits. <br>
+      It returns 1 if either a and b is 1.</p>
+      <br>
+      <p id="did190"></p> 
+      <br>
+  
+  <h2>Bitwise XOR ( ^ ) Operator</h2>
+  <p>Performs the XOR operation on each pair of bits. <br> It returns 1 if either a and b is different.</p>
+  <br>
+  <p id="did191"></p>
+  <br> 
+  
+  <h2>Bitwise NOT ( ~ ) Operator</h2>
+       <p> Performs NOT operation of each bit. </p>
+   <p>NOT a yields the inverted value.</p>
+   
+   <br>
+   <p id="did192"></p>
+       
+       
+      <script type="text/javascript" charset="utf-8">
+        var num21 = 0 & 0; //return 0
+        var num22 = 1 & 1; //return 1 
+        var num23 = 1 & 0; //return 0 
+        var num24 = 0 & 1; //return 0
+    
+    document.getElementById("did189").innerHTML = 
+    num21 +"<br>"+ num22 +"<br>"+ num23 +"<br>"+num24;
+        
+        var num25 = 0 | 0;//return 0
+        var num26 = 1 | 0;//return 1
+        var num27 = 0 | 1;//return 1
+        var num28 = 1 | 1;//return 1
+        
+  document.getElementById("did190").innerHTML = num25 + "<br>" + num26 +"<br>"+ num27 +"<br>"+ num28;
+        
+        var num29 = 0 ^ 0; //return 0
+        var num30 = 1 ^ 1; //return 0 
+        var num31 = 1 ^ 0; //return 1 
+        var num32 = 0 ^ 1; //return 1
+      
+      document.getElementById("did191").innerHTML = num29 + "<br>" + num30 +"<br>"+ num31 +"<br>"+ num31;
+    
+    
+    var num33 = ~0; //returns -1
+    var num34 = ~1; //returns -2
+    
+    document.getElementById("did192").innerHTML = num33 + "<br>"+ num34;
+      </script>
+    </section>
+      <br>
+      
+      <section id="JS_Reg_Ex">
+    <h1>JavaScript Regular Expression</h1>
+    <p>Regular expressions are patterns used to match character combinations in strings.</p>
+      <p>Regular expressions are commonly used to search or replace a pice of text from a string</p>
+      <br> 
+      <h2>Creating a Regular Expression</h2>
+      <p>To create a regular expression, follow this syntax:</p>
+      <p> <span style="color:#ff2900">var </span> pattern = /pettern/modifier;
+    <br>
+    <span>Example:</span>
+    <br>
+   <b> var pattern = /codeliber/gi;</b>
+    </p>
+  <p>The pattern is enclosed by <i>slashes</i>. <br> The modigier are optional.<br> Another way og creating a regular expression is by using the <i>RegExp</i> class. <br>
+      
+  <span>syntax:</span><br>
+  var pattern = new RegExp('pattern','modifier');
+  <b>Example:</b><br>
+  var pattern = new RegExp('codeliber','gi');
+  </p>
+  <br>
+  <p>Simply enclosed the pattern and modifier by quotation marks. </p>
+  <h2>When Do We Use Regular Expression?</h2>
+  <p>In JavaScript, regular expressions are commonly used when searching and replacing text from astring.
+  <br>
+  Thus, they ae commonly used with the search( ) and replace( ) and similar methods.</p>
+  <h2>Using Regular Expression with search( )</h2>
+  <p>The search( ) method returns the index of the first occurence of text in a string. <br>
+  It is case-sensitive. <br>
+  It return -1 if no match is found.</p>
+  <script type="text/javascript" charset="utf-8">
+    var text11 = "I love coding.";
+    var search = text11.search("coding");
+    document.write(search,"<br>");
+    document.write("Now here is an example of regular expression.<br>");
+    var search = text11.search(/cOdInG/i);
+    console.log(search);
+    document.write(search,"<br>");
+    var text12 = "In the example above we used the <b>i </b> modifier which makes the search( ) case-sensitive. ";
+    document.write(text12);
+  </script>
+  <br>
+  <h2>Using Regular Expression with replace( )</h2>
+  <p>The replace( ) method replaces specific text inside a string and returns a new string. It is <b>case-sensitive</b>.</p>
+  <script type="text/javascript" charset="utf-8">
+    var text13 = "JavaScript is fun I love JavaScript.<br>";
+    document.write(text13);
+    var replace = text13.replace("JavaScript","Programming");
+    document.write(replace);
+    document.write('<br>Notice that only the first occurence of "JavaScript" was replaced. <br> To replace all occurence use a regular expression with <i>g</i> modifier.');
+    var replace = text13.replace(/JavaScript/g,"Programming");
+    document.write("<br>",replace);
+    document.write("<br> We can also combine <b>g</b> and <b>i</b> in a single regular expression.");
+    var replace = text13.replace(/jaVascRiPt/gi,"Programming");
+    document.write("<br>",replace);
+  </script>
+      </section>
+  <section id="JS_Exception_Handle">
+    <h1>JavaScript Exception Handling Statement</h1>
+    <h2>JavaScript Exception Handling</h2>
+    <p>While programming with JavaScript, you may encounter different types of errrors.</p>
+    <br>
+    <h2>What is an excption?</h2>
+    <p>In JavaScript an exception is thrown ( genereted ) whenever an error occurs.
+    <br>
+    An exception can be an string, number, boolean, or an object. </p>
+    <h2>Catching an Exception</h2>
+    <p>In real life, when somone throws a ball, we can catch it.<br>
+    Also, when JavaScript throws an exception, we can catch it. <br>
+    We can do so by using the <b>try . . . catch</b> statement.</p>
+  <h1>The try .... catch Statement</h1>
+  <p>the try statement takes a block of statement to test.</p>
+  <p>The catch statement specifies one or more responses when an exception is thrown.</p>
+  <span style="color:#fa2a0b">syntax:</span>
+  <p><span style="color:#FF00F2"> try</span> <i>{</i><br>
+  // block of statements to test <br>
+   <i>}</i><br>
+   <span style="color:#FF00F2"> catch(errorVariable)</span> <i>{</i> <br>
+   // code to run when an exception is thrown. <br><i>}</i></p>
+   <br>
+   <p>The errorVariable holds the value of exception.</p>
+   <br>
+   <p> In this example, the following <b>exception</b> is thrown because <b>myFunction()</b> is not defined. </p>
+   <p id="did193"></p>
+  <br>
+  <h2>The throw Statement</h2>
+  <p>The throw statement allows us to throw our custom exceptions.
+  <br>
+  We may throw different types of expressions.
+  <br>
+  This example throws different types of exceptions.</p>
+  <p><span style="color:#FF0058">throw </span> <span style="color:#FFCE00">"Error occurred!"; </span> <span style="color:#5C5C5C"> // a string</span>
+   <br>
+   <span style="color:#ff0058">throw</span> <span style="color:#9B00FF">21;</span><span style="color:#5C5C5C"> // a numbers </span> 
+   <br>
+   <span style="color:#FF0058">throw </span> <span style="color:#9B00FF">false; </span> <span style="color:#5C5C5C"> // a Boolean</span> 
+   <br>
+   <span style="color:#ff0058">throw</span> { <span style="color:#FFCE00">errorText: </span><span style="color:#80FF00"> "Error occurred!" </span>}; <span style="color:#5C5C5C"> // an object</span>
+   </p>
+   <br>
+   <p>Here is an example of using with the <i> try .... catch</i> statement.</p>
+   <p id="did194"></p>
+   <br>
+   <h2>The finally Statement </h2>
+  <p>The finally statement executes a block of code after the try and catch statements.
+  <br>the finally statement will execute whether or not an exception is thrown.</p>
+  <p id="did195"></p>
+  <p id="did196"></p>
+  <br>
+  <h2>Illustrative Exampla</h2>
+  <p>In this example, if the user is below 18 an exxeption will be thrown.</p>
+  
+  <form>
+    <label >Age: <input type="number" id="age2"/></label>
+    <button type="submit" id="submit2">Submit</button>
+  </form>
+  <p id="did197"></p>
+  
+  <script type="text/javascript" charset="utf-8">
+    try {
+      myFunction()
+    } catch(err) {
+      document.getElementById("did193").innerHTML = err;
+    };
+    
+    try {
+      throw "Something went wrong, please fix it!"
+    }
+    catch(err) {
+      document.getElementById("did194").innerHTML= err;
+    };
+    
+    try {
+      throw "<br>Something went wrong, please fix it!"
+    } 
+    catch(err) {
+      document.getElementById("did195").innerHTML= err;
+    }
+    finally {
+      document.getElementById("did196").innerHTML="<br>Hello I'm the finally statement!";
+    };
+    
+    var submit2 = document.getElementById("submit2");
+   submit2.onclick = function() {
+      var age2 = parseInt(document.getElementById("age2").value);
+      try {
+        if(age2 <18) {
+          throw "The user must be 18 or above to enter.";
+       } else {
+         document.getElementById("did197").innerHTML = "The user is 18 or above."
+         }
+      }
+      catch(err) {
+        document.getElementById("did197").innerHTML = err;
+      }
+    };
+  </script>
+  <br>
+  <h2>Error objects</h2>
+  <p>Error objects are thrown when runtimw err occur, <br> 
+  The following are the different types of error.</p>
+  <table border="1px">
+    <thead id="flip">
+      <th style="color:#008FFF; font-size:1.5em; width:30%">Error Name</th>
+      <th style="color:#008FFF ;  font-size:1.5em">Error Description</th>
+    </thead>
+    <tbody id="panel">
+      <tr>
+        <td>RangeError</td>
+        <td>Error that occurs when a numeric variable or parameter is otside of its valid</td>
+      </tr>
+      <tr>
+        <td>ReferenceError</td>
+        <td>Error that occours when de-referencing an invalid reference</td>
+      </tr>
+      <tr>
+        <td>SyntaxError</td>
+        <td>Error that occurs when parsing code in eval( ) method.</td>
+      </tr>
+      <tr>
+        <td>TypeError</td>
+        <td>error that occurs when a variable or parameter is not a valid type.</td>
+      </tr>
+      <tr>
+        <td>URIError </td>
+        <td>Error htat occurs when encodeURI( ) or decodeURI( ) passed invalid paraneters.</td>
+      </tr>
+    </tbody>
+    
+  </table>
+  
+  <br />
+  <p>All the mentioned obeject above cotains the follwing properties:</p>
+  <table border="2px">
+    <thead>
+      <th style="color:#008FFF ;  font-size:1.5em">property </th>
+      <th style="color:#008FFF ;  font-size:1.5em">Desctiption</th>
+    </thead>
+    <tr>
+      <td>name:</td>
+      <td>Returns the error name.</td>
+    </tr>
+    <tr>
+      <td>message:</td>
+      <td>Returns the error message.</td>
+    </tr>
+  </table>
+  <h2>RangeError</h2>
+  <p>The RangeError is thrown a numeric variable or parameter is outside of its valid range.
+  <br>
+  For example, the toExponential( ) method only takes a number argument in the range between <i> 0 and 100</i> , if we give it a value outside of that range it will throw an exception.</p>
+  <br>
+  <p> Name: <span id="did198"></span></p>
+  <p>Message: <span id="did199"></span></p>
+  <br>
+  
+  <h2>ReferenceError</h2>
+  <p>The ReferenceError is thrown when de-referencing an invalid reference.
+  <br>
+  For example, since num35 variable does not exist, an wxception thrown.</p>
+  <br>
+  <p> Name: <span id="did200"></span></p>
+  <p>Message: <span id="did201"></span></p>
+  <h2>SyntaxError</h2>
+  <p>The syntaxError is thrown while parsing code eval( ) method. 
+  <br>
+  For example, since string below is not enclosed by quotes, an excepton is thrown.</p>
+  <br>
+  <p> Name: <span id="did202"></span></p>
+  <p>Message: <span id="did203"></span></p>
+  <br>
+  <h2>TypeError</h2>
+  <p>The TypeError is thrown when a variable or parameter is not a valid type.
+  <br>
+  For example, the toFixed( ) method can only be used on a number but we will used it on a string. <br>
+  Because of that, a exception will be thrown.</p>
+  <br>
+  
+  <p> Name: <span id="did204"></span></p>
+  <p>Message: <span id="did205"></span></p>
+  <br>
+  <h2>URIError</h2>
+  <p>The URIError is thrown when encodeURI( ) or decodeURI( ) are passed invalid parameters. <br />
+  For example, when we provide an invalid character sequence ( malformed URI) to the decoddeURI( ) method, an exception will be thrown.</p>
+  <br>
+  <p> Name: <span id="did206"></span></p>
+  <p>Message: <span id="did207"></span></p>
+  
+  
+  
+  <script type="text/javascript" charset="utf-8">
+    var number = 2.1;
+    try {
+      number.toExponential(-2);
+    } catch(err) {
+      document.getElementById("did198").innerHTML = err.name;
+      document.getElementById("did199").innerHTML = err.message;
+    };
+    
+    var num35 = 10;
+    try {
+     var total = num35 + num36;
+    } catch(err) {
+      document.getElementById("did200").innerHTML = err.name;
+      document.getElementById("did201").innerHTML = err.message;
+    };
+    
+    try {
+      eval("document.getElementById('Hello World)"); //must be 'Hello World' to avoid error.
+    }
+    catch(err) {
+      document.getElementById("did202").innerHTML = err.name;
+      document.getElementById("did203").innerHTML = err.message;
+    };
+    
+    var str16 = "Hello world!";
+    try {
+      var x = str16.toFixed(3)
+    }
+    catch(err) {
+      document.getElementById("did204").innerHTML = err.name;
+      document.getElementById("did205").innerHTML = err.message;
+    };
+    
+    try {
+      var text14 = decodeURI("%EO%A4%A")
+    }
+    catch(err) {
+      document.getElementById("did206").innerHTML = err.name;
+      document.getElementById("did207").innerHTML = err.message;
+    } 
+    finally {
+      document.write(text14);
+    };
+  </script>
+  </section>
+      
+      <section id="JS_Var_Scope">
+        <h1>JavaScipt Variable Scope</h1>
+        <p>The accesiblity of variable is defined by their scope. <br>
+        In JavaScript there are 2 variable scopes:
+        <br>
+        <ol><li>Globle Scope</li>
+        <li>Local Scope</li></ol></p>
+        <br>
+        <h2>Globle Variable Scope</h2>
+    <p>Any variable that is declared outside of a function has a global scope. <br>
+  A global variable can be accessed by all functions and scropt in a document.</p>
+ <br>
+ <pre id="did208">
+   var fruitv ="mango";
+  // fruitv can be used here 
+  function myFunc3( ) {
+  // fruitv can be ysed here 
+  document.getElementById
+  ("did208").innerHTML = fruitv;
+  };
+  <button onclick="myFunc3();">Try It Yourself</button>
+  </pre>
+  <br>
+  <p>Also any variable that is initialized or has been assigned a value inside a function without being declared first will be global.</p>
+  <p>For example:</p>
+  <pre>
+  myFunc4(); 
+  // call the function first
+  // fruit1 can be used here 
+  document.getElementById
+  ("did209).innerHTML = 
+  "I Love" + fruit1;
+  function myFunc4( ) {
+  fruit1 = "mango";
+  //alert(fruit1);
+  //fruit1 can be used here 
+  }
+</pre>
+<button onclick="myFunc4();">Try It Yourself</button>
+<p id="did209"></p> 
+ <br>
+ <h2>Local Variables</h2>
+  <p>Any variable that is declared inside a fnction has a local scope. <br> 
+  A local variable can be only accessed by the function where it was declared.</p>
+  <br>
+<button onclick="myFunc5();">try it Yourself</button>
+   <p id="did210"> My id is <b>did210</b>. The <b>fruit</b> variable will not be printed here.</p>
+   <br>
+  <h2>JavaScript Function</h2>
+  
+  <p>Functions are also variables, therefore the rules mentioned above also apply to function. </p>
+  <h3>A global Function</h3>
+  <p>&lt;button onclick &#61; &quot;myFunc6&#40; &#41;&#59;&gt; Call myFunc6 &lt;&#47;button&gt;</p>
+  <pre>function myFunc6() {
+  document.getElementById
+  ().innerHTML="Hello";
+  } // myFunc6() can be used here
+  function myFunc7() {
+  // myFunc6() can be used here 
+  myFunc6();
+  document.getElementById().
+  innerHTML += "World";
+  };
+  </pre>
+  <button onclick="myFunc7();">call myFunc6</button>
+  <p id="did211"></p>
+  
+  <br>
+  <h2>A Local Function</h2>
+  <p>Example:</p>
+  <button onclick="myFunc8();">call myFunc8() </button>
+  <p id="did212"></p>
+  
+  
+  
+  <script type="text/javascript" charset="utf-8">
+  var fruitv ="pineapple";
+  // fruitv can be used here 
+  function myFunc3() {
+  // fruitv can be ysed here 
+  document.getElementById("did208").innerHTML = fruitv;
+  }; 
+  
+  myFunc4(); // call the function first
+  // fruit1 can be used here 
+  document.getElementById("did209").innerHTML = "I Love " + fruit1;
+  function myFunc4() {
+fruit1 = "strawberry";
+//alert(fruit1);
+//fruit1 can be used here
+};
+
+// fruit2 can't be used here 
+document.getElementById("did210").innerHTML = fruit2;
+
+function myFunc5() {
+  var fruit2 = "mango";
+  //alert(fruit2);
+};
+
+function myFunc6() {
+  document.getElementById("did211").innerHTML = "Hello ";
+} // myFunc6 can be used here 
+function myFunc7() {
+  // myFunc6() can be used here 
+  myFunc6(); 
+  document.getElementById("did211").innerHTML += "World!";
+};
+
+// getSum() can not be used here
+function myFunc8() {
+  function getSun(x, y) {
+    return x + y;
+  }
+  document.getElementById("did212").innerHTML = "the sum of 5 and 3 is: " + getSun(5, 3);
+};
+  </script>
+      </section>
+      
+      <br>
+      <section id="JS_Var_Hoisting">
+        <h1>JavaScript Variable hoisting</h1>
+      <p>In JavaScript <b>hoisting</b> is default behavior of declaring a variable to the top.</p> 
+      <p>Variable declaration are always executed first before any code is executef in the current scope.</p>
+      <p><b>For example:</b></p>
+      <p id="did213"></p>
+      <br>
+      
+      <p>Although, the var book declaration is at the bottom of the code, it was still execute first. <br>
+      This behavior called hoisting.</p>
+    <p>The example above equivalent to this:</p>
+      <p id="did214"></p>
+      <h2>Variable Initialized Are Not Hoisted</h2>
+      <p>In javascript, variable initializations are NOT hoisted, only declaraion are hoisted. </p>
+      <p style="background:#0E0C10; text-align:center"><b><span>Tip:</span> When you assign avalue to a variable it is called initialization.</b></p>
+      <p>This example will work as expected because the book2 was initialized first before being used.</p>
+      <p id="did215"></p>
+      <br>
+      <p>This example will not work as expected because the book3 was used first before being initialized:</p>
+      <p id="did216"></p>
+      <br>
+      
+      <h2>Recommended: Declare Variables at the Top</h2>
+      <p><b>Although hoisting is a good feature of JavaScript. <br>
+      It is still always recommended to declare your variables at the top the scope. <br>
+      This will maintain the readablity of your code and can avoid errors.</b></p>
+      
+      <script type="text/javascript" charset="utf-8">
+        book = "Math";
+        document.getElementById("did213").innerHTML = book;
+        var book;
+        
+    var book1;
+    book1 = "Burmese";
+    document.getElementById("did214").innerHTML = book1;
+        
+    var book2; // declares book2
+    book2 =" English"; // initializes
+    document.getElementById("did215").innerHTML = book2;
+    
+    var book3; // declares book3
+    document.getElementById("did216").innerHTML = book3;
+    book3 = "Physice"; // initializes
+      </script>
+      </section>
+      
+      
+      <section id="JS_Strict_Mode">
+        <h1>JavaScript Strict Mode</h1>
+        
+    <p>JavaScript Strict Mode was introduse in ECMAScript 5.</p>
+    <h2>Invoking Strict Mode</h2>
+    <p>To invoke or start strict mode, put the exact statement <b>"use strict"</b> at the top of the script.</p>
+    <p style="color:#FFCF00">"use strict" <br>
+    <span style="color:#FF0011">var </span> <span style="color:white">text15</span> <span style="color:#FF00CD"> &#61; </span> <span style="color:#FFCF00">&quot;Hello, this variable is in strict mode script&#46;&quot;</span></p>
+    <br>
+    <p>To invoke strict mode in a function, put the <b>"use strict"</b> at the top of the function.</p> 
+    <br>
+    <p>function myFunc9() {<br>
+      "use strict"; // used strict mode  remove and try it. <br>
+       text16 = "This variable is in a strict mode function!"; // causes an error because the variable not defined. <br>
+       document.write(text16); <br>
+    } <br>
+   myFunc9();</p>
+    <br>
+    <h2>Variables in Strict Mode</h2>
+    <p>Undeclared variables in strict mode cause an error.</p>
+    <br>
+    <p>&quot;use strict&quot;; <br>
+    fruit3 = "apple"; // initialized but NOT declared <br>
+    document.write(fruit3);</p>
+    <br>
+    <p><i>The error report can be seen by desktop/ laptop browser's developer console. <br>
+    The developer console can be accessed by pressing the <b>F12</b> key. <br>
+    However, we can also see the error on a mobile device (this device) using the <u style="color:gray">try...catch</u> statement.</i></p>
+    
+    
+          <script type="text/javascript" charset="utf-8">
+      
+        "use strict";
+    var text15 = "Hello, this variable is in strict mode script.";
+        console.log(text15);
+    
+     function myFunc9() {
+       "use strict"; // used strict mode  remove and try it.
+        text16 = "This variable is in a strict mode function!"; // causes an erro   because the variable not defined.
+        document.write(text16);
+     };
+    myFunc9();
+   
+   </script>
+   <script>
+   "use strict";
+   try {
+  fruit4 = "apple";
+  document.write(fruit4);
+   }
+   catch(err) {
+     document.write(err);
+   };
+      </script>
+   <p><b>Undeclared variables in a strict mode function will only cause error in that function scope, not outside.</b></p>
+   <br>
+   <p><b>We can see the error by calling myfunc10() function inside the <i>try...catch </i> statement.</b></p>
+   <br>
+   <p>myVariable = "Hello world"; // does not cause error. <br>function myfunc10() { <br> "use strict"; <br> fruit5 = "guava"; // causes an error <br> //alert(fruit5); } <br> try { <br> myfunc10(); <br> } <br> catch(err) {<br> document.write(err); </p>
+      
+      <script>
+        myVariable = "Hello world"; // does not cause an error
+        function myfunc10() {
+          "use strict";
+          fruit5 = "guava"; // cause an error
+          //alert(fruit5);
+        }
+        try {
+          myfunc10();
+        } 
+        catch(err) {
+          document.write('<br>'+err);
+        };
+      </script>
+      
+      <h2>Other Strict Mode Restriction</h2>
+      <p><span>Strict mode requires function parameters names be unique.</span></p>
+      <br>
+      <p>The example below will throw a syntax error.</p>
+      
+      <script>
+        function bvb(x,x,y) { // cause syntax error 
+          "use strict";
+          //alert(x+x+y);
+        };
+    </script>
+    <p><b>In strict mode, a leading zero will cause an error.</b></p>
+    <p>The example below will throw a syntax error.</p>
+    
+    <script>
+    "use strict";
+      var num0 = 04 + 7;
+      //alert(num0);
+    </script>
+      </section>
+      
+  <section id="JS_let_Statement">
+    <h1>JavaScript <i>let</i> Statement </h1>
+    <p>The let statement declares variables that are limited to the scope of a block statement. <br>
+    A block statements enclosed curly bracket {}.</p>
+    
+    <script>
+      {
+        let myVar = "Hello";
+        // myVar can be used Here
+      };
+      // myVar can NOT be used here
+      
+    </script>
+    
+    <h2>Scoping Rules</h2>
+    <p>To better understand, compare <i>var</i> and <i>let</i> when they are used in a function.
+    <br>
+    The scope of a <i>var</i> variable is the entire function. <br>
+    The scope of a <i>let</i> variable is the block where it was defined.</p>
+    <p>For example:</p>
+    <button onclick="myFunc11();">call myFunc11();</button>
+    <p id="did217"></p>
+    <p id="did219"></p>
+    <button onclick="myFunc12();">call myFunc12();</button>
+     <p id="did218"></p>
+     <p id="did220"></p>
+     
+     
+     
+     <script>
+       function myFunc11() {
+         var x = 3;
+         {
+           var x = 4;
+           document.getElementById("did217").innerHTML = x + "<br>";
+         }
+         document.getElementById("did219").innerHTML = x;
+       };
+       
+       function myFunc12() {
+         let x = 6;
+         {
+           let x = 7;
+           document.getElementById("did218").innerHTML = x + "<br>";
+         }
+         document.getElementById("did220").innerHTML = x;
+       };
+     </script>
+    
+    <h2>Using <span>let</span> in a Loop</h2>
+    <p>Using let in a loop makes sure that you don't redeclare any variable outside the loop.</p>
+    <br>
+    <p>In this example num variable is redeclared.</p>
+    <script>
+      var num = 10; 
+      for(var num = 0; num < 15; num++) {
+        // block of code 
+      }
+      // num is 15 here
+      document.write(num);
+    </script>
+    <br>
+    <p>In this example, the variable is NOT redeclared.</p>
+    
+    <script type="text/javascript" charset="utf-8">
+      var num = 10;
+      for(let num = 0; num < 15; num++) {
+        // block of code
+      }
+      // num is 10 here
+      document.write(num);
+    </script>
+    <p><span style="background:#45235D; color:#00FFEC">Using let in loop is a good practice as it does NOT mess with your other variables.</span></p>
+    <br>
+    
+    <h2>Window Object Properties for Variables</h2>
+    <p>The var statement creates aproperty for the window object. <br>
+    The window object is a global object contains the properties of the docment.</p>
+    <br>
+    <p>In this example, the fruit variable can be accessed using window.fruit6</p>
+    <p>var fruit6 = "orange"; <br>
+    document.getElementById("did221").innerHTML = window.fruit6;<br>
+    </p>
+    <p id="did221"></p>
+    <script>
+      var fruit6 = "orange";
+      document.getElementById("did221").innerHTML = "output: " + window.fruit6;
+    </script>
+<br>
+    <p> On the other hand, the let statement does NOT create a property for the wondow object. <br> 
+    In this example, the fruit7 variable can NOT be accessed using window.fruit7.</p>
+    <br>
+    <p>
+      let fruit7 = "banana"; <br>
+      document.getElementById("").innerHTML = window.fruit7;
+    </p>
+    <p id="did222"></p>
+    <script>
+      let fruit7 = "banana";
+      document.getElementById("did222").innerHTML = "output: " + window.fruit7;
+    </script>
+    
+    <h2><b>let </b> Hoisting</h2>
+    <p>Variables declared with the let statement are not hoisted to the top.</p>
+    <p>
+      fruit8 = "apple"; <br>
+      document.write(fruit8); // fruit8 can not be used here <br>
+      let fruit8; // replace let with var to see the differance
+    </p>
+  </section>
+  
+  <section id="JS_const_Statement">
+<h1>JavaScript const Statement</h1>
+<p>The const statement is another way to declare Variables.<br>
+The <span>let</span> and <span>const</span> statements behave the same way.</p>
+<br>
+<p>The only defferance are the following:
+<br>
+The const statement variable declare using <b>const</b> statement can NOT be redeclared and reassigned. <br>
+For example, reassigning a const variable will throw an error.</p>
+  <br>
+  <p>try { const x = 5; x = 10; // throws an error } catch(err) { document.write(err); };</p>
+  
+  
+  <script>
+    try { const x = 5;
+    x = 10; // throws an error
+    } catch(err) { document.write(err); };
+  </script>
+  
+  <br>
+  <br>
+  <p>redeclaring also not work: <br>
+  <b>const x= 5; <br>
+  const x = 10; // this wil fail <br>
+  const x = 5; <br>
+  var x = 10; // this will fail</b></p>
+  
+  
+  </section>
+  
+  <section id="JS_Date">
+    <h1>JavaScript Date</h1>
+    <p>The Date object allows us to work with dates.</p>
+    <h2>The Date() Constructor</h2>
+    <p>The new Date() constructor returns a Date object.</p>
+    <h3>There are 4 basic form of the Date constructor:</h3>
+    
+    <li>new Date()</li>
+    <li>new Date(milliseconds)</li>
+    <li>new Date(dateString)</li>
+    <li>new Date(year, monthIndex, day, hours, minutes, seconds, millisecods)</li>
+    
+    <h2>new Date()</h2>
+    <p>new Date() creates a date object representing the current date and time.</p>
+    <span>var date = new Date();</span>
+    
+    <script>
+      var date = new Date();
+      document.write( " <br> <b>" + date +"</b>");
+    </script>
+    <br>
+    <h2>new Date(milliseconds)</h2>
+    <p>new Date(milliseconds) creates a date object representing the Date milliseconds since January 1, 1970.</p>
+    <p><em>For example, the date below is equivalent to 86,400,000 milliseconds(1day) since January 1, 1970,</em></p>
+    <span>var date = new Date(864000000);</span>
+    <br>
+    
+    <script>
+      var date = new Date(864000000);
+      document.write("<b>"+date+"</b>")
+    </script>
+    <br>
+    <h4>The date strings will be discussed further in the next lesson.</h4>
+    <br />
+    <h4>new Date(year, monthIndex, . . . ) </h4>
+    <p>The new Date(year, monthIndex, ...) creates date object from 7 parameters.</p>
+    <ul>
+      <li>Year <s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s> Integer representing the year</li>
+      <li>monthIndex <s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s> Integer representing the month 0 is January 11 is December</li>
+      <li>Day <s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s> Integer representing the day default is 1</li>
+      <li>Hours <s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s> Integer representing the hours of the day, default is 0 (midnight)</li>
+      <li>Minutes <s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s> Integer representing the minutes, default is 0</li>
+      <li>Seconds <s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s> Integer representing the Milliseconds, default is 0</li>
+      <li>Milliseconds <s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s> Integer representing the Milliseconds, default is 0</li>
+      
+    </ul>
+    <br>
+    <p><i>All this parameters are optional.</i></p>
+    <br>
+    <p>7 parameters specify years, monthIndex, day, hours, seconds and milliseconds.</p>
+    <script>
+      var date = new Date(2023, 4, 20, 11, 43, 50, 394);
+      document.write("<b>"+date+"</b>");
+    </script>
+    <br>
+     <p>6 parameters specify years, monthIndex, day, hours, seconds.</p>
+     <br>
+     <script>
+       var date = new Date(2021, 7, 14, 2, 30, 40);
+      document.write("<b>"+date+"</b>");
+     
+     </script>
+     <br>
+      <p>5 parameters specify years, monthIndex, day, hours and minutes.</p>
+      <br>
+      <script>
+       var date = new Date(2021, 7, 14, 2, 45);
+      document.write("<b>"+date+"</b>");
+        
+      </script>
+      <br>
+      
+       <p>4 parameters specify years, monthIndex, day, hours.</p>
+       <br>
+       <script type="text/javascript" charset="utf-8">
+       var date = new Date(2021, 7, 14, 2);
+      document.write("<b>"+date+"</b>");
+         
+       </script>
+    <br>
+     <p>3 parameters specify years, monthIndex, day.</p>
+     <br>
+     <script>
+       var date = new Date(2021, 7, 14);
+      document.write("<b>"+date+"</b>");
+       
+     </script>
+    <br>
+     <p>2 parameters specify years, monthIndex.</p>
+     <br>
+     <script>
+       var date = new Date(2021, 7);
+      document.write("<b>"+date+"</b>");
+       
+     </script>
+  </section>
+    <br>
+     <p>1 parameters will use new Date(milliseconds).</p>
+     <br>
+     <script>
+       var date = new Date(123467856);
+      document.write("<b>"+date+"</b>");
+       alert(new Date());
+     </script>
+  </section>
+  
+  <section id="JS_Datef_Format">
+    <h1>JavaScript Date Formats</h1>
+    <h4>In JavaScript there are 3 date input formats:</h4>
+  <table id="table" border="0">
+    <thead style="background:#78afec; font-size:20px">
+      <th>Format Name</th>
+      <th>Example</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Short Date</td>
+        <td>"06/04/2000"</td>
+      </tr>
+      <tr>
+        <td>Long Date </td>
+        <td>"June 04 2000"</td>
+      </tr>
+      <tr>
+        <td>ISO Date</td>
+        <td>"2000-06-04"</td>
+      </tr>
+    </tbody>
+  </table>
+  <h1>Short Date</h1>
+  <p>Short date are written with this syntax: "MM/DD/YYYY"</p>
+  <p>For example:</p>
+  <br>
+  <script>
+    var date = new Date("05/02/2023");
+    document.write(date);
+  </script>
+  <p><b>Note! </b>It is recommended to include a leading zero to months and days to avoid error in some browser. <span>Avoid this:</span></p>
+  <p><i>var date = new Date("6/5/2023");</i></p>
+  
+  <h2>Long Date </h2>
+  <p>Long dates are written with this syntax: MMM DD YYYY or DD MMM YYYY</p>
+  <p>For example:</p>
+  <br>
+  <script type="text/javascript" charset="utf-8">
+    var date = new Date("oct 21 1999");
+    document.write(date);
+    document.write("<p>Example of DD MMM YYYY</p>");
+    var date = new Date("20 may 2023");
+    document.write(date);
+  </script>
+  <br>
+  <p><b>Note! </b>Use a leading if the day of the month is a single digit.</p>
+  <br>
+  <p>In this example, we use 04 instead of 4 as the day of the month.</p> 
+  <script>
+    var date = new Date ("04 jun 2023");
+    document.write(date);
+  </script>
+  <br>
+  <h2>ISO Date</h2>
+  <p>The international standard representing of time and date is called <b>ISO 8601.</b></p>
+  <p>It is written with this syntax: YYYY - MM- DD.</p>
+  <br>
+  <script>
+    var date = new Date("2023-04-02");
+    document.write(date);
+  </script>
+  
+  </section>
+<br>
+<br>
+<p>You can also omit the day so it becomes: YYYY-MM</p>
+<script>
+var date = new Date("2023-05");
+document.write(date);
+</script>
+<br>
+<br>
+<p>You can also omit both month and day so it becomes: YYYY</p>
+<script>
+var date = new Date("2023-05");
+document.write(date);
+</script>
+<br>
+<br>
+<h2>Specifying Time Zone</h2>
+<p>All the examples above are based on your time zone. <br>
+To specify time zone use <b>UTC</b> offset. <br> A UTC (Universal Time Coordited) offset look like <i>00:00+HH:MM</i>. Simply separete the specified date and the UTC offset with a capital letter T.</p>
+<br>
+<script type="text/javascript" charset="utf-8">
+var date = new Date("2023-05-21T04:52+00:30");
+document.write("<b>"+date+"</b>");
+</script>
+
+
+
+</section>
+
+<section id="JS_Date_Get_Method">
+<h1>JavaScript Date Get Method</h1>
+<p>The following methods are used to get information from a Date object.</p>
+<br>
+<table border="0">
+<thead style="font-weight:bold; background:#00AAFF; color:green">
+<th>Method </th>
+<th>Description</th>
+</thead>
+<tbody>
+<tr>
+<td>Date.now()</td>
+<td>Returns the number of milliseconds elapsed since January 1, 1970.</td>
+</tr>
+<tr>
+<td>Date.getFullYear()</td>
+<td>Returns the year of the spesified date.</td>
+</tr>
+<tr>
+<td>Date.getMonth()</td>
+<td>Returns the month index (0-11) 0f the specified date.</td>
+</tr>
+<tr>
+<td>Date.getDate()</td>
+<td>Returns the day of the month for the specified date. </td>
+</tr>
+<tr>
+<td>Date.getDay()</td>
+<td>returns the day of the week for the specified date.</td>
+</tr>
+<tr>
+<td>Date.getHours()</td>
+<td>Returns the hour of the specified date,</td>
+</tr>
+<tr>
+<td>Date.getMinutes()</td>
+<td>Returns the minuites in the specified date.</td>
+</tr>
+<tr>
+<td>Date.getsSeconds()</td>
+<td>Returns the seconds in the specified date.</td>
+</tr>
+<tr>
+<td>Date.getMilliseconds()</td>
+<td>Returns the milliseconds in the specified()</td>
+</tr>
+<tr>
+<td>Date.getTime(givenDate)</td>  <td>Returns the tine elapsed between January 1, 1970 and the given date.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Date.now() Method</h2>
+<p>Date.now() method returns the nmbers of milliseconds elapsed since January 1, 1970.</p>
+<p>The number of milliseconds since January 1, 1970 is <span id="did223"></span></p>
+<br>
+<script type="text/javascript" charset="utf-8">
+var now = Date.now();
+document.getElementById("did223").innerHTML = now;
+</script>
+<br>
+<h2>Date.getFullYear() Method</h2>
+<p>The Date.getFullYear() method returns year of the specified date.</p>
+<p>The year is <span id="did224"></span></p>
+<br>
+<script>
+var date = new Date("23 may 2023");
+var year = date.getFullYear();
+document.getElementById("did224").innerHTML = year;
+</script>
+<br>
+<h2>Date.getMonth() Method</h2>
+<p>The Date.getMonth() method returns the month index of the specified date. <b>0 is January and 11 is December.</b></p>
+<p>The month is <span id="did225"></span></p>
+<script>
+var date = new Date("23 june 2023");
+var month = date.getMonth();
+document.getElementById("did225").innerHTML = month;
+</script>
+<br>
+<h2>Date.getDate() Method</h2>
+<p>The Date.getDate() Method returns the day of the month for the specified date.</p>
+<p>The is <span id="did231"></span></p>
+<script>
+var date = new Date();
+var day = date.getDay();
+document.getElementById("did231").innerHTML = day;
+</script>
+<br>
+<h2>Date.getDay() Method </h2>
+<p>The Date.getDay() method returns the day index of the week for the specified date. 0 is Sunday and 6 is Saturday.</p>
+<p>To day is <span id="did226"></span></p>
+<script>
+var date = new Date();
+var day = date.getDay();
+document.getElementById("did226").innerHTML = day;
+
+</script>
+<h2>Date.getHours() Method</h2>
+<p>The Date.getHours() method returns the hour of the specified date.</p>
+<p>The hour is <span id="did227"></span></p>
+<script>
+var date = new Date();
+var hour = date.getHours();
+document.getElementById("did227").innerHTML = hour;
+</script>
+<br>
+<h2>Date.getSeconds() Method</h2>
+<p>The Date.getSecondsmethod returnsthe seconds in the specidied date.</p>
+<p>The second is <span id="did228"></span></p>
+<script>
+var date = new Date();
+var second = date.getSeconds();
+document.getElementById("did228").innerHTML = second;
+
+</script>
+<br>
+<h2>Date.getMilliseconds() Method</h2>
+<p>The Date.Milliseconds() method returns the millisconds in the specified date</p>
+<p>The millisecond is <span id="did229"></span></p>
+<script>
+var date = new Date();
+var millisecond = date.getMilliseconds();
+document.getElementById("did229").innerHTML = millisecond;
+</script>
+<br>
+<h2>Date.getTime(givenDate) Method</h2>
+<p>The Date.getTime(givenDate) method returns the time elapsed between January 1, 1970 and the givenDate.</p>
+<p>The millisconds elapsed between <b>January 1, 1970 </b> and <b> May 24, 2000</b> is <span id="did230"></span></p>
+
+<script>
+var date = new Date("May 24 2023");
+var milliseconds = date.getTime(date);
+document.getElementById("did230").innerHTML = millisecond;
+</script>
+
+  </section>
+  <br>
+      <section id="JS_Date_Set_Method">
+          <h1>JavaScript Date Set Methods</h1>
+      <p>The following methods allow us to set Date values such as year, month, day and more.</p>
+  
+  <table>
+      <thead style="font-weight:bold; background:#00AAFF; color:green;">
+          <th>Method</th>
+          <th> Description</th>
+      </thead>
+      <tr>
+          <td>Date.setTime()</td>
+          <td>Sets the date to the time represented by a number of milliseconds since January 1, 1970.</td>
+      </tr>
+      <tr>
+          <td>Date.setFullYear()</td>
+          <td>Sets the year for a specified date.</td>
+      </tr>
+      <tr>
+          <td>Date.setMonth()</td>
+          <td>Sets the month for a specified date.</td>
+      </tr>
+      <tr>
+          <td>Date.setDate()</td>
+          <td>Sets the day of the month for a specified date.</td>
+      </tr>
+          <td>Date.setHours()</td>
+          <td>Sets the hours for a specified date.</td>
+      </tr>
+      <tr>
+          <td>Date.setMinutes()</td>
+          <td>Sets the minutes for a specified date.</td>
+      </tr>
+      <tr>
+      <tr>
+          <td>Date.setSeconds()</td>
+          <td>Sets the seconds for a specified date.</td>
+      </tr>
+      <tr>
+          <td>Date.setMilliseconds()</td>
+          <td>Sets the miliseconds for a specidied date.</td>
+      </tr>
+  </table>
+  <br />
+      <h2>Date.setTime() Method</h2>
+      <p>The Date.setTine() method sets the date to the tine represented by a number of miliseconds sonce January 1, 1970. <br>
+      In this example, we get the milliseconds elapsed between January 1, 1970 and March 21, 2023 using date1.getTime(). <br>
+      Next, set the sate of date2. using milliseconds. <br>
+      Then we added 864000000 (1 day) milliseconds</p>
+      <p><span id="did232"></span></p>
+      
+      <script>
+      var date1 = new Date("Mar 21, 2019");
+      var date2 = new Date();
+      date2.setTime(date1.getTime()+86400000);
+      document.getElementById("did232").innerHTML= date2;
+      </script>
+      
+      <br>  
+      <h2>Date.setFullYear() Method</h2>
+      <p>The Date.setFullYear() method sets the year for a specified date.</p>
+      <p><span id="did233"></span></p>
+      <script type="text/javascript" charset="utf-8">
+          var date = new Date();
+          date.setFullYear("2023");
+          document.getElementById("did233").innerHTML = date;
+      </script>
+      
+      <h2>Date.setMonth() Method</h2>
+      <p>The Date.setMonth() method sets the month for a specified date.</p>
+      <p><span id="did234"></span></p>
+      <script>
+          var date = new Date();
+          date.setMonth("05");
+          document.getElementById("did234").innerHTML =date;
+      </script>
+      <br>
+      <h2>Date.setDate() Method</h2>
+      <p>The Date.setDate() method sets the day for a specified date.</p>
+      <p><span id="did235"></span></p>
+      <script>
+          var date = new Date();
+          date.setDate(27);
+          document.getElementById("did235").innerHTML =date;
+      </script>
+      <br>
+      <h2>Date.setHours() Method</h2>
+      <p>The Date.setHours() method sets the hours for specidied date.</p>
+      <p><span id="did236"></span></p>
+      <script type="text/javascript" charset="utf-8">
+          var date = new Date();
+          date.setHours(12);
+          document.getElementById("did236").innerHTML = date;
+      </script>
+      <br>
+      <h2>Date.setMinutes() Method</h2>
+      <p>The Date.setMinutes() method sets the minutes for specified date.</p>
+      <p><span id="did237"></span></p>
+      <script type="text/javascript" charset="utf-8">
+          var date = new Date();
+          date.setMinutes(50);
+          document.getElementById("did237").innerHTML = date;
+      </script>
+      <br>
+      <h2>Date.SetSeconds() Method</h2>
+      
+      <p>The Date.setSeconds() method sets the seconds for specified date.</p>
+      <p><span id="did238"></span></p>
+      
+      <script>
+          var date = new Date()
+          date.setSeconds(2225);
+          document.getElementById("did238").innerHTML = date;
+      </script>
+      <br>
+      <h2>Date.setMilliseconds() Method</h2>
+      <p>The Date.setMilliseconds() method sets the milliseconds for a specidied date.</p>
+      <p><span id="did239"></span></p>
+      <script type="text/javascript" charset="utf-8">
+          var date = new Date();
+          date.setMilliseconds(480);
+          document.getElementById("did239").innerHTML = date.getMilliseconds();
+      </script>
+      </section>
+      
+      <section id="JS_this_Keyword">
+        <h1>JavaScript "<sub>this</sub>" Keyword</h1>
+        <h4>The "this" keyword represents the object where it belong to.</h4>
+  <h3>What is "this" keyword?</h3>
+  <p>In JavaScript, the <span>this</span> keyword refers to an object. <br>
+  Which object depends on how <span>this</span> is being invoked (used or call). The <span>this</span> keyword refers to different objects depending on how it is used.</p>
+  
+  <ul>
+      <li>In an object method,  <span>this</span> refers to the object.</li>
+      <li>Alone, "this" refers to the global object.</li>
+      <li>In a function, "this" refers to the local object.</li>
+      <li>In a function, in strict mode, "this" is undefined.</li>
+      <li>In an event, "this" refers to element that received the event.</li>
+      <li>Methods call(), apply(), and bind() can ferer "this" to any object.</li>
+  </ul>
+  <p><b><u>Note</u>:</b><br> <i>this</i> is not a variable, it is keyword. You cannot change the value of <i>this</i>.</p>
+  <br>
+  <p><span id="did240"></span></p>
+  <script type="text/javascript" charset="utf-8">
+  var phone = {
+    name: "Redmi",
+    model: "Note 10 Pro Max",
+    price: "28400TK",
+    showInfo: function() { 
+  document.getElementById("did240").innerHTML = "Name is " + this.name + " model is " + this.model + " price is " + this.price;
+    }
+  };
+  phone.showInfo();
+      var thisK = "Coding is fun.";
+      var test3 = this;
+      document.write(test3.thisK);
+      
+  </script>
+  <h2>The Global Object</h2>
+  <p>The global object always exists in the global scope. <br>
+  The window object represents the global object. It contains properties the window.document property.</p>
+      <br>
+      <script type="text/javascript" charset="utf-8">
+          window.document.write("Hello world");
+          document.write("<br>");
+          this.document.write("Hello JavaScript");
+      </script>
+          <br>
+          <p>It also contains methods likes the wondow.alert()</p>
+      <p>The window object also contain the <b>variables</b> and <b>function</b> that you declare in the global scope.</p>
+      <p>Both the function and the variable above can be accessed using the window object.</p>
+      <br>
+      <p><span id="did241"></span></p>
+      
+      <script type="text/javascript" charset="utf-8">
+          var fruit9 = "orange";
+      function greetUser1() {
+          document.write("Hello user.");
+      }
+      document.getElementById("did241").innerHTML = this.fruit9;
+      window.greetUser1();
+      </script>
+      <br>
+      <h2><span>this</span> in a Function</h2>
+      <p>The "this" keyword inside a function represent the global object.</p>
+      <br>
+      <button onclick="toVisit()">Click me</button>
+      <script type="text/javascript" charset="utf-8">
+    var city = "Cox's Bazar";
+    function toVisit() {
+        x = this;
+        x.alert("I would like to go to " + x.city);
+    };
+    
+      </script>
+      <br>
+      <h2><span>this</span> Alone</h2>
+      <p>The "this" is used in the global scope alone, it represents the gobal object.</p>
+      <br>
+      <script type="text/javascript" charset="utf-8">
+          var x = this;
+          this.document.write("Hello world! " + "\b \t \r \f Type of \"this\" is an" + typeof(x));
+          
+      </script>
+      
+      <br>
+      <h2><span>this</span> in an EventHandler</h2>
+      <p>When "this" is used in an event handler, it represents the HTML element that received the event.</p>
+      <p><em>In this example, "this" represents the button clicked.</em></p>
+      <br>
+      <button id="did242">call the function to hide me</button>
+      
+      <script>
+          var id = document.getElementById("did242");
+          did242.onclick = function() {
+               // hides the button by setting its display property to none
+              this.style.display = "none";
+          };
+      </script>
+      
+      </section>
+      <br>  
+      <section id="JS_Arrow_Function">
+          <h1>JavaScript Arrow Function</h1>
+    <p>The arrow function expression is a compact alternative to a regular function expression.</p>
+    <p>For example: </p>
+    <script type="text/javascript" charset="utf-8">
+        function myArrow() {
+            document.write("<span>Hello Developers!</span>");
+        };
+        myArrow();
+    </script>
+  <br>
+  <p>The example above is similar with this:</p>
+  <script type="text/javascript" charset="utf-8">
+    myArrow = () => {
+          document.write("<span>Hello Programmer!</span>");
+      };
+      myArrow();
+  </script>
+  <p>If you have only one statement, you can omit the <span>curly brackets { }</span>.</p>
+  <br>
+  <button onclick="myArrFunc()">click here</button>
+  <script>
+      myArrFunc = () => alert("Hello World");
+  </script>
+  <h2>Paramets in Arrow Function</h2>
+  <p>Parements in <span>arrow function should be inside the parentheses ( ).</span></p>
+  <button onclick="myArrFunc2(4,6)">add 4 and 6</button>
+     <script>
+        myArrFunc2 = (x,y) => alert(x+y);
+     </script>
+     <br>
+     <p>If you only have one parameter, you can omit the prentheses <b>( )</b>.</p>
+     <button onclick="myArrFunc3('Yangon')">click me</button>
+     <script>myArrFunc3 = city => alert("I want to go "+ city);</script>
+     <br>
+     <h2><small>this</small> in Arrow Function</h2>
+     <p>In a regular function, the <small>this</small> keyword represents the global object or the object that called it <b>e.g. an HTML button element</b>. <br>
+     On the other hand, the <small>this</small> keyword in an arrow function always represents the object that owns it. <br>
+     No matter what calls it. The example below aims to hide the button when it is clicked.</p>
+     <p>However, the button will NOT be hidden because hide() function is owned by the window object.</p>
+     <p>Therefore the <small>this </small> keyword represent the window object not the HTML buttin element.</p>
+     <button id="did243"> click to hide</button>
+     <script>   
+         var arrf = document.getElementById("did243");
+         hide = () => {
+             this.style.display = "none";
+             
+         };
+         arrf.onclick = function() {
+             hide();
+         };
+     </script>
+     <p>To hide the button, the hide() function must be owned by the HTML button element. <br>
+     This way, the <small>this</small> keyword wil represent the HTML button element.</p>
+     <button id="did244"> click to hide me </button>
+     
+     <script> 
+     var arrf1 = document.getElementById("did244");
+     arrf1.onclick = function() {
+     hide1 = () => {
+         this.style.display = "none";
+     };
+     hide1();
+     };
+     </script>
+     
+      </section>    
+      
+      <section id="JS_Class">
+      <h1>JvaScript Classes</h1>
+      <p>JavaScript classes are special type of function.</p>
+      
+      <h2>Declaring a Class</h2>
+      <p>To declare or create a class use the <small>class</small> keyword with the name of the class.</p>
+      <p>In this example the fruit class is created.</p>
+      <p><small>class Fruit { <br> constructor(fruitName) { <br>this.name = fruitName; <br> } <br> };</small></p>
+      <p><em>Class declarations are not hoisted</em>.</p>
+      <p>Now we can use and/or initialize the fruit class using the new operator.</p>
+      <br>
+      <p>Afrer calling new Fruit("mango") an object is created. <br> Then, the constructor() run automatically with the given argument and assigns <small>this,name</small> to the created object.</p>
+      <p><span id="did245"></span></p>
+      
+      <script type="text/javascript" charset="utf-8">
+          class Fruit {
+              constructor(fruitName) {
+                  this.name =fruitName;
+              }
+          }
+      var fruit = new Fruit("Guava");
+      // accesing the objject ereated.
+      document.getElementById("did245").innerHTML = fruit.name
+      </script>
+      
+    <p>In this example, there are multiple parameters in the constructor() method.</p>
+    <p id="did246"></p>
+    
+    <script type="text/javascript" charset="utf-8">
+        class Fruitc {
+            constructor(fruitName, fruitColor) {
+                this.name = fruitName;
+                this.color = fruitColor;
+                this.taste = "sweet.";
+            }
+        }
+        var fru = new Fruitc("mango", "yellow");
+        // accessint the object created
+        document.getElementById("did246").innerHTML = "The "+fru.name + " is " + fru.color + " and " + fru.taste; 
+    </script>
+  
+  <h2>Methods in Classes</h2>
+  <p>Just like in a regular object, you can add function(methods) to a class.</p>
+  <p>In this example, the showInfo() function is added thi the class:</p>
+  <p id="did247"></p>
+      <script>
+          class Fruit2 {
+              constructor(fruitName,fruitColor, taste) {
+                  this.name = fruitName;
+                  this.color= fruitColor;
+                  this.taste = taste;
+              }
+          showInfo() {
+              document.getElementById("did247").innerHTML = "<span> The " + this.name + " is " + this.color + " and " + this.taste + "</span>";
+              
+      }
+      }
+      //Then we can call the function after the class has been intialized;
+      var fruit = new Fruit2("mango", "yellow", "sweeet");
+      fruit.showInfo();
+          
+      </script>
+      <p><i>We can also add parameters to the function.
+      <br> The parameters should go inside the parentheses.</i></p>
+      <p id="did248"></p>
+      
+      <script>
+          class Android {
+              constructor(andName, andColor, andPrice) {
+              this.name = andName;
+              this.color =andColor;
+              this.price = andPrice;
+              }
+      showMessage(text) {
+          document.getElementById("did248").innerHTML = "<span> The "+ this.name + " is "+ this.color + " and " + this.price +".</span>" + text;
+      }
+          }
+          // Then we can call the function with and argument
+          var android = new Android("TECNO camon", "light_blue", "price is 17999tk");
+          android.showMessage("I love TECNO mobile.");
+      </script>
+      <br>
+      <h2>Static Methods</h2>
+      <p>Static methods are called without initializing their class. <br>
+      A static method <b>( sayHello ())</b> cannot be called by the object <b>(myFruit)</b> but it can be called using the <b>class(Fruit3)</b>.</p>
+      <p><span id="did249"></span></p>
+      <script type="text/javascript" charset="utf-8">
+          class Fruit3{
+          constructor(fruitName, fruitColor) {
+              this.name = fruitName;
+              this.color = fruitColor;
+          }
+          static sayHello(text) {
+              return text;
+          }
+          }
+          var fruit = new Fruit3("mango", "green");
+          document.getElementById("did249").innerHTML = Fruit3.sayHello("Hello Fruit!") + " The " + fruit.name + " is " + fruit.color;
+      </script>
+      
+      <br>
+      <h2>Class Inheritance</h2>
+      <p>Class inheritance is a way for a class to inherit all the properties and methods of another class. This way we create new functionality in top of the existing.</p> 
+      <p>The Animal class below can be used to tell that an animal can walk.</p>
+      
+      <br>
+      <p><b>class Animal {
+              constructor(animalName) {
+                  this.name = animalName;
+                  
+              }
+      walk() {
+          return this.name + " walk";
+          
+      }
+          }
+      </b></p>
+      <br>
+      <p>Let's say we want to create another class called <b>Cat</b>. <br>
+      Since a cat is also an animal, it's a good idea to have access to all the properties and method of the <b>Animal</b> class. <br>
+      The syntax to inherit a class: <b>class Child extends Padrent</b> for example , the Cat class below inherit the Animal classs. <br>
+      Class Cat extends Animal class 
+      <br> Here is the full example:</p>
+      <br>
+      <p><span id="did250"></span></p>
+      <script type="text/javascript" charset="utf-8">
+          class Animal {
+              constructor(animalName) {
+              this.name = animalName;
+          }
+          walk() {
+              return this.name + " walk ";
+          }
+          }
+  class Cat extends Animal {
+      constructor(animalName) {
+          super(animalName);
+      }
+      speak() {
+          return this.name + " meows ";
+          
+      }
+  }
+  var cat = new Cat("mingming");
+  document.getElementById("did250").innerHTML = cat.walk() + " and " + cat.speak();
+      </script>
+      </section>
+    <section id="JS_JSON">
+        <h1>JS JSON</h1>
+        <h1>JavaScript Object Notation</h1>
+        <p>JSON or JavaScript Object Notation is a standard text-based format for represnting structed data based on HavaScript object Syntax.</p>
+        <p>JSON is commonly used for sending data from the server to a client e.g. a web page.</p>
+        <p>A JSON object can be stored in its own file, wich is basically just a text file with an exrention of <span>.json</span> e.g. fileName.json </p>
+        <i>Note! JSON is basicalljust a text.</i>
+        <h2>JSON Syntax </h2>
+        <p>JSON syntax is closey similar to JavaScript object. <br>
+        When writing a JSON object, always take note of the following:</p>
+        <ol>
+            <li>JSON can NOT contains methods.</li>
+            <li>JSON requires the use of double quotes("), single quotes(') are NOT valid.</li>
+            <li>A single misplaced comma will cause the JSON to not work.</li>
+            <li>Property names in JSON should be enclosed by quotes.</li>
+        </ol>
+        <p><em>Here a basic example: <br><b>{<br>"firstName":"Mohammed",<br>"lastName":"Ismail", <br>"age":23, <br>"isMarried":true, <br> "laptop":null <br> } </b></em></p>
+        <p><em>Note that the example above contains a string, a number, a Boolean and Null.</em></p>
+        <p>In the example below, the JSON contains an <b>object</b> and an <b> array</b>.</p>
+        <p><b>{ <br>"favorite":{"food":"fried chicken","game":"CSGO and DOTA2","color":"green"},<br>"hobbies":["coding", "reading", "wacthing movie"] <br>}</b></p>
+        <h2>Converting JSON to JavaScript Object</h2>
+        <p>To convert <b>JSON.parse()</b> Method. </p>
+        <p><i>Commonly, a JSON read from a server  and stored in a variable.</i></p>
+        <br>
+        <p><span id="did251"></span></p>
+    <script type="text/javascript" charset="utf-8">
+        var test4 = `{
+            "firstName":"Mohammed",
+            "lastName":"Ismail",
+            "age":24,
+            "isMarried":true,
+            "Laptop":null
+        }`;
+        var obj = JSON.parse(test4);
+        //return an Object
+        
+        // now you can access its properties 
+        document.getElementById("did251").innerHTML =obj.firstName+ " " + obj.lastName +" is "+ obj.age + " years old.";
+        
+        console.log(obj.Laptop);
+    </script>
+    <br>
+    <h2>Converting JavaScript Object to JSON</h2>
+    <p>To convert a regular JavaScript object to JSON, use the <b>JSON.stringify()</b> method.</p>
+    <br>
+    <p><span id="did252"></span></p>
+    <script type="text/javascript" charset="utf-8">
+        var obj = {
+            "firstName":"MD",
+            "lastName":"Ismail",
+            "age":24,
+            "isMarried":true
+            
+        };
+        var test5 = JSON.stringify(obj);
+        //returns stringify
+        
+        // now you can print the JSON text.
+        document.getElementById("did252").innerHTML = test5;
+    </script>
+    </section>
+    <br>
+    
+    <section id="JS_Forms">
+        <h1>JavaScript Forms</h1>
+        <p>HTML Forms can be validated using JavaScript before they are submetted to the server.</p>
+        <p><b>Note!</b> You must have enough knowledge about HTML form before taking this lesson.</p>
+        <h1>How to Prevent a Form Being</h1>
+    <p>An HTML form can be prevented from being submitted by using <b> <u>return false</u></b>. When the form received the submit event.</p>
+    <br>
+    <form action="https://codeliber.com/form-action.php">
+        <input type="text" name="firstName"/>
+        <input type="submit"/>
+        
+    </form>
+    <br>
+    <p>The form above will not be submitted, when we use <b><u>return flase</u></b> in the event handler</p>
+    <p><b>Notice!</b> That we also used <b><u>return</u></b> in the <b>onsubmit</b> attribute</p>
+    <form action="https://codeliber.com/form-action.php" onsubmit="return validateForm()">
+        <input type="text" name="firstName">
+        <input type="submit">
+    </form>
+    <p>this demo requires internet connection</p>
+    <script>
+        function validateForm() {
+            alert("This form will not be submitted.");
+            return false;
+        }
+    </script>
+    <br>        
+    <h1>Cleint_Side Validation</h1>
+    <p>Cleint_Side form validation is done by a web page sending input data to a server. <br>
+    In this example, if the text field is empty the input data will not be submitted to the server.</p>
+    <br>
+    <form action="https://codeliber.com/form-action.php" onsubmit="return validateForm0()">
+        <label for="firstName">firstName <input type="text" name="firstName" id="firstName"/></label>
+        <input type="submit"/>
+    </form>
+    <script type="text/javascript" charset="utf-8">
+        function validateForm0() {
+            var firstName = document.getElementById("firstName").value;
+            if (firstName =="") {
+                //alert("Please enter a value on text field");
+                return false;
+            };
+        };
+    </script>
+    <p><em>The "https://codeliber.com/form-action.php" is a server script</em>.</p>
+    </section>
+      
+<!-- all javascript code-->
+    <script type="text/javascript" charset="utf-8">
+var x = 6;
+var y = 9;
+var sum = x + y;
+console.log(sum); //using console
+function myFun() {
+var x = 7;
+var y = 5;
+var multiply = x * y;
+//alert(multiply); //using alert
+}
+
+function myFun1() {
+var x = 78;
+var y = 47;
+divide = x / y;
+document.getElementById("demo").innerHTML = divide;
+//document.getElementById 1st condition
+}
+document.getElementById("demo1").innerHTML = "Hello world! JavaScript is easy to learn! Although you may struggle at first. <i>I'm from JavaScript! </i>";
+//document.getElementById 2nd condition
+function myFun2() {
+var a = 3;
+var b = 43;
+var ab = a / b;
+
+document.write(ab, "<br>I love JavaScript.");
+//document.write
+}
+document.getElementById("sl").innerHTML = "This is Single-Line Statement."; //Single-Line Statement
+document.getElementById("ml").innerHTML =
+"<b>Note </b>: A statment that span Single or Multiple lines behave the same way.";
+//Multiple-Line statment
+function myFun3() {
+document.getElementById("JGS").innerHTML = "<b><i>I have changed to JavaScript Startment.</i> </b>";
+}
+//JS grouped statment
+var nm = 6; // assigns number 5 to the variable named num
+document.getElementById("VD").innerHTML = nm + "&nbsp; In this example called the <b>nm</b> <i> is an identifier.</i>"; // prints the output
+// variable declaration
+var num = 43;
+Num = 26;
+percent = num % Num;
+document.getElementById("cs").innerHTML = percent;
+//JS variables Case-Sensitive explanation
+function myFun4() {
+var myVar =
+"To make a single-line comment, add two forward slash <b>// </b> to the beginning of the line. This makes all text following it to be a comment. <br/> Here is an example:";
+document.write(myVar);
+// I am single-line comment
+}
+var a = 25;
+b = 43;
+c = a + b;
+console.log(c);
+/* let's add the value of y to x
+            and then print the sum */
+
+/*
+            you can also comment like this
+            sometimes it's more convenient
+            and easier to see
+         */
+function myFun5() {
+
+var firstName = "Mohammed ";
+lastName = "Ismail";
+age = 24;
+description = "In this example the variable <b>firstName</b> is declared and is initialized to the value <b>Mohammed </b>.<br/> The variable <b>lastName</b> is declared and is initialized to the value <b>Ismail</b>.<br/> The variable <b>age</b> is declared and is initialized to the value <b>24</b>."
+// print the values of variables
+document.getElementById("JSV").innerHTML = firstName + " " + lastName + "<br>" + age+"<br>" + description;
+// variables declaration
+}
+var x;
+x = 24;
+document.getElementById("dvf").innerHTML = x +"<br>" + "We can also declare or create a variable first, then assign a value (initialize) later.";
+
+var firstName = "Mohammed Ismail", lastName = "Ismail", title = "Web Designer";
+document.getElementById("MV").innerHTML = firstName +" "+ lastName + "<br>" + title;
+// multiple variables in one statment
+document.getElementById("nv").innerHTML = "JavaScript variables should be identified with unique names. These unique names are called identifiers. Identifiers can be as short as single letters like a, b, x, y or z. They could also be descriptive like firstName or lastName.";
+
+document.getElementById("rnv").innerHTML = " A name should start with a letter, anunderscore or a dollar sign <br> A name cannot start with a number <br> A name is case-sensitive <br> A name can only contain letters, digits, underscores and dollar signs <br> JavaScript reserved keywords (like var, function, if, else, etc.) cannot be used as variable names";
+
+document.getElementById("subd").innerHTML = "<b>Data Types</b> are different kinds of data that can be stored or used in a JS programe.";
+//data types
+
+var description = "The <b>string</b> data type is a sequense of characters used to represent text.<br /><br/> String can be written within either single or double quotes.";
+document.getElementById("sdt").innerHTML = description;
+//String data type
+document.getElementById("sdt1").innerHTML = "<br>Should you use single or double quotes? <br> You can use which one you like. <br>But if the string contains single quotes, use double quotes. Or if it contains double quotes, use single quotes.";
+var sentence = "My name is 'Ismail'.";
+sentence1 = 'My first name is "Mohammed".';
+document.getElementById("JSDT1").innerHTML = "<em>In Javascript, there are five basic, or primitive, types of data. The five most basic types of data are <i>strings</i>, <i>numbers </i>, <i>booleans</i>, <i>undefined</i>, and <i>null</i>.</em>";
+document.getElementById("did").innerHTML = sentence + "<br>"+ sentence1;
+var
+r = 45
+x = 60;
+y = 4.7;
+sum = x + y;
+document.getElementById("did1").innerHTML = r + "<br>" + sum;
+var text = "MD" + "Ismail"; //string + string = string
+text1 = 12 +6; // number + number = number
+text2 = 21+7+ "Rohim"; // number + string = string
+text3 = " Rohim" + 21 + 7; // string + number = string
+result = text + "<br>" + text1 + "<br>" + text2 + "<br>" + text3;
+document.getElementById("did2").innerHTML = result;
+var text4 = 4;
+text5 = 4;
+result1 = (text4 == text5);
+text6 = 6;
+text7 = 7;
+result2 = (text6 == text7);
+document.getElementById("did3").innerHTML = result1 + "<br>" + result2;
+var title1;
+document.getElementById("did4").innerHTML = title1;
+function myFun6() {
+var fruit = null;
+document.write(fruit);
+}
+document.getElementById("did7").innerHTML =
+typeof {
+firstName: "John",
+lastName: "Doe",
+age: 30
+} + "<br>" + // returns "object"
+typeof ["apples", "oranges", "bananas"] + "<br>" + // returns "object"
+typeof null + "<br>" + // returns "object"
+typeof function myFunction() {}; // returns "function"
+// typeof
+var x = 6+4+3;
+document.getElementById("did8").innerHTML = x;
+var
+text8 = "Rohim ";
+text9 = "Ullah";
+sentence2 = text8 + text9;
+document.getElementById("did9").innerHTML = sentence2;
+var x = 9 - 6;
+document.getElementById("did10").innerHTML = x;
+var y = 6 * 4;
+document.getElementById("did11").innerHTML = y;
+var x = 15 / 3;
+document.getElementById("did12").innerHTML = x;
+var z = 3 ** 4;
+document.getElementById("did13").innerHTML = z;
+var x = 4+2;
+x++;
+document.getElementById("did14").innerHTML = x;
+var x = 4+2;
+x--;
+document.getElementById("did15").innerHTML = x;
+var y = 3 + 4 * 3;
+document.getElementById("did16").innerHTML = y;
+var x = (4+7) * 7;
+document.getElementById("did17").innerHTML = x;
+var x = 6;
+document.getElementById("did18").innerHTML = x;
+var x = 7;
+y = 4;
+x += y;
+document.getElementById("did19").innerHTML = x; // same as x = x + y
+var
+x = "Amotur ";
+y = "Rohim";
+x += y;
+document.getElementById("did20").innerHTML = x; // same as x = x + y
+var x = 7;
+y = 4;
+x -= y;
+document.getElementById("did21").innerHTML = x; // same as x = x - y
+x *= y;
+document.getElementById("did22").innerHTML = x; // same as x = x * y
+
+var x = 12;
+y = 3;
+x /= y;
+document.getElementById("did23").innerHTML = x; // same as x = x / y
+
+var x = 11;
+y = 3;
+x %= y;
+document.getElementById("did24").innerHTML = x; // same with x = x % y
+// 11 divided by 3 is 3 remainder 2
+// 2 is then assigned to variable x
+
+var x = 3;
+y = 4;
+x **= y;
+document.getElementById("did25").innerHTML = x; // same with x = x ** y
+// 3 raised to 4 is 3 * 3 * 3 * 3 = 81
+
+document.getElementById("did26").innerHTML =
+"<b>" + (2 == 2) /* returns true */ + "<br>" +
+(2 == 4) /* returns false */ + "<br>" +
+("2" == 2) /* returns true */ + "<br>" +
+("Hello world" == "Hello world") /* returns true */ + "<br>" +
+("Hello world" == "Hello everyone") + "</b>"; /* returns false */
+
+document.getElementById("did27").innerHTML =
+"<b>" + (2 != 2) /* returns false */ + "<br>" +
+(2 != 4) /* returns true */ + "<br>" +
+("2" != 2) /* returns false */ + "<br>" +
+("Hello world" != "Hello world") /* returns false */ + "<br>" +
+("Hello world" != "Hello everyone") + "</b>"; /* returns true */
+
+document.getElementById("did28").innerHTML = "<b>"+ (2 === 2) +"</b>"; // returns true
+
+document.getElementById("did29").innerHTML = "<b>" + ("2" === 2) + "</b>"; //returns false
+
+document.getElementById("did30").innerHTML = "<b>" + ("2" !== 2) + "</b>"; // returns true
+
+document.getElementById("did31").innerHTML = "<b>" + (2 !== 2) + "</b>"; // returns false
+
+document.getElementById("did32").innerHTML =
+"<b>" + (4 > 2) /* returns true */ + "<br>" +
+(2 > 4) /* returns false */ + "<br>" +
+(2.25 > 2.24) /* returns true */ + "<br>" +
+(2.24 > 2.25) + "</b>"; /* returns false */
+
+document.getElementById("did33").innerHTML =
+"<b>" + (4 >= 2) /* returns true */ + "<br>" +
+(2 >= 4) /* returns false */ + "<br>" +
+(2.25 >= 2.24) /* returns true */ + "<br>" +
+(2.24 >= 2.25) /* returns false */ + "<br>" +
+(4 >= 4) /* returns true */ + "<br>" +
+(2.25 >= 2.25) + "</b>"; /* returns true */
+
+document.getElementById("did34").innerHTML =
+"<b>" + (4 < 2) /* returns false */ + "<br>" +
+(2 < 4) /* returns true */ + "<br>" +
+(2.25 < 2.24) /* returns false */ + "<br>" +
+(2.24 < 2.25) + "</b>"; /* returns true */
+
+document.getElementById("did35").innerHTML =
+"<b>"+(2 <= 4) /* returns true */ + "<br>" +
+(4 <= 2) /* returns false */ + "<br>" +
+(2.24 <= 2.25) /* returns true */ + "<br>" +
+(2.25 <= 2.24) /* returns false */ + "<br>" +
+(4 <= 4) /* returns true */ + "<br>" +
+(2.25 <= 2.25) + "</b>"; /* returns true */
+if (6 == 6) {
+document.getElementById("did36").innerHTML = "Hi, I'm a web developer!";
+}
+if (6 >= 7) {
+document.getElementById("did37").innerHTML = "I love coding very much.";
+}
+document.getElementById("did38").innerHTML =
+"<i>" + (true && true) /* returns true */ + "<br>" +
+(true && false) /* returns false */ + "<br>" +
+(3 == 3 && 4 == 4) /* returns true */ + "<br>" +
+(3 == 4 && 4 == 4) /* returns false */ + "<br>" +
+(5 > 3 && 4 < 6) /* returns true */ + "<br>" +
+(3 > 5 && 6 < 4) + "</b>"; /* returns false */
+
+document.getElementById("did39").innerHTML =
+"<i>" + (true || true) /* returns true */ + "<br>" +
+(true || false) /* returns true */ + "<br>" +
+(false || false) /* returns false */ + "<br>" +
+(2 == 2 || 2 == 3) /* returns true */ + "<br>" +
+(1 == 2 || 2 == 3) /* returns false */ + "<br>" +
+(10 > 5 || 5 > 10) /* returns true */ + "<br>" +
+(10 < 5 || 5 > 10) + "</i>" /* returns false */
+
+document.getElementById("did40").innerHTML =
+"<i>" + !(true) /* returns false */ + "<br>" +
+!(false) /* returns true */ + "<br>" +
+!(1 == 1) /* returns false */ + "<br>" +
+!(1 > 2) + "</i>"; /* returns true */
+
+if (3 == 3 && 4 == 4) {
+document.getElementById("did41").innerHTML = "The condition is true.";
+}
+
+if (3 == 3 && 3 == 4) {
+document.getElementById("did42").innerHTML = "I will not be printed because the condition is false.";
+}
+
+var testScore = 80;
+testResult = (testScore > 75) ? "passed": "failed";
+document.getElementById("did43").innerHTML = testResult;
+
+/* defining function */
+function writeText(str) {
+document.getElementById("did44").innerHTML = str;
+}
+/* calling function */
+writeText("Hello! I'm Md Ismail");
+
+function addNumber(num1, num2) {
+var sum = num1 + num2;
+document.getElementById("did45").innerHTML = sum;
+}
+addNumber(7, 4);
+
+function addNumber1(num3, num4) {
+var sum = num3 + num4;
+document.getElementById("did46").innerHTML = sum;
+}
+
+function showDailog() {
+//alert("Hello! Md Ismail");
+}
+
+function addNumbers(num1, num2) {
+var sum = num1 + num2;
+return sum;
+}
+//The function caller
+document.getElementById("did47").innerHTML = addNumbers(7, 6);
+
+function addNumbers(num1, num2) {
+var sum = num1 + num2;
+return sum;
+}
+
+/* the function caller */
+//document.write(addNumbers(2, 5));
+
+function getFullname(fname, lname) {
+return fname + " " + lname;
+}
+var fullName = getFullname("Mohammed", "Ismail");
+document.getElementById("did48").innerHTML = fullName;
+
+function getAge(age) {
+var fullName = "Mohammed Ismail";
+
+// the fullName variable can be used here
+document.getElementById("did49").innerHTML = fullName +" is " + age + " years old.";
+}
+
+document.getElementById("did50").innerHTML = fullName;
+
+var fruit = "apple";
+function myFunc() {
+document.getElementById("did51").innerHTML = fruit;
+}
+
+function toMiles(kilometer) {
+var miles = kilometer * 0.62137;
+return kilometer + " " + "kilometer" + " "+ "equel" + " " + miles + " " + "miles";
+}
+
+// we can use the function as many times as we want
+////alert(toMiles(4));
+document.getElementById("did52").innerHTML = toMiles(10);
+
+//JavaScript Object
+var person = {
+fullName: "Mohammed Ismail",
+age: 24,
+hobbies: ["coding",
+"video game",
+"reading"],
+isMarried: true
+}
+document.getElementById("did53").innerHTML = person.fullName + person.age + person.hobbies[0] + person.isMarried;
+
+var person = {
+fullName: "Mohammed Ismail",
+age: 24,
+hobbies: ["coding",
+"video game",
+"reading"],
+isMarried: true,
+showName: function() {
+//alert(this.fullName);
+},
+showAge: function() {
+//alert(this.age);
+}
+}
+document.getElementById("did55").innerHTML = this.fullName + " " + " is" + " " + person.age + " years old.";
+
+
+document.getElementById("did56").innerHTML =
+person.fullName +"<br>"+
+person.age + "<br>" +
+person.hobbies[0] + "<br>" +
+person.isMarried;
+
+document.getElementById("did57").innerHTML =
+person["fullName"] + " is " + person["age"] + " years old." + "<br>" + "Hobby is " +
+person["hobbies"][0] + ". Marriage status: " + person["isMarried"]+".";
+
+var person1 = {
+name: " Amotur Rohim",
+age: 1,
+hobbies: ["playing",
+"reading",
+"writing"],
+
+showDetails: function() {
+console.log(this.hobbies[1]);
+//alert(this.name + " is " + this.age + " year old" + " hobby is " + this.hobbies[1]);
+}
+}
+
+var fruits = {
+banana: {
+color: "yellow",
+taste: "sweet",
+},
+apple: {
+color: "yellow",
+taste: "sweet",
+}
+}
+document.getElementById("did58").innerHTML = "Banana color is " + fruits.banana.color + ", " + "taste is " + fruits.banana.taste + ". <br>" + "Apple color is " + fruits.apple.color + ", " + "taste is " + fruits.apple.taste + ". <br>" +"As you may notice, we accessed the color... properties using<i> fruits.banana.color </i>etc....";
+
+var str = "Hello";
+str += " world!";
+document.getElementById("did59").innerHTML = str;
+
+var str1 = "Lorem ipsum";
+var str2 = "dolor sit";
+var str3 = "amet.";
+
+var sentence = str1 + " " + str2 + " " + str3;
+document.getElementById("did60").innerHTML = sentence;
+
+function greeting() {
+var userName = window.prompt("Hello, welcome to the tutorial. May I know your name?");
+var str = "Nice to meet you " + userName + "! " + "Welcome to Learndg, I hope you're enjoying the lessons!";
+
+//alert(str);
+}
+
+var str4 = "He is called \"Abosoyed.\""; // escaping "
+str5 = 'He is called \' Nur Mohamed.\''; // escaping '
+str6 = "Escaping backslash.\\"; // escaping \
+str7 = str4 + "<br>" + str5 + "<br>" + str6;
+document.getElementById("did61").innerHTML = str7;
+
+
+var str8 = "Hello LearndgC Tutorial. I love LearndgC tutorial.";
+lenstr = str8.length;
+
+document.getElementById("did62").innerHTML = lenstr;
+x = str8[8];
+document.getElementById("did63").innerHTML = "<i>" + x + "</i>";
+
+x = str8.indexOf("LearndgC");
+document.getElementById("did64").innerHTML = x;
+x = str8.lastIndexOf("LearndgC");
+document.getElementById("did65").innerHTML = x;
+x = str8.indexOf("world");
+document.getElementById("did66").innerHTML = x;
+x = str8.lastIndexOf("world");
+document.getElementById("did67").innerHTML = x;
+x = str8.search("tutorial");
+document.getElementById("did68").innerHTML = x;
+x = str8.search("nothing");
+document.getElementById("did69").innerHTML = x;
+
+var str9 = "The quick brown fox jumps over the lazy dog.";
+x = str9.slice(6, 20);
+document.getElementById("did70").innerHTML = x;
+x = str9.slice(-20, -1);
+document.getElementById("did71").innerHTML = x;
+x = str9.substring(4, 25);
+document.getElementById("did72").innerHTML = x;
+x = str9.substr(16, 7);
+document.getElementById("did73").innerHTML = x;
+x1 = str9.slice(9);
+x2 = str9.substring(11);
+x3 = str9.substr(12);
+document.getElementById("did74").innerHTML = x1 + "<br>" + x2 + "<br>" + x3;
+
+var str10 = "Codeliber is nice, I love Codeliber!";
+x4 = str10.replace("Codeliber", "Everyone");
+document.getElementById("did75").innerHTML = x4;
+x4 = str10.replace(/codeliber/i, " Everyone");
+document.getElementById("did76").innerHTML = x4;
+x4 = str10.replace(/codeliber/ig, "Everyone");
+document.getElementById("did77").innerHTML = x4;
+
+var str11 = "           Codeliber is nice, I love Codeliber!            ";
+x5 = str11.trim();
+document.getElementById("did78").innerHTML = x5;
+
+var str12 = "Codeliber IS nice, I love Codeliber!";
+x6 = str12.toUpperCase();
+document.getElementById("did79").innerHTML = x6;
+x6 = str12.toLowerCase();
+document.getElementById("did80").innerHTML = x6;
+
+var str13 = "Hello";
+x7 = str13.concat(",", " ", " LearndgC!");
+document.getElementById("did81").innerHTML = x7;
+
+var num4 = 343; // integer number
+num5 = 44.626; // floating number
+document.getElementById("did82").innerHTML = num4;
+document.getElementById("did83").innerHTML = num5;
+num6 = 343e4;
+num7 = 0.443e-5;
+document.getElementById("did84").innerHTML = num6+ "<br>" + num7;
+
+var difference = "10" - "2";
+product = "10" * "2";
+quotient = "10" / "2";
+addition = "10" + "2";
+document.getElementById("did85").innerHTML = difference;
+document.getElementById("did86").innerHTML = product;
+document.getElementById("did87").innerHTML = quotient;
+document.getElementById("did88").innerHTML = addition;
+
+var difference1 = "10" - 2;
+product1 = 10 * "2";
+quotient1 = "10" / 2;
+document.getElementById("did89").innerHTML = difference1;
+document.getElementById("did90").innerHTML = product1;
+document.getElementById("did91").innerHTML = quotient1;
+
+var addition1 = "10" + 2;
+addition2 = 10 + "2";
+addition3 = "error" +"404";
+document.getElementById("did92").innerHTML = addition1;
+document.getElementById("did93").innerHTML = addition2+"<br>" + addition3;
+
+var hexa = 0x1;
+hexa1 = 0xA;
+hexa2 = 0x0123456789ABCDEF;
+document.getElementById("did94").innerHTML = hexa+" <br>" + hexa1 + "<br>" + hexa2;
+
+var Na_N = "26" /"code";
+Na_N1 = 26 * "code";
+Na_N2 = "code is" - "fun";
+document.getElementById("did95").innerHTML = Na_N + "<br>" + Na_N1 + "<br>" + Na_N2;
+var test = typeof(Na_N);
+test1 = typeof(Na_N1);
+test2 = typeof(Na_N2);
+document.getElementById("did96").innerHTML = test +"<br>" + test1 + "<br>" + test2;
+
+var num8 = isNaN(5); // returns false
+var num9 = isNaN("5"); // returns false
+var num10 = isNaN("Hello World!"); // returns true
+var num11 = isNaN("five"); // returns true
+
+document.getElementById("did97").innerHTML = num8 + "<br>" + num9 + "<br>" + num10 + "<br>" + num11;
+
+// JS Number method
+var num12 = Number.isInteger(243);
+num13 = Number.isInteger(243.442);
+num14 = Number.isInteger("Coding  is fun!");
+document.getElementById("did98").innerHTML = num12 + "<br>" + num13 + "<br>" + num14;
+
+var pari = parseInt("2538");
+pari1 = parseInt("26 Kilometer");
+pari2 = parseInt("43.36 Coding is my mission");
+pari3 = parseInt("days 7 are 1 week");
+pari4 =
+document.getElementById("did99"). innerHTML = pari + "<br>" + pari1 + "<br>" + pari2 + "<br>" + pari3;
+
+var num15 = parseFloat("21.427"); // returns 21.427
+var num16 = parseFloat("3.21"); // returns 3.21
+var num17 = parseFloat("21.3 days"); // returns 21.3
+var num18 = parseFloat("3.21 months and 21 days"); // returns 3.21
+var num19 = parseFloat("months 3.21"); // returns NaN
+var num20 = parseFloat("I lova Codeliber!"); // returns NaN
+
+document.getElementById("did100").innerHTML =
+num15 + "<br>" +
+num16 + "<br>" +
+num17 + "<br>" +
+num18 + "<br>" +
+num19 + "<br>" +
+num20;
+
+var expo = (243.16245).toExponential(1);
+expo1 = (243.16245).toExponential(2);
+expo2 = (243.16245).toExponential(3);
+document.getElementById("did101").innerHTML = expo+"<br>" + expo1 + "<br>" + expo2;
+
+var tost = (204).toString();
+tost1 = (213.43).toString();
+tost2 = (2022).toString();
+tost3 = (10).toString(2);
+tost4 = (10).toString(4);
+tost5 = (2022).toString(2);
+document.getElementById("did102").innerHTML = tost +"<br>" +tost1 +"<br>" + tost2 + "<br>" + tost3+ "<br>" +tost4+ "<br>" +tost5;
+
+var mobile = ["One+", " ViVo", " Oppo"];
+document.getElementById("did103"). innerHTML = mobile;
+
+var cities = new Array("Cox's Bazar", " Chittagong", " Sylhet");
+document.getElementById("did104").innerHTML = cities;
+
+document.getElementById("did105").innerHTML = cities[0];
+
+cities.push(" Taknaf");
+document.getElementById("did106").innerHTML = cities;
+cities.push(" Noakhali", " Bandor Bon", " Rajshai", " Kishor Gonj");
+document.getElementById("did107").innerHTML = cities;
+
+cities.unshift(" Khulna",);
+document.getElementById("did108").innerHTML = cities;
+cities.unshift(" Mymensingh", " Rangpur", " Barishal");
+document.getElementById("did109").innerHTML = cities;
+
+cities.pop();
+document.getElementById("did110").innerHTML = cities;
+
+cities.shift();
+document.getElementById("did111").innerHTML = cities;
+
+document.getElementById("did112").innerHTML = cities.length;
+
+lastItem = cities[cities.length - 1];
+document.getElementById("did113").innerHTML = lastItem;
+
+for (var c = 0;
+c < cities.length;
+c++) {
+document.getElementById("did114").innerHTML += cities[c] + "<br>";
+}
+
+document.getElementById("did115").innerHTML = typeof cities;
+
+var fruits1 = ["banana", "mango", " painapple", "blueberry", " orange", "strawberry", " watermelon"];
+str14 = fruits1.join();
+document.getElementById("did117").innerHTML = str14;
+
+str15 = fruits1.join("<s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s>");
+document.getElementById("did118").innerHTML = str15;
+
+
+var string1 = " England -Iceland -New Zealand -Thailand -Finland -Ireland -Netherland -Poland -Switzerland -Scotland -Somaliland -Puntland.";
+arr = string1.split(" "); // This will split where blank space
+document.getElementById("did119").innerHTML = arr;
+arr1 = string1.split("-");
+document.getElementById("did120").innerHTML = typeof arr1+" :" + arr1;
+arr2 = arr.concat(arr1);
+document.getElementById("did121").innerHTML = arr2+"<br><br> <em>To concatenate three or mone arrays, separate the arrays with commas</em>.";
+var country_ia = "Australia India Russia Austria Albania Latvia Lithuania Algeria Slovakia Romania Indonesia Bulgaria Estonia Slovenia Armenia Croatia Serbia Nigeria Bolivia Zambia Czechia Colombia Tanzania Namibia Malaysia Ethiopia Somalia Cambodia Mongolia Tunisia Liberia Georgia Saudi Arabia Syria North Macedonia The Gambia Mauritania Micronesia St. Lucia";
+arr3 = country_ia.concat(arr, arr2);
+document.getElementById("did122").innerHTML = "<br>" +arr3;
+
+var arr4 = new Array("England", "Iceland", "New Zealand", "Thailand", "Finland", "Ireland", "Iceland");
+
+arr5 = arr4.indexOf("Iceland");
+document.getElementById("did123").innerHTML = arr5;
+
+document.getElementById("did124").innerHTML = arr4.lastIndexOf("Iceland");
+
+document.getElementById("did125").innerHTML = arr4.includes("Ireland");
+document.getElementById("did126").innerHTML = arr4.includes("Island");
+document.getElementById("did127").innerHTML = arr4.slice(0, 4);
+document.getElementById("did128").innerHTML = "<br>" + arr4.slice(3, 6);
+
+var monthN = ["January", "February", "April", "May", "June"];
+monthN.splice(2, 0, "March");
+monthN.splice(6, 0, "July", "August");
+monthN.splice(1, 0, "February")
+document.getElementById("did129").innerHTML = monthN;
+
+monthN.splice(1, 1);
+document.getElementById("did130").innerHTML = monthN;
+monthN.splice(1, 3);
+document.getElementById("did131").innerHTML = monthN;
+
+monthN[0] = "December";
+document.getElementById("did132").innerHTML = monthN;
+
+
+var fruits = ["banana", " apple", " durian", " astrawberry", " blueberry", " watermelon", " jackfruit"];
+
+fruits.sort();
+document.getElementById("did133").innerHTML = fruits;
+
+var numbers = [3, 4, 2, 5, 6, 1];
+numbers.sort(function(a, b) {
+return a-b;
+});
+document.getElementById("did134").innerHTML = numbers;
+
+numbers.sort(compareFuntion);
+
+function compareFuntion(a, b) {
+// you can name the function anything you like.
+return a-b;
+}
+document.getElementById("did135").innerHTML = numbers;
+
+numbers.sort(Compare);
+function Compare(a, b) {
+return b-a;
+}
+document.getElementById("did136").innerHTML = numbers;
+
+
+numbers.sort(function(a, b) {
+return b-a;
+})
+document.getElementById("did137").innerHTML = numbers;
+
+numbers.sort(compareFuntion);
+function compareFuntion(a, b) {
+return a-b;
+}
+document.getElementById("did138").innerHTML = numbers;
+
+var Students = [{
+name: "Anowar Mostafa",
+age: 11
+},
+{
+name: "Md Jaber",
+age: 9
+},
+{
+name: "Mohamed Sedek",
+age: 10
+},
+{
+name: "Hafizur Rahman",
+age: 12
+}];
+
+Students.sort(function(a, b) {
+return a.age - b.age
+});
+
+// displaying data
+for (var i = 0; i < Students.length; i++) {
+document.getElementById("did139").innerHTML += "<p>Name:" + Students[i].name + "<br> Age:" + Students[i].age+ "</p>"
+};
+
+Students.sort(SortBy);
+function SortBy(a, b) {
+return b.age-a.name
+}
+for (var i = 0; i < Students.length; i++) {
+document.getElementById('did140').innerHTML += Students[i].name +"<br>" + Students[i].age+"<br>"
+};
+
+var fruits = ["apple", " orange", " banana", "mango", " watermelon"];
+fruits.reverse();
+document.getElementById("did141").innerHTML = "<br>" + fruits;
+
+
+var tools = ["nail cutter", "scissor", "clipper", "comb"];
+for (var i = 0; i < tools.length; i++) {
+document.getElementById("did142").innerHTML += tools[i] + "<br>";
+};
+
+var students = ["Anowar", "Sadek", "Rashed", "Jaber"];
+students.forEach(function(value, index, array) {
+document.getElementById("did143").innerHTML += "<br><p> Index:" + index + "<br> Value:" + value + "</p>"
+});
+
+var numbers = [10, 20, 30, 40, 50, 60];
+var numbersTimeTwo = numbers.map(function(value) {
+return value * 2;
+});
+document.getElementById("did144").innerHTML = "<br>" + numbersTimeTwo;
+
+var num = [7, 9, 6, 12, 10];
+var b = num.map(value);
+function value(x) {
+return x * 10;
+};
+document.getElementById("did145").innerHTML += b;
+
+var numbers = [1, 2, 3, 4, 5, 6,];
+var newArr = numbers.filter(value);
+function value(x) {
+return x <= 4;
+};
+document.getElementById("did146").innerHTML += newArr;
+
+var btn = document.getElementById("btn");
+
+// the block of codes below is called event handler
+btn.onclick = function() {
+//alert("The button was clicked and task is that to show the dialogue box.");
+};
+
+function myFunc() {
+//alert(tools + "," + "key" + fruits);
+};
+
+var volunteers = ["Imran", " Gulap", " Roshid", " Mustafa"];
+//var btn = document.getElementById("btn2");
+btn2.addEventListener("click", function() {
+//alert(volunteers);
+});
+
+document.getElementById("img1").onmouseover = abc;
+function abc() {
+document.getElementById("img1").style.filter = "grayscale(100%)";
+};
+
+img1.addEventListener("mouseout", function() {
+this.style.filter = "grayscale(0%)"
+});
+
+document.getElementById("img2").addEventListener("mouseover", xyz);
+function xyz() {
+document.getElementById("img2").style.filter = "grayscale(100%)"
+};
+
+img2.addEventListener("mouseout", function() {
+document.getElementById("img2").style.filter = "grayscale(0%)";
+});
+
+countries.addEventListener("change", function() {
+document.getElementById("did147").innerHTML = countries.value;
+});
+
+var elem = document.getElementById("did148");
+elem.addEventListener("mouseover", function() {
+elem.innerHTML = "Hello World!";
+});
+
+area.addEventListener("keypress", textValue);
+function textValue() {
+document.getElementById("did149").innerHTML = area.value;
+};
+
+area1.addEventListener("focus", function() {
+this.style.background = "yellow";
+});
+
+area2.addEventListener("focus", arb);
+function arb() {
+this.style.background = "yellow";
+};
+
+area2.addEventListener("blur", arb1);
+function arb1() {
+this.style.background = "white";
+};
+
+window.addEventListener("resize", function() {
+document.getElementById("winWidth").innerHTML = window.innerWidth;
+document.getElementById("winHeight").innerHTML = window.innerHeight;
+});
+
+var a = Math.ceil(0.9);
+b = Math.ceil(1.70);
+c = Math.ceil(21.62);
+d = Math.ceil(6.32);
+e = Math.ceil(3.40);
+var f = a+"<br>" + b +"<br>" + c + "<br>" + d + "<br>" + e;
+document.getElementById("did150").innerHTML = f;
+
+var a = Math.floor(0.9);
+b = Math.floor(1.70);
+c = Math.floor(21.62);
+d = Math.floor(6.32);
+e = Math.floor(3.40);
+var g = a+"<br>" + b +"<br>" + c + "<br>" + d + "<br>" + e;
+document.getElementById("did151").innerHTML = g;
+
+var a = Math.round(0.9);
+b = Math.round(1.70);
+c = Math.round(21.62);
+d = Math.round(6.32);
+e = Math.round(3.40);
+
+var h = [a, b, c, d, e];
+for (var i = 0; i < h.length; i++) {
+document.getElementById("did152").innerHTML += h[i] + "<br>";
+};
+
+var a = Math.sqrt(1);
+b = Math.sqrt(4);
+c = Math.sqrt(100);
+d = Math.sqrt(3.12);
+e = Math.sqrt(-9);
+var j = [a, b, c, d, e];
+for (var i = 0; i < j.length; i++) {
+document.getElementById("did153").innerHTML += j[i]+"<br>";
+};
+
+var a = Math.cbrt(8);
+b = Math.cbrt(100);
+c = Math.cbrt(3.21);
+d = Math.cbrt(-27);
+e = Math.cbrt(81);
+var k = [a, b, c, d, e];
+for (var i = 0; i < k.length; i++) {
+document.getElementById("did154").innerHTML += k[i] + "<br>";
+};
+
+var a = Math.abs(5);
+b = Math.abs(-5);
+c = Math.abs(3.21);
+d = Math.abs(-3.21);
+var l = [a, b, c, d];
+for (var i = 0; i < l.length; i++) {
+document.getElementById("did155").innerHTML += l[i] +"<br>";
+};
+
+var a = Math.max(2, 3, 4, 6);
+b = Math.max(-2, -3, -4, -5);
+c = a + "<br>" + b;
+document.getElementById("did156").innerHTML = c;
+
+var a = Math.min(2, 3, 4, 6);
+b = Math.min(-2, -3, -4, -5);
+d = a + "<br>" + b;
+document.getElementById("did157").innerHTML = d;
+
+var a = Math.pow(2, 4);
+b = Math.pow(-3, -2);
+c = Math.pow(5, 3);
+d = a + "<br>" + b + "<br>" + c;
+document.getElementById("did158").innerHTML = d;
+
+var rnd = Math.random();
+document.getElementById("did159").innerHTML = rnd;
+
+function getRandomInt(min, max) {
+document.getElementById('did160').innerHTML = Math.floor(Math.random()*(max-min))+min;
+};
+
+function getRandomInt1(min, max) {
+document.getElementById("did161").innerHTML = Math.floor(Math.random () *(max-min))+ min;
+};
+
+function getRandomInt2(min, max) {
+document.getElementById("did162").innerHTML = Math.floor(Math.random() *(max-min + 1)) + min;
+};
+
+function getRandomInt3(min, max) {
+document.getElementById("did163").innerHTML = Math.floor(Math.random() *(max-min));
+};
+
+var age = 10;
+if (age >= 10) {
+//alert("The user is old enough to enter this site.");
+};
+
+if (age >= 12) {
+//alert("The user is old enough to enter.")
+} else {
+//alert("The user not old enough to enter.")
+};
+
+document.getElementById("submit").addEventListener("click", function() {
+var Age = document.getElementById("Age").value;
+if (Age >= 18) {
+//alert(" The user is allowed to enter.");
+} else {
+//alert("The user isn't allowed to enter.");
+}
+});
+
+
+document.getElementById("submit1").addEventListener("click", function() {
+var x = document.getElementById("x").value;
+if (x < 10) {
+document.getElementById("did164").innerHTML = "x is less than 10";
+} else if (x > 10) {
+document.getElementById("did164").innerHTML = "x is greater than 10";
+} else {
+document.getElementById("did164").innerHTML = "x is 10 because it's neither less than or more than 10.";
+}
+});
+
+function greetUser() {
+var time = new Date().getHours();
+if (time < 12) {
+return "Good Morning";
+} else if (time < 14) {
+return "Good Afternoon";
+} else if (time < 17) {
+return "Good Evening"
+} else {
+return "Goodnight";
+}
+};
+document.getElementById("did165").innerHTML = greetUser();
+
+function mealTime() {
+var time1 = new Date().getHours();
+if (time1 < 10) {
+return "It's time to breakfast.";
+} else if (time1 < 14) {
+return "It's time to launch.";
+} else if (time1 < 20) {
+return "It's time to learn code."
+} else if (time1 < 22) {
+return "It's time to dinner."
+} else {
+return "It's time to go bed."
+}
+};
+
+document.getElementById("did166").innerHTML = greetUser() + "! " + mealTime();
+
+var fruits2 = "banana";
+if (fruits2 == 'apple') {
+document.getElementById("did167").innerHTML = "color is red"
+}
+if (fruits2 == 'watermelon') {
+document.getElementById('did167').innerHTML = 'color is green'
+}
+if (fruits2 == 'strawberry') {
+document.getElementById('did167').innerHTML = 'color is pink'
+}
+if (fruits2 == 'banana') {
+document.getElementById('did167').innerHTML = 'color is yellow'
+};
+
+switch (fruits2) {
+case "apple":
+document.getElementById("did168").innerHTML = "The color is red";
+break;
+case "banana":
+document.getElementById("did168").innerHTML = "The colour is yellow";
+break;
+case "strawberry":
+document.getElementById("did168").innerHTML = "The colour is pink";
+break;
+
+default:
+document.getElementById('did168').innerHTML = "Sorry, fruit not found"
+};
+
+
+var City = "Dhaka";
+switch (City) {
+case "Yangon":
+document.getElementById("did169").innerHTML = "Capital of Myamar.";
+break;
+case "Mumbai":
+document.getElementById("did169").innerHTML = "The capital of India";
+break;
+case "Washington":
+document.getElementById("did169").innerHTML = "The capital of U.S.";
+break;
+case "Dhaka":
+document.getElementById("did169").innerHTML = "The capital of Bangladesh.";
+break;
+default:
+document.getElementById("did169").innerHTML = "Sorry, I can't find the city!";
+};
+
+
+var fruit = "lettuce";
+
+switch (fruit) {
+case "apple":
+document.getElementById("did170").innerHTML = "The color is red.";
+break;
+case "strawberry":
+document.getElementById("did170").innerHTML = "The color is pink.";
+break;
+case "mango":
+document.getElementById("did170").innerHTML = "The color is yellow.";
+break;
+default:
+document.getElementById("did170").innerHTML = "That is not a fruit.";
+};
+
+function checkPrice() {
+var fruitP = document.getElementById("fruits").value;
+switch (fruitP) {
+case "apple":
+var amount = "$1.92";
+document.getElementById("did171").innerHTML = "The price of " + fruitP + " is " + amount;
+break;
+case "mango":
+var amount = "$2.2";
+document.getElementById("did171").innerHTML = "The price of " + fruitP + " is " + amount;
+break;
+case "cherry":
+var amount = "$3.4";
+document.getElementById("did171").innerHTML = "The price of " + fruitP + " is " + amount;
+break;
+case "banana":
+var amount = "$2.99";
+document.getElementById("did171").innerHTML = "The price of " + fruitP + " is " + amount;
+break;
+case "orange":
+var amount = "$1.42";
+document.getElementById("did171").innerHTML = "The price of " + fruitP + " is " + amount;
+break;
+case "strawberry":
+var amount = "$3.14";
+document.getElementById("did171").innerHTML = "The price of " + fruitP + " is " + amount;
+break;
+default:
+/*document.getElementById("did171").innerHTML = */ //alert("Sorry for the inconvenience, " + fruitP + " is currently not available.");
+console.log(fruitP);
+}
+};
+
+
+var fruit0 = ["banana", "apple", "orange", "jackfruit", "blueberry"];
+var html = "";
+html += "<p>" + fruit0[0]+ "</p>";
+html += "<p>" + fruit0[1]+ "</p>";
+html += "<p>" + fruit0[2]+ "</p>";
+html += "<p>" + fruit0[3]+ "</p>";
+html += "<p>" + fruit0[4]+ "</p>";
+
+document.getElementById("did172").innerHTML = html;
+
+var html0 = "";
+for (var i = 0; i < fruit0.length; i++) {
+html0 += "<p>" + fruit0[i] + "</p>";
+document.getElementById("did173").innerHTML = html0+ "<br> <p> Note both examples above work the <span> same way</span>, but with different approaches.";
+};
+
+for (var i = 0; i < 5; i++) {
+document.getElementById("did174").innerHTML += "Hello Ismail! <br>";
+};
+
+var students0 = ["Sadek", "Jaber", "Rashed"];
+html1 = "";
+for (var i = 0; i < students0.length; i++) {
+html1 += students0[i] +"<br>";
+};
+document.getElementById("did175").innerHTML = html1;
+
+var school0 = "Twinkle-3";
+for (value of school0) {
+document.getElementById("did176").innerHTML += value + "<br>";
+};
+var school = 'Twinkle-3';
+var i = 0;
+while (i < 8) {
+document.getElementById("did177").innerHTML += school+"<br>"; i++;
+};
+
+var vegetable = ["tomato", "potato", "cucumber", "eggplant"];
+var len = vegetable.length;
+console.log(len);
+var i = 0;
+var html2 = "";
+while (i < len) {
+html2 += "<p>I like " + vegetable[i] + ". </p>";
+i++;
+}
+document.getElementById("did178").innerHTML = html2;
+
+var i = 0;
+do {
+document.getElementById("did179").innerHTML += "Hello world! <br>"; i++;
+} while (i < 4);
+
+var occupation = [" software engineer", " mobile developer", " web developer", " programmer"];
+var leng = occupation.length;
+var i = 0;
+var html = "";
+do {
+html += "Someday I want to be" + occupation[i] +".<br>"; i++;
+} while (i < leng);
+document.getElementById("did180").innerHTML = html;
+
+
+var html = " ";
+for (var i = 1; i < 10; i++) {
+if (i == 6) {
+break;
+}
+html += "<li> Number " + i + "</li>"
+};
+
+document.getElementById("did181").innerHTML = html;
+
+var html = " ";
+for (var i = 1; i < 10; i++) {
+if (i == 5) {
+continue;
+}
+html += "<li> Number" + i +" </li>";
+};
+document.getElementById("did182").innerHTML = html;
+
+</script>
+    <br>
+<!--iframe src="/storage/emulated/0/myDocuments/myProject/HtmlFiles/NewProject.html" frameborder="3px" width="100%" height="400px">HTML PAGE</iframe-->
+   <!--a href="/storage/emulated/0/myDocuments/myProject/JavaScript/JavaScript.html" download> Save file</a-->
+     <br>
+<a href="mailto:mdi258470@gmail.com" id="end">Send mail</a>
+<div class="home-link">
+<a href="#Home">Home</a>
+</div>
+</main>
+</body>
+</html>

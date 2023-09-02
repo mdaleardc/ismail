@@ -17,7 +17,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        color: #f0ffff;
+        color: #00ffff;
         width: 99%;
         scroll-behavior: smooth;
     }
@@ -61,9 +61,14 @@
         padding-left: 100px;
     }
     h1 {
-        color: #FF0056;
+       color: #f8f8ff;
+  background: conic-gradient(from 0deg at center, #005ff3, #F000ff, #4CAF50, #FF00A5);
+  background-size: fit-content;
+        /*color: #FF0056;*/
         font-weight: 600;
         text-align: center;
+        padding: 5px;
+        margin: 5px auto;
         display: block;
     }
     h2 {
@@ -79,7 +84,7 @@
     }
     b *, b {
         background: #000;
-        color: #fff;
+        color: #00ced1;
         border-radius: 5px;
     }
     /* button {
@@ -200,6 +205,10 @@ width: 180px;
   background-color: #f5f5f5;
 }
     
+    main.sections {
+        margin-top:100px;
+    }
+    
     div#wrapper {
         margin: 25px auto 0px auto;
         width: 75%;
@@ -268,6 +277,21 @@ width: 180px;
         border-radius: 9px;
         text-transform: uppercase;
     }
+    
+    section#JS_Reserved_Keywords h2 {
+        text-align: center;
+    }
+    div.js-reserve-key {
+        width: 100%;
+        display: flex;
+        flex-direction:row;
+    }
+    ul.sub-class {
+        width: 50%;
+    }
+    ul.sub-class li {
+        padding-left: 30px;
+    }
     </style>
     </head>
     <body>
@@ -313,184 +337,60 @@ width: 180px;
     }
     </style>
     
-    <main>
     <header>
-    <div class="menu-ctn" id="Home">Menu</div>
     <div class="menu-bar">
-        <ul class="menu-list">
-            
-            <div>
-    <li><a href="#JS-Output"> JS-Output </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-Statment"> JS-Statment </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-Syntax"> JS-Syntax </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Comments"> JS Comments </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Variables"> JS_Variables </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-DetaType"> JS-DetaType </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Operator"> JS_Operator </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-Arithmetic-O"> JS-Arithmetic-O </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-Assigment-O"> JS-Assigment-O </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-String-M"> JS-String-M </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-Logical-O"> JS-Logical-O </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-Comparison-O"> JS-Comparison-O </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-Function"> JS-Function </a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-Object"> JS-Object </a></li>
-                
-            </div>
-            <div>
-                
-    <li><a href="#JS-String"> JS-String </a></li>
-            </div>
-            <div>
-                
-    <li><a href="#JS-Number"> JS-Number </a></li>
-            </div>
-            <div>
-    <li><a href="#JS_Number_M">JS_Number_M</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Arrays">JS_Arrays</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Array_M">JS_Array_M</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Array_S">JS_Array_S</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Array_I">JS_Array_I</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Events">JS_Events</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Math_Ob">JS_Math_Ob</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#Js_Math_R">Js_Math_R</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#Js_if...else">Js_if...else</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Bit_Operator">JS_Bit_Operator</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Reg_Ex">JS_Reg_Ex</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Exception_Handle">JS_Exception_Handle</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Var_Scope">JS_Var_Scope</a></li>
-                
-            </div>
-            <div>
-                
-    <li><a href="#JS_Var_Hoisting">JS_Var_Hoisting</a></li>
-            </div>
-            <div>
-    <li><a href="#JS_Strict_Mode">JS_Strict_Mode</a></li>
-                
-            </div>
-            <div>
-                
-    <li><a href="#JS_let_Statement">JS_let_Statement</a></li>
-            </div>
-            <div>
-    <li><a href="#JS_const_Statement">JS_const_Statement</a></li>
-                
-            </div>
-            <div>
-                
-    <li><a href="#JS_Date">JS_Date</a></li>
-            </div>
-            <div>
-    <li><a href="#JS_Datef_Format">JS_Datef_Format</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Date_Get_Method">JS_Date_Get_Method</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Date_Set_Method">JS_Date_Set_Method</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS-this_Keyword">JS_this_Keyword</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Arrow_Function">JS_Arrow_Function</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Class">JS_Class</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_JSON">JS_JSON</a></li>
-                
-            </div>
-            <div>
-    <li><a href="#JS_Forms">JS_Forms</a></li>
-                
-            </div>
-    </ul>
+        <ul class="menu-list"><li><a href="#JS-Output"> JS-Output </a></li>
+        <li><a href="#JS-Statment"> JS-Statment </a></li>
+        <li><a href="#JS-Syntax"> JS-Syntax </a></li>
+        <li><a href="#JS_Comments"> JS Comments </a></li>
+        <li><a href="#JS_Variables"> JS_Variables </a></li>
+        <li><a href="#JS-DetaType"> JS-DetaType </a></li>
+        <li><a href="#JS_Operator"> JS_Operator </a></li>
+        <li><a href="#JS-Arithmetic-O"> JS-Arithmetic-O </a></li>
+        <li><a href="#JS-Assigment-O"> JS-Assigment-O </a></li>
+        <li><a href="#JS-String-M"> JS-String-M </a></li>
+        <li><a href="#JS-Logical-O"> JS-Logical-O </a></li>
+        <li><a href="#JS-Comparison-O"> JS-Comparison-O </a></li>
+        <li><a href="#JS-Function"> JS-Function </a></li>
+        <li><a href="#JS-Object"> JS-Object </a></li>
+        <li><a href="#JS-String"> JS-String </a></li>
+        <li><a href="#JS-Number"> JS-Number </a></li>
+        <li><a href="#JS_Number_M">JS_Number_M</a></li>
+        <li><a href="#JS_Arrays">JS_Arrays</a></li>
+        <li><a href="#JS_Array_M">JS_Array_M</a></li>
+        <li><a href="#JS_Array_S">JS_Array_S</a></li>
+        <li><a href="#JS_Array_I">JS_Array_I</a></li>
+        <li><a href="#JS_Events">JS_Events</a></li>
+        <li><a href="#JS_Math_Ob">JS_Math_Ob</a></li>
+        <li><a href="#Js_Math_R">Js_Math_R</a></li>
+        <li><a href="#Js_if...else">Js_if...else</a></li>
+        <li><a href="#JS_Bit_Operator">JS_Bit_Operator</a></li>
+        <li><a href="#JS_Reg_Ex">JS_Reg_Ex</a></li>
+        <li><a href="#JS_Exception_Handle">JS_Exception_Handle</a></li>
+        <li><a href="#JS_Var_Scope">JS_Var_Scope</a></li>
+        <li><a href="#JS_Var_Hoisting">JS_Var_Hoisting</a></li>
+        <li><a href="#JS_Strict_Mode">JS_Strict_Mode</a></li>
+        <li><a href="#JS_let_Statement">JS_let_Statement</a></li>
+        <li><a href="#JS_const_Statement">JS_const_Statement</a></li>
+        <li><a href="#JS_Date">JS_Date</a></li>
+        <li><a href="#JS_Datef_Format">JS_Datef_Format</a></li>
+        <li><a href="#JS_Date_Get_Method">JS_Date_Get_Method</a></li>
+        <li><a href="#JS_Date_Set_Method">JS_Date_Set_Method</a></li>
+        <li><a href="#JS-this_Keyword">JS_this_Keyword</a></li>
+        <li><a href="#JS_Arrow_Function">JS_Arrow_Function</a></li>
+        <li><a href="#JS_Class">JS_Class</a></li>
+        <li><a href="#JS_JSON">JS_JSON</a></li>
+        <li><a href="#JS_Forms">JS_Forms</a></li>
+        <li><a href="#JS-Form-Input">JS-Form-Input</a></li>
+        <li><a href="#JS_Reserved_Keywords">JS_Reserved_Keywords</a></li>
+        <li><a href="#JS_Func_Invocation">JS_Func_Invocation</a></li>
+        
+        </ul>
     </div>
     </header>
     
+    
+  <main class="sections">
     <section id="JS-Output">
     <h1> JavaScript Displaying Output</h1>
     <ol>
@@ -3943,6 +3843,244 @@ document.getElementById("did230").innerHTML = millisecond;
     </script>
     <p><em>The "https://codeliber.com/form-action.php" is a server script</em>.</p>
     </section>
+    <hr>
+    <section id="JS-Form-Input">
+    <h1>JavaScript Form Input</h1>
+    <p>In this lesson we will study how to validate form input.</p>
+    <br>
+    <h2>How to Get an Input's Value?</h2>
+    <p>Before we can learn how to validate inputs, we need to know how to get their value at first. <br><br>
+    To get an input's value select the element and use its value property.</p>
+    
+    <h3>Example:</h3>
+    <form>
+    <input type="text" name="firstName" id="firstName1"/>
+    <button type="button" onclick="getValue()">getValue</button>
+    </form>
+    
+    <script>
+        function getValue() {
+           var val = document.getElementById("firstName1").value;
+            alert("The value you entered is: " + val);
+        }
+    </script>
+    
+    <p><b>Notic!</b> that the example above we used the <b>document.getElementById("")</b> method to select the input element.</p>
+    <p>The more efficient way to select the input element is the <br>
+    documrnt.getElementByName("") metnod.
+    <br>
+    This way we don't need to put <b>id'</b>s to each input.</p>
+    <br>
+    <form action="https://codeliber.com/form-action.php" method="get" accept-charset="utf-8">
+        <input type="text" name="firstName1">
+        <button type="button" onclick="getValue1()">getValue1</button>
+    </form>
+    <br>
+    <p>The document.getElementsByName() returns an array of selected elements withe the specified name.
+    <br>
+    That's why we used bracket notation ([0]) to select the first item.</p>
+    
+    <script>
+        function getValue1() {
+            var val1 = document.getElementsByName("firstName1")[0].value;
+            alert("The name you entered is " + val1);
+        }
+        
+    </script>
+    
+    <h2>Validate Empty Text Input</h2>
+    <p>The form beow will not be submited if the firstName2 is emty.</p>
+    <br>
+    <form action="https://codeliber.com/form-action.php" onsubmit="return validateForm3()">
+        <label for="firstName2">First Name:
+        <input type="text" name="firstName2" id="firstName2"/></label>
+        <button type="submit">submit</button>
+    </form>
+    
+    <script>
+        function validateForm3() {
+            const firstName2 = document.getElementsByName("firstName2")[0].value;
+            if (firstName2 == "") {
+                alert("Please enter a value on the text field!!!");
+                return false;
+            }
+        }
+    </script>
+    <br>
+    <h2>Limited Number of Characters</h2>
+    <p>The form below will not be submitted of the user input text exeeding 10 characters.</p>
+    
+    <form action="https://codeliber.com/form-action.php" onsubmit="validateForm4()">
+        First Name:<input type="text" name="length"/>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+        function validateForm4() {
+            const userName = document.getElementsByName("length")[0].value;
+            const userLength = userName.length;
+            if (userLength > 10) {
+                alert("You can't input more than 10 characters!");
+                return false;
+            }
+        }
+    </script>
+    
+    <h2>Validate Numbers</h2>
+  <p>The form below will not be submitted if the user input a number less than 18.</p>
+    <br>
+    <form action="https://codeliber.com/form-action.php" onsubmit="validateForm5()">
+        age:<input type="text" name="age">
+        <button type="submit">submit</button>
+    </form>
+    
+    <script>
+        function validateForm5() {
+            const userAge = document.getElementsByName("age")[0].value;
+            if (userAge < 18) {
+                alert("The age of the user less than 18, the form will not be submits");
+                return false;
+            }
+        }
+        
+    </script>
+    <h2>USING HTML5 ATTRIBUTE</h2>
+    <p>HTML5 introdused new attribute that can help validate forms.</p>
+    <p>The required attribute will prevent a form from being submitted if the input is empty.</p>
+    <form action="https://codelibr.com/form-action.php">
+        <label for="age">Age: <input type="number" required></label>
+        <input type="submit"/>
+    </form>
+    
+    <br>
+    <p>The min and max attributes specify the minimum and maximum inlput values allowed.</p>
+    <p>In this example, only the numbers from 18 to 65 allowed.</p>
+    <form action="https://codeliber.com/form-action.php">
+        <label for="age">Age:
+            <input type="number" min="18" max="65"/>
+            <input type="submit"/>
+            
+        </label>
+    </form>
+    </section>
+    <br>
+    <section id="JS_Reserved_Keywords">
+        <h1>JAVASCRIPT RESERVED KEYWORDS</h1>
+        <p>JavaScript reserved keywords cannot be used as identifiers.</p>
+        <p>That means you cannot use reserved keywords as variable or function names.</p>
+        <br>
+        <h2><u>The Reserved Keywords</u></h2>
+        <p>Here is a list of the reserved keywords:</p>
+        
+    <div class="js-reserve-key">
+        <ul class="sub-class">
+            <li>break</li>
+            <li>case</li>
+            <li>catch</li>
+            <li>class</li>
+            <li>const</li>
+            <li>continue</li>
+            <li>debugger</li>
+            <li>default</li>
+            <li>delete</li>
+            <li>do</li>
+            <li>else</li>
+            <li>enum</li>
+            <li>export</li>
+            <li>extends</li>
+            <li>false</li>
+            <li>finally</li>
+            <li>for</li>
+            <li>function</li>
+            <li>if</li>
+        </ul>
+    
+        <ul class="sub-class">
+            <li>import</li>
+            <li>in</li>
+            <li>instance</li>
+            <li>new</li>
+            <li>null</li>
+            <li>return</li>
+            <li>super</li>
+            <li>switch</li>
+            <li>this</li>
+            <li>throw</li>
+            <li>true</li>
+            <li>try</li>
+            <li>typeof</li>
+            <li>var</li>
+            <li>void</li>
+            <li>while</li>
+            <li>with</li>
+            <li>yield</li>
+            
+        </ul>
+    </div>
+    <h2><u>Future Reserved Keywords</u></h2>
+    <p>The following are reserved as future keywords.</p>
+    <p>They have no special functionality at present, but they might in future, so they cannot be used as identifiers.</p>
+    <div class="js-reserve-key">
+            <ul class="sub-class">
+                <li>abstract</li>
+                <li>boolean</li>
+                <li>byte</li>
+                <li>char</li>
+                <li>double</li>
+                <li>final</li>
+                <li>float</li>
+                <li>goto</li>
+            </ul>
+        
+            <ul class="sub-class">
+                <li>int</li>
+                <li>long</li>
+                <li>native</li>
+                <li>short</li>
+                <li>synchronized</li>
+                <li>throws</li>
+                <li>transient</li>
+                <li>volatile</li>
+            </ul>
+    </div>
+    
+    <h2><u>Reserved Keywords in Strict Mode</u></h2>
+    <p>The following cannot be used as identifiers in strict mode.</p>
+    <div class="js-reserve-key">
+        <ul class="sub-class">
+            <li>implements</li>
+            <li>interface</li>
+            <li>let</li>
+            <li>pakage</li>
+        </ul>
+        
+        <ul class="sub-class">
+            <li>private</li>
+            <li>protected</li>
+            <li>public</li>
+            <li>static</li>
+        </ul>
+    </div>
+    </section>
+    
+    <section id="JS_Func_Invocation">
+        <h1>JAVASCRIPT FUNCTION INVOCATION</h1>
+        <p>You already know that <b>calling a function </b>will execute the codes inside it.</p>
+        <p>Calling a function can also be refered to as involing a function.</p>
+        <h3>Example:</h3>
+        <p id="did253"></p>
+        
+        <script>
+            function addNumbers0(x,y) {
+            return x+y;
+            }
+                document.getElementById("did253").innerHTML = addNumbers0(4,8);
+        </script>
+    </section>
+    
+    
+    
+    
       
 <!-- all javascript code-->
     <script type="text/javascript" charset="utf-8">

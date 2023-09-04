@@ -178,7 +178,7 @@
   gap: 5px;
   margin: 0 auto;
   height:93px;
-  
+  overflow-x:hidden;
 }
 .menu-list li {
     text-align: center;
@@ -384,6 +384,7 @@ width: 180px;
         <li><a href="#JS-Form-Input">JS-Form-Input</a></li>
         <li><a href="#JS_Reserved_Keywords">JS_Reserved_Keywords</a></li>
         <li><a href="#JS_Func_Invocation">JS_Func_Invocation</a></li>
+        <li><a href="#JS_DOM_Introduction">JS_DOM_Introduction</a></li>
         
         </ul>
     </div>
@@ -2197,7 +2198,7 @@ In this example, myInterval will be stopped when you press the button.
       <h1>JavaScript Bitwise Operator</h1>
       <p>Bitwise operators treat their rperands as a sequense of 32 bit (zeros and ones ), rather than as numbers. 
       <br> 
-      For example, the decimal number 5 h a binary represention of 101. 
+      For example, the decimal number 5 h a binary representation of 101. 
       <br>
       Bitwise operators return numerrical values.</p>
       <br>
@@ -4076,8 +4077,67 @@ document.getElementById("did230").innerHTML = millisecond;
             }
                 document.getElementById("did253").innerHTML = addNumbers0(4,8);
         </script>
+        <br>
+        <h2>Invoking function with Default Parameters</h2>
+        <p>A function can have default parameters.</p>
+        <p>A function with default parameters can be invoked even if there is no argument is passed.</p>
+        <br>
+        <button onclick="sayHello2()">Call sayHello1 without an Argument</button>
+        
+        <script>
+            function sayHello2(message="Welcome to the coding world!") {
+            alert(message);
+            }
+        </script>
+        
+        <h2>Invoking Function with Global Object</h2>
+        <p>All functions declared in the global scope are added to the <b>global object.</b></p>
+        <p>The window object represents the global object.</p>
+        <br>
+        <p id="did254"></p>
+        
+        <script>
+            function addNumbers2(xa,ya) {
+                return xa+ya;
+            }
+                document.getElementById("did254").innerHTML = window.addNumbers2(7, 3); // invoking function using window object.
+        </script>
+        
+        <h2>Invoking Function In An Object</h2>
+        
+        <p>The <span>this</span> keyword inside a function in an object referers to the <b>object</b> itself.</p>
+        
+        <p><span id="did255"></span></p>
+        
+        <script>
+            const fruit10 = {
+                name:"namgo",
+                color:"yellow",
+                test:"sweet.",
+                showInfo1: function() {
+                    return "<br> The "+ this.name + " is " + this.color + " and test is " + this.test;
+                }
+            }
+            document.getElementById("did255").innerHTML = fruit10.showInfo1();
+        </script>
+        
     </section>
-    
+    <br>    
+    <section id="JS_DOM_Introduction">
+        <h1>THE DOCUMENT OBJECT MODEL <abbr>(DOM)</abbr> INTRODUCTION</h1>
+        <p>As you already know, the backbone of an HTML document is elements</p>
+        <p>When an HTML document is loaded, the browser creates an <b>HTML Document Object Model</b> or <b>HTML DOM</b>.</p>
+        <br>
+        <h2>What is the DOM?</h2>
+        <p>The DOM is created by the browser when an HTML document is loaded.</p>
+        <p>It is a "<b>tree structure</b>" representation of an <b>HTML structure</b>.</p>
+        <p>The DOM contains all the elements in a document.</p>
+        <div style="text-align:center">
+            <img src="https://onedrive.live.com/embed?resid=92490333B2709818%21643&authkey=%21AEb5QLU5oy11KTo&width=720&height=676" alt="dom tree" max-width="100%`" height="auto" loading="lazy"/>
+            <p><b>HTML DOM Tree</b></p>
+        </div>
+        
+    </section>
     
     
     

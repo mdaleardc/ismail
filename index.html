@@ -292,6 +292,14 @@ width: 180px;
     ul.sub-class li {
         padding-left: 30px;
     }
+    .dom_tree img {
+        border-radius: 7px 7px 0 0;
+    }
+    .dom_tree p {
+        border-radius: 0 0 7px 7px;
+        background-color: black;
+        padding: 5px;
+    }
     </style>
     </head>
     <body>
@@ -4132,7 +4140,7 @@ document.getElementById("did230").innerHTML = millisecond;
         <p>The DOM is created by the browser when an HTML document is loaded.</p>
         <p>It is a "<b>tree structure</b>" representation of an <b>HTML structure</b>.</p>
         <p>The DOM contains all the elements in a document.</p>
-        <div style="text-align:center">
+        <div class="dom_tree" style="text-align:center">
             <img src="https://onedrive.live.com/embed?resid=92490333B2709818%21643&authkey=%21AEb5QLU5oy11KTo&width=720&height=676" alt="dom tree" max-width="100%`" height="auto" loading="lazy"/>
             <p><b>HTML DOM Tree</b></p>
         </div>
@@ -5325,6 +5333,7 @@ document.getElementById("did182").innerHTML = html;
      <br>
 <a href="mailto:mdi258470@gmail.com" id="end">Send mail</a>
 <div class="home-link">
+<a href="#Home">Home</a>
 </div>
 </main>
 </body>

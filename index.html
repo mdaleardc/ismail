@@ -206,7 +206,7 @@ width: 180px;
 }
     
     main.sections {
-        margin-top:100px;
+        margin-top:90px;
     }
     
     div#wrapper {
@@ -393,7 +393,7 @@ width: 180px;
         <li><a href="#JS_Reserved_Keywords">JS_Reserved_Keywords</a></li>
         <li><a href="#JS_Func_Invocation">JS_Func_Invocation</a></li>
         <li><a href="#JS_DOM_Introduction">JS_DOM_Introduction</a></li>
-        
+        <li><a href="#JS_DOM_Selectors">JS_DOM_Selectors</a></li>
         </ul>
     </div>
     </header>
@@ -406,7 +406,7 @@ width: 180px;
       <li>
       Output using console.
       </li>
- <figcaption> By using console.log()fantion, we can write into the browser's developer console</figcaption>
+ <figcaption> By using console.log()function, we can write into the browser's developer console</figcaption>
   
   <li>
     Output using dialog box or Alert funtion.
@@ -4144,9 +4144,152 @@ document.getElementById("did230").innerHTML = millisecond;
             <img src="https://onedrive.live.com/embed?resid=92490333B2709818%21643&authkey=%21AEb5QLU5oy11KTo&width=720&height=676" alt="dom tree" max-width="100%`" height="auto" loading="lazy"/>
             <p><b>HTML DOM Tree</b></p>
         </div>
+        <br>
+        <h2>DOM and JavaScript</h2>
+        <ul class="jsdom">
+            <li>JavaScript can an HTML element's content.</li>
+            <li>JavaScript can add attributes to an HTML element.</li>
+            <li>JavaScript can change an HTML element's attribute value.</li>
+            <li>JavaScript can change an HTML element's styles.</li>
+            <li>JavaScript can add HTML elements to other HTML elements.</li>
+            <li>JavaScript can remove an HTML element.</li>
+            <li>JavaScript can listen to events that happen to an HTML element.</li>
+        </ul>
         
     </section>
+    <hr>
+    <br>
+    <section id="JS_DOM_Selectors">
+        <h1>JavaScript DOM Selectors</h1>
+    <p>With JavaScript, we can select elements from the DOM tree using the document object.</p>
+    <h4>why do we select elements?</h4>
+    <ul>
+        <li>To get their content.</li>
+        <li>To change their content.</li>
+        <li>To style them.</li>
+        <li>To get or change their attribute.</li>
+        <li>To remove them.</li>
+        <li>And many more.</li>
+    </ul>
+        
+        <h2>Select the Topmost Elements</h2>
+    <p>The topmost elements be selected directly from the document object properties.</p>
     
+    <ul>
+        <li>document.documentElement selects <b>&lt;html&gt;</b></li>
+        <li>document.head selects <b>&lt;head&gt;</b></li>
+        <li>document.body selects <b>&lt;body&gt;</b></li>
+    </ul>
+    
+    <script>
+        //gets value of the lang attribute of <html> elements
+        console.log(document.documentElement.getAttribute("lang") + " is html attribute value.");
+        console.log(document.head.firstElementChild.innerHTML);
+        //change the backround color of the <body> element
+        document.body.style.backgroundColor="maroon";
+    </script>
+    
+    <h2>Select an Element By Id</h2>
+    <p>The document.getElementById( ) selects the element whose id attriute matches the specified string. It is the best nethod to use when slecting a <b id="byid"></b>.</p>
+    <script>
+        document.getElementById("byid").innerHTML = "single element";
+    </script>
+    
+    <h2>Select Elements By Class Name</h2>
+    <p>The document.getElementsByClassName( ) selects all element with the iven class name. It returns an array of objects. <b class="byclass">Why objects?</b> Because in a DOM tree all are objects. In this example, we will select all elements with <b class="byclass">"byclass"</b> class name. The get access to the each elements using <b class="byclass">for</b> loop.</p>
+    
+    <script>
+        //let's select elements with "byclass" class name
+        var elements = document.getElementsByClassName("byclass");
+        //let's access to each selected element 
+        for(let i = 0; i < elements.length; i++) {
+            //let's style each selected element 
+            elements[i].style.fontSize="20px";
+            elements[i].style.color="indigo";
+            elements[i].style.backgroundColor = "cornsilk";
+        }
+    </script>
+    
+    <h2>Select Elements By Tag Name</h2>
+    <p>The document.getElementByTagName( ) selects all elenent with the given tag name. It returns an array of objects. In this example, we will style all <b class="byclass"> &lt;h2&gt; elements</b>.</p>
+    
+    <script>
+    var h2Elements = document.getElementsByTagName("h2");
+
+// Loop through each h2 element and wrap it in a div with the class "h2container"
+for (var i = 0; i < h2Elements.length; i++) {
+      var h2Element = h2Elements[i];
+      h2Element.style.color="#FFDD00";
+      h2Element.style.padding = "5px";
+      h2Element.style.textAlign = "center";
+      h2Element.style.display = "inline"
+      var divElement = document.createElement("div"); // Create a new div element
+      divElement.className = "h2container"; // Set the class attribute
+      divElement.appendChild(h2Element.cloneNode(true)); // Clone the h2 element and append it to the div
+      h2Element.parentNode.replaceChild(divElement, h2Element); // Replace the original h2 with the new div
+    }
+    
+    //other part
+    
+    //let's select elements with "h2container that created by JavaScript
+    var h2containers = document.getElementsByClassName("h2container");
+    //let's access each selected element
+    for(let i = 0; i < h2containers.length; i++) {
+        var h2container = h2containers[i];
+        // let's style each selected element
+        h2container.style.margin = "auto";
+        h2container.style.width= "fit-content";
+        h2container.style.margin = "3px auto";
+        h2container.style.textAlign = "center";
+        h2container.style.backgroundColor = "green";
+        h2container.style.borderRadius = "4px";
+    }
+    </script>
+    
+    <h2>Select Elements By Name</h2>
+    <p>The document.getElementById( ) selects all elements with the given name. It returns an array of objects. In this example, we use the document.getelementsByName( ) to select inputs by their name attribute. Since it returns an array, we need to use the bracket notation ([0]) to select the first item of the array.</p>
+    
+    <form>
+        <label for="firstName3">First Name: <input type="text" name="firstName3"/></label>
+        <label for="lastName3">Last Name: <input type="text" name="lastName3"></label>
+        <button onclick="getValue2()">getvalue</button>
+        
+    </form>
+    <script type="text/javascript" charset="utf-8">
+    function getValue2() {
+        var firstName3 = document.getElementsByName("firstName3")[0].value;
+        var lastName3 = document.getElementsByName("lastName3")[0].value;
+        var fullName = "Your full name is " +firstName3 + lastName3;
+        console.log(fullName);
+    }
+    </script>
+    
+    <h2>Select Elements Using CSS Celetors</h2>
+    <p>The document.querySelectorAll( ) selects all elements that match the specified selector. The selector must be a valid CSS selector. It returns an array of the selected elements (nods). In this example, the element with the  id is selected.</p>
+    <br>
+    <p class="did256"></p>
+    
+    <script>
+        document.querySelectorAll(".did256")[0].innerHTML = "Hello world!";
+        
+        var h1Elements = document.querySelectorAll("h1");
+        for(let i = 0; i < h1Elements.length; i++) {
+            h1Elements[i].classList.add("h1Container");
+        }
+        console.log(document.firstElementChild.innerHTML);
+    </script>
+    <br>
+    <p>In this example, all element with the <b>h1Container</b> class name are selected.</p>
+    <script>
+        // let's select all elements with the "h1Container" class name
+        var elements = document.querySelectorAll(".h1Container");
+        // let's access each selected elements
+        for(let i = 0; i < elements.length; i++) {
+            //let'style each selected element 
+       elements[i].style.marginTop = "10px";
+        }
+    </script>
+    </section>
     
     
       

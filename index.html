@@ -55,12 +55,10 @@
     li {
         font-weight: 700;
         font-size: 1em;
-        head
         color: #58FF00;
-        list-style-position: inside;
-        padding-left: 100px;
+        list-style-position:inside;
     }
-    h1 {
+    h1:not(.nodeNavig) {
        color: #f8f8ff;
   background: conic-gradient(from 0deg at center, #005ff3, #F000ff, #4CAF50, #FF00A5);
   background-size: fit-content;
@@ -292,13 +290,26 @@ width: 180px;
     ul.sub-class li {
         padding-left: 30px;
     }
+    .dom_tree {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-end;
+    }
     .dom_tree img {
         border-radius: 7px 7px 0 0;
+        margin-left: 6px;
     }
     .dom_tree p {
+        margin-left: 6px;
         border-radius: 0 0 7px 7px;
         background-color: black;
-        padding: 5px;
+    }
+    #codeContainer {
+        background-color:black;
+        border-radius: 7px;
+        text-align: center;
+        width: fit-content;
+        padding: 7px;
     }
     </style>
     </head>
@@ -312,11 +323,7 @@ width: 180px;
     $("#flip").click(function() {
     
     $("#panel").slideToggle("slow");
-    
-        
     });
-    
-        
     });
     </script>
     
@@ -394,6 +401,11 @@ width: 180px;
         <li><a href="#JS_Func_Invocation">JS_Func_Invocation</a></li>
         <li><a href="#JS_DOM_Introduction">JS_DOM_Introduction</a></li>
         <li><a href="#JS_DOM_Selectors">JS_DOM_Selectors</a></li>
+        <li><a href="#JS_DOM_Nodes">JS_DOM_Nodes</a></li>
+        <li><a href="#JS_DOM_Navigation">JS_DOM_Navigation</a></li>
+        <li><a href="#JS_DOM_HTML">JS_DOM_HTML</a></li>
+        
+        
         </ul>
     </div>
     </header>
@@ -418,7 +430,7 @@ width: 180px;
     </div>
     <li> Writing to HTML Element</li>
     <br/>
-    <figcaption> By using the innerHTML property, we can chenge the content or text of the selected element.We can use <i>document.getElementById() function</i> to select the element.</i></figcaption>
+    <figcaption> By using the innerHTML property, we can chenge the content or text of the selected element.We can use <i>document.getElementById() function</i> to select the element.</figcaption>
     <p id="demo"></p>
   <div class="btn">
    <button type="button" onclick="myFun1()"> Write</button>
@@ -632,6 +644,7 @@ returns a string.</p>
               <td><b> ** </b></td>
               <td> Exponentiation</td>
             </tr>
+            <tr>
             <td><b> % </b></td>
               <td> Remainder</td>
             </tr>
@@ -1241,7 +1254,7 @@ returns a string.</p>
     <p>The parseFloat( ) method takes a string argument  (value) and returns a floating point number.</p>
     <p id="did100"></p>
     
-    <h2>The <i>toExponential( )</i> Methood</h2
+    <h2>The <i>toExponential( )</i> Methood</h2>
     <p>The <em>toExponential( )</em> method returns a string in exponential notation base on the given floating point.</p>
     <p id="did101"></p>
     
@@ -1441,9 +1454,9 @@ returns a string.</p>
      <p>The <i> compareFuntion( ) </i> come with two arguement <em>a and b </em>.
      <br>
      if a and b are being compared, then;</p>
-     <p>1) If compareFuntion<i>(a,b)</i> returns less than <i>0, a</i> comes first.<br>
-     2) If compareFuntion<i>(a,b)</i> returns <i>0, a</i> be unchanged. <br>
-     3) If compareFuntion<i>(a,b)</i> returns greater than <i> 0, b </i> comes first.</p>
+     <p>(1) If compareFuntion<i>(a,b)</i> returns less than <i>0, a</i> comes first.<br>
+     (2) If compareFuntion<i>(a,b)</i> returns <i>0, a</i> be unchanged. <br>
+     (3) If compareFuntion<i>(a,b)</i> returns greater than <i> 0, b </i> comes first.</p>
      <p><em>The example below use compare function.</em></p>
      
      <h2>Sorting Numbers</h2>
@@ -1582,8 +1595,8 @@ returns a string.</p>
       <br>
       Syntax:<b> element.addEventListener(eventType,listenerFunction) </b></p>
       <br>
-              <p><b>1) EventType</b>— a string representing the event type.</p>
-        <p><b>2) listenerFunction</b>— a listener function, It will be called when the event fires.</p>
+              <p><b>(1) EventType</b>— a string representing the event type.</p>
+        <p><b>(2) listenerFunction</b>— a listener function, It will be called when the event fires.</p>
       
       
       <div class="btn">
@@ -3065,7 +3078,6 @@ For example, reassigning a const variable will throw an error.</p>
       document.write("<b>"+date+"</b>");
        
      </script>
-  </section>
     <br>
      <p>1 parameters will use new Date(milliseconds).</p>
      <br>
@@ -3139,7 +3151,6 @@ For example, reassigning a const variable will throw an error.</p>
     document.write(date);
   </script>
   
-  </section>
 <br>
 <br>
 <p>You can also omit the day so it becomes: YYYY-MM</p>
@@ -3332,6 +3343,7 @@ document.getElementById("did230").innerHTML = millisecond;
           <td>Date.setDate()</td>
           <td>Sets the day of the month for a specified date.</td>
       </tr>
+      <tr>
           <td>Date.setHours()</td>
           <td>Sets the hours for a specified date.</td>
       </tr>
@@ -4141,7 +4153,7 @@ document.getElementById("did230").innerHTML = millisecond;
         <p>It is a "<b>tree structure</b>" representation of an <b>HTML structure</b>.</p>
         <p>The DOM contains all the elements in a document.</p>
         <div class="dom_tree" style="text-align:center">
-            <img src="https://onedrive.live.com/embed?resid=92490333B2709818%21643&authkey=%21AEb5QLU5oy11KTo&width=720&height=676" alt="dom tree" max-width="100%`" height="auto" loading="lazy"/>
+            <img src="https://onedrive.live.com/embed?resid=92490333B2709818%21643&authkey=%21AEb5QLU5oy11KTo&width=720&height=676" alt="dom tree" max-width="100%`" height="auto"/>
             <p><b>HTML DOM Tree</b></p>
         </div>
         <br>
@@ -4276,7 +4288,7 @@ for (var i = 0; i < h2Elements.length; i++) {
         for(let i = 0; i < h1Elements.length; i++) {
             h1Elements[i].classList.add("h1Container");
         }
-        console.log(document.firstElementChild.innerHTML);
+       
     </script>
     <br>
     <p>In this example, all element with the <b>h1Container</b> class name are selected.</p>
@@ -4291,9 +4303,419 @@ for (var i = 0; i < h2Elements.length; i++) {
     </script>
     </section>
     
+    <section id="JS_DOM_Nodes">
+        <h1>JavaScript DOM Nodes</h1>
+        <p>In a DOM tree, every element is an <b>object</b>.</p>
+        <p>For example, the <b>document.body</b> object represents the <i>&lt;body&gt;</i> element.</p>
+        <h2>What is a Node?</h2>
+        <p>A node is any object in the DOM tree. <br>Therefore, a node can be any HTML element such as <i>&lt;html&gt;, &lt;body&gt;, &lt;head&gt;</i> all other elements.</p>
+        <h4>Example:</h4>
+          <button onclick="displayHTMLCode()">Display HTML Code</button>
+   <pre id="codeContainer"></pre>
+   
+   <script>
+      function displayHTMLCode() {
+         var htmlCode = `<!DOCTYPE html>
+<html>
+<head>
+   <title> The Title </title>
+</head>
+<body>
+   <h1> A Header </h1>
+   <p> A Paragraph </p>
+</body>
+</html>`;
+         document.getElementById("codeContainer").textContent = htmlCode;
+      }
+   </script>
+        
+        <p>The structure of the HTML Example above can be represented by this DOM tree:</p>
+        <div class="dom_tree" style="text-align:center">
+            <img src="https://onedrive.live.com/embed?resid=92490333B2709818%21643&authkey=%21AEb5QLU5oy11KTo&width=720&height=676" alt="dom tree" max-width="100%`" height="auto"/>
+            <p><b>All the elements in the DOM tree are Nodes</b></p>
+        </div>
+        <br>
+        <h2>Nodes Relationships</h2>
+        <p>The nodes in the DOM tree have relationships with each other.</p>
+        <p>We use the terms <i>parent, child</i> and <i>sibling</i> to describe their relationships.</p>
+        <br>
+        <p><em>Let's take a look to our DOM tree again:</em></p>
+        <div class="dom_tree" style="text-align:center">
+            <img src="https://onedrive.live.com/embed?resid=92490333B2709818%21643&authkey=%21AEb5QLU5oy11KTo&width=720&height=676" alt="dom tree" max-width="100%`" height="auto"/>
+            <p><b>All the elements in the DOM tree are Nodes</b></p>
+        </div>
+        <h5>In this DOM tree:</h5>
+        <ul>
+            <li>&lt;html&gt; is the root or node meaning it has no parents.</li>
+            <li>&lt;html&gt; is parent of &lt;head&gt; and &lt;body&gt;</li>
+            <li>&lt;head&gt; is the first child of &lt;html&gt;</li>
+            <li>&lt;body&gt; is the last child of &lt;html&gt;</li>
+            <br>
+            <li>&lt;head&gt; has one child: &lt;title&gt;</li>
+            <li>&lt;body&gt; has two children: &lt;h1&gt; and &lt;p&gt;</li>
+            <li>&lt;h1&gt; is first child of &lt;body&gt;</li>
+            <li>&lt;p&gt; is the last child of &lt;body&gt;</li>
+            <br>
+            <li>&lt;head&gt; and &lt;body&gt; are siblings</li>
+            <li>&lt;h1&gt; and &lt;p&gt; siblings</li>
+        </ul>
+        <p>Even the text inside the elements are considered as nodes the are called <b>text nodes</b>.</p>
+        <h6>Therefore:</h6>
+        <ul>
+            <li>"The Title" is a child of &lt;title&gt;</li>
+            <li>"A Header" is a child of &lt;h1&gt;</li>
+            <li>"A Paragraph" is a child &lt;p&gt;</li>
+        </ul>
+        <h2>Everything is Node</h2>
+        <p>In a Document Object Model tree, everything is a <b>node</b> <br>
+        As you already know, elements are nodes.</p>
+        <p>Additionally, <b>text, attribute and even comments are considered as nodes.</b></p>
+    </section>
+    
+    <section id="JS_DOM_Navigation">
+        <h1>JavaScript Navigation Nodes</h1>
+        <p>Navigating nodes means reaching nodes in the DOM tree.</p>
+        <p>The following document object properties are used to navigate nodes:</p>
+        <ul>
+            <li>parentNode</li>
+            <li>firstChild</li>
+            <li>lastChild</li>
+            <li>childNodes[index]</li>
+            <li>previousSibling</li>
+            <li>nextSibling</li>
+        </ul>
+        <br>
+        <p>The properties mentioned above will navigate not just element nodes, but also text, and commnet nodes.</p>
+        <p>Commonly, we onlu need to navigate element nodes for efficiency.</p>
+        <br>
+        <h2>Navigating Element Nodes</h2>
+        <p>The following document object properties are used to navigate element nodes:</p>
+        <ul>
+            <li>parentElement</li>
+            <li>firstElementChild</li>
+            <li>lastElementChild</li>
+            <li>children[index]</li>
+            <li>previousElementSibling</li>
+            <li>nextElementSibling</li>
+        </ul>
+        <h2>Parent and Children</h2>
+        <p>The <b>parentElement</b> property returns the DOM node's parent element.</p>
+        <p>In this example, we will select &lt;p&gt; element's parent element which is &lt;div&gt;.</p>
+        <p>Then we will change it's background color using the style.background property.</p>
+        <br>
+        <div id="container">
+      <h1 class="nodeNavig"> Lorem Ipsum </h1>
+      <p id="did257"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate at ligula sit amet sagittis. Aliquam pharetra eros quis nisl. </p>
+      <a href="http://example.com"> Go to example.com </a>
+   </div>
+   
+   <script>
+       //let's select the <p> element 
+       var pElement = document.getElementById("did257");
+       //let's select the <p> element's parent element and style it 
+       pElement.parentElement.style.backgroundColor = "gold";
+       pElement.parentElement.style.textAlign = "center";
+   </script>
+   <br>
+   <h2>firstElementChild</h2>
+   <p>The <b>firstElementChild</b> poperty returns the DOM node's first child element.</p>
+   <p>In this example, we will select the first child element of the &lt;div&gt; element.</p>
+   <br>
+    <div id="container1">
+      <h1 class="nodeNavig"> Lorem Ipsum </h1>
+      <p id="did258"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate at ligula sit amet sagittis. Aliquam pharetra eros quis nisl. </p>
+      <a href="http://example.com"> Go to example.com </a>
+   </div>
+    <script>
+        // let's select the <div> element
+        var divElement = document.getElementById("container1");
+        //let select the first child element of <div> and style it 
+        divElement.firstElementChild.style.color = "green";
+        
+    </script>
+    <br>
+    <h2>lastElementChild</h2>
+    <p>The <b>lastElementChild</b> property returns the DOM node's last element.</p>
+    <p>In the example, we will select the last child elemtent of the &lt;div&gt; elemtent.</p>
+    <br>
+    <div id="container2">
+      <h1 class="nodeNavig"> Lorem Ipsum </h1>
+      <p id="did258"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate at ligula sit amet sagittis. Aliquam pharetra eros quis nisl. </p>
+      <a href="http://example.com"> Go to example.com </a>
+   </div>
+    
+    <script>
+        //let's select the <div> element
+        var divElement = document.getElementById("container2");
+        //let's select the <div> last child element and style it 
+        divElement.lastElementChild.style.textDecoration = "blue underline wavy";
+        divElement.lastElementChild.style.color= '#57fa23';
+    </script>
+    <br>
+    <h2>The children[] Property</h2>
+    <p>The <b>children[]</b> returns a collection of selected element's children.</p>
+    <p>The collection is like an <i>array</i>, therefore we can acess each item using bracket notation.</p>
+    <p><b>Remember!</b> In bracket notation, the first item in <b>0</b>.</p>
+    <p>In this example, we will select the &lt;div&gt;'s second child.</p>
+    <br>
+    <div id="container3">
+      <h1 class="nodeNavig"> Lorem Ipsum </h1>
+      <p id="did259"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate at ligula sit amet sagittis. Aliquam pharetra eros quis nisl. </p>
+      <a href="http://example.com"> Go to example.com </a>
+   </div>
+    
+    <script>
+        //let's select the <div> element
+        var divElement = document.getElementById('container3');
+        //let's select <div>'s second element and style it 
+        divElement.children[1].style.textDecoration = "blue underline wavy";
+        divElement.children[0].style.textDecoration = "white underline";
+        divElement.children[0].style.backgroundColor = "gray";
+        divElement.children[2].style.color = "blue";
+    </script>
+    <br>
+    <h2>Siblings</h2>
+    <h3>The previousElementSibling</h3>
+    <p>The <b>previousElementSibling</b> returns the previous element prior to the specified on parent's children list.</p>
+    <p>In this example we will select the &lt;p&gt; element. Then we will select and style the element that come before it: the &lt;h1&gt; element.</p>
+    <br>
+    <div id="container4">
+      <h1 class="nodeNavig"> Lorem Ipsum </h1>
+      <p id="did260"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate at ligula sit amet sagittis. Aliquam pharetra eros quis nisl. </p>
+      <a href="http://example.com"> Go to example.com </a>
+   </div>
+   
+   <script>
+       //let's select the <p> element
+       var pElement = document.getElementById('did260');
+       //let select the <h1> element and style it 
+       pElement.previousElementSibling.style.color ='green';
+       pElement.previousElementSibling.style.textDecoration = "blue underline wavy";
+       pElement.style.backgroundColor= "black";
+   </script>
+   <br>
+   
+   <h3>The nextElementSibling Property</h3>
+    <p>The <b>nextElementSibling</b> returns the next element prior to te specified one in a parent's children list.</p>
+    <p>In this example, we will select the &lt;p&gt; element. <br> Then we will select and style the element that comes after it: the &lt;a&gt; element.</p>
+    
+   <br>
+    <div id="container5">
+      <h1 class="nodeNavig"> Lorem Ipsum </h1>
+      <p id="did261"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate at ligula sit amet sagittis. Aliquam pharetra eros quis nisl. </p>
+      <a href="http://example.com"> Go to example.com </a>
+   </div>
+   
+   <script>
+       //let's select the <p> element
+       var pElement = document.getElementById('did261');
+       //let's select the <a> element and style it
+       pElement.nextElementSibling.style.color="gold";
+       pElement.nextElementSibling.style.textDecoration="blue underline overline wavy";
+   </script> 
+    </section>
+    
+    <section id="JS_DOM_HTML">
+    <h1>JavaScript <abbr title="Document Object Model">DOM</abbr> <abbr title="Hypertext Markup Language">HTML</abbr></h1>
+    <p>In this lesson we will study about the amazing things that we can do to HTML using DOM.</p>
+    <h2>Gettin Element Content</h2>
+    <p>The <b>innerHTML</b> property returns the content of an HTML element.</p>
+    <br>
+    <ul class="list">
+        <li>oranges</li>
+        <li>apple</li>
+        <li>mango</li>
+        <li>papaya</li>
+    </ul>
+        
+    <script type="text/javascript" charset="utf-8">
+        var list = document.getElementsByClassName("list");
+        for(let i = 0; i < list.length; i++) {
+           // alert(list[i].innerHTML); remove comment mode
+    document.write("<br>"+list[i].innerHTML);
+        }
+    </script>
+        
+        <br>
+        <h2>Replacing Element's Content</h2>
+        <p>The <b>innerHTML</b> property can also be used to replacr the content of an HTML element.</p>
+        <br>
+    <ul class="listReplace">
+        <li>oranges</li>
+        <li>apple</li>
+        <li>mango</li>
+    </ul>
+        
+    <button onclick="replaceContent()">replace content</button>
+    
+    <script>
+    function replaceContent() {
+        var listReplace = document.getElementsByClassName("listReplace");
+        //let access the class "list"
+        for(let i = 0; i < listReplace.length; i++) {
+        
+            listReplace[i].innerHTML = 
+            "<li>Mercury</li>"+
+            "<li>Venus</li>"+
+            "<li>Earth</li>";
+        }
+        }
+        
+    </script>
+    <p><i>Note!</i><em> The innerHTML simply add content to the selected element if it's empty.</em></p>
+    <br>
+    <h2>Creatint Element(Nodes)</h2>
+    <p>Before we can insert elements(Nodes) to the DOM, we should learn first how to create them in JavaScript.</p>
+    <p>To create an element, use the <b>document.createElement("element")</b> method.</p>
+    <p>The code below creates a paragraph &lt;p&gt; element.</p>
+    <br>   
+    <br>   
+    <p><b>var</b> <i>element </i> = <span>document.createElement("p");</span> <br>
+    <br>   
+    Of course, we want to add text to the &lt;p&gt; element.</p>
+    <p>To do this, we need to create a text node and insert it to the &lt;p&gt; element.</p>
+    <p>Use the <b>documen.createTextNode("string");</b> to create a text node. like this:</p>
+    <br>
+    <p><b>var</b> textNode = <i>document.createTextNode("Hello World");</i> 
+    <br>
+    <br> 
+    Then use the <b>appendChild()</b> to insert the text node to the &lt;p&gt; element. Lile this: 
+    <br>
+    <br>
+    <span>element</span>.<i>appendChild(textNode);</i> <br>
+    <br>
+    Finally, we have successfully created a &lt;p&gt; element with a text inside it.</p><br>
+    
+    <p><em>Here is the full example:</em></p>
+    <br>
+    <div class="htdoc"></div>
+    <script>
+    var element = document.createElement("p");
+    var textNode = document.createTextNode("Lorem ipsum dolor sit amet.");
+    element.appendChild(textNode);
+    var toInsert = document.getElementsByClassName("htdoc");
+    for(let i = 0; i < toInsert.length; i++) {
+        toInsert[i].appendChild(element);
+    }
+    </script>
+    <br>
+    <h2>Inserting To Elements</h2>
+    <p>Commonly, we only want to insert to elements not completely replace it's content.</p>
+    <h3>parentNode.prepend( ) method</h3>
+    <p>The parentNode.prepend( ) method inserts an element (node) before the first child of the parentNode.</p>
+        <br>
+        <br>
+    <ul id="list">
+        <li>oranges</li>
+        <li>apple</li>
+        <li>mango</li>
+    </ul>
+    <button onclick="prependContent()">prepend content</button>
+    
+    <script>
+        var list = document.getElementById("list");
+        function prependContent() {
+            var li = document.createElement("li");
+            var textNode = document.createTextNode("strowberry");
+            li.appendChild(textNode);
+            list.prepend(li);
+        }
+    </script>
+    <br>
+    <h3>parentNode.append( ) method</h3>
+    <p>The parentNode.append( ) method insert an element (node) after the last child of the parentNode.</p>
+    <br>
+    <br>
+    <ul id="list1">
+        <li>oranges</li>
+        <li>apple</li>
+        <li>mango</li>
+    </ul>
+    <button onclick="appendContent()">append content</button>
+    
+    <script>
+        var list1 = document.getElementById("list1");
+        function appendContent() {
+            var li = document.createElement("li");
+            var textNode = document.createTextNode("watermelon");
+            li.appendChild(textNode);
+            list1.append(li);
+        }
+    </script>
+    <br>
+    <h2>Removing Element</h2>
+    <p>To remove an element, use the <b>node.remove( )</b> method.</p>
+    <p>The <b>node.remove( )</b> method remove the node from the tree it belongs it.</p>
+    <br>
+    <ul id="list2">
+        <li>oranges</li>
+        <li>apple</li>
+        <li>mango</li>
+    </ul>
+    <button onclick="removeContent()">remove content</button>
+    
+    <script type="text/javascript" charset="utf-8">
+        var list2 = document.getElementById("list2");
+        function removeContent() {
+            //let's select the first element child of the list 
+            var firstChild = list2.firstElementChild;
+            // remove the first child
+            firstChild.remove();
+        }
+    </script>
+    
+    <h2>Working with Attributes</h2>
+    <p>With JavaScript and DOM, we can <b>get, set and change</b> an attribute value. </p>
+    <h3>Getting Attribute Value</h3>
+    <p>The <b>node.getAttribute(attributeName);</b> returns the value of an specified attribute</p>
+    <p>In this example, we get value of the <i>href</i> attribute</p>
+    <br>
+    <a href="https://www.example.com" id="did262">Go to example.com</a>
+    
+    <script>
+        var a = document.getElementById("did262");
+        var hrefAttribute = a.getAttribute("href");
+        console.log(hrefAttribute);
+    </script>
+    
+    <h2>Setting or Changing Attribute Value</h2>
+    <h3>node.setAttribute(attributeName)</h3>
+    <p>The <b>node.setAttribute(attributeName, value);</b> set the value of an attribute on the specified element.</p>
+    <p>If the already exists, the value is changed.</p>
+    <p>In this example, we will set the <i>src</i> attribute of the &lt;img&gt; element.</p>
+    <br>
+    <div><img id="did263" alt="I don't have any src attribute" /></div>
+    <button onclick="setSrc()">set src to img</button>
+    
+    <script>
+        var img = document.getElementById("did263");
+        function setSrc() {
+            img.setAttribute("src","/storage/emulated/0/Pictures/Whatsapp/IMG-20230912-WA0028.jpg");
+        }
+    </script>
+    <br>
+    <p>In this example, we will <b>change</b> the <i>src</i> attribute of the <b>&lt;img&gt;</b> element.</p>
+    <br>
+    <div><img src="/storage/emulated/0/Pictures/Screenshot/Screenshot_20230916-221812.jpg" id="did264" alt="I don't have any src attribute" /></div>
+    <button onclick="changeSrc()">change src to img</button>
+     
+     <script>
+         var img1 = document.getElementById("did264");
+         function changeSrc() {
+             img1.setAttribute("src", "/storage/emulated/0/DCIM/Facebook/FB_IMG_1694609186425.jpg");
+         }
+     </script>
+    
+    
+    </section>
+    
+    
     
       
-<!-- all javascript code-->
+<!-- all javascript code
+<script type="text/javascript" charset="utf-8">
+     console.log(document.firstElementChild.innerHTML);
+</script>-->
     <script type="text/javascript" charset="utf-8">
 var x = 6;
 var y = 9;

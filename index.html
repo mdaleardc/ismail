@@ -13,25 +13,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Roboto:ital,wght@0,300;0.5,500&display=swap" rel="stylesheet">
 <style type="text/css" media="all">
-    * {
+
+    *:not(.noneStyle) {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
         color: #00ffff;
-        width: 99%;
+        /* width: 99%; */
         scroll-behavior: smooth;
     }
-    body {
+    body:not(.noneStyle) {
         margin: 0;
+        box-sizing: border-box;
         padding: 5px;
         font-family: 'Roboto', sans-serif;
-        /*background-image:url("/storage/emulated/0/Download/istockphoto-1142857528-612x612.jpg");
-    background-position:top;s
+        background-image:url("/storage/emulated/0/Download/istockphoto-1142857528-612x612.jpg");
+    background-position:top;
     background-repeat: repeat;
     background-attachment: fixed;
-    background-size: 100%;*/
+    background-size: 100%;
         width: 100%;
-        /*background: linear-gradient( #000, #b8860b);*/
+        background: linear-gradient( #000, #b8860b);
         background: #0c1022;
     }
     section {
@@ -73,7 +74,11 @@
         color: #FD00FF;
         font-weight: 400;
         text-align: center;
-        display: block;
+        /*display: block;*/
+        background-color: green;
+        border-radius: 4px;
+        padding: 2px;
+        margin: 3px;
     }
     i * , i {
         color: #FB0;
@@ -93,11 +98,7 @@
         font-size: 1em;
         background: transparent
     } */
-    button:hover {
-        color: #15f4ee;
-        letter-spacing: 2px;
-
-    }
+    
     /* div.btn {
         overflow: hidden;
         width: 120px;
@@ -112,6 +113,8 @@
         transition: 1.5s;
     } */
     button:hover {
+        color: #15f4ee;
+        letter-spacing: 2px;
         padding-top: 1px;
         background: #000;
         box-shadow: 0 5px 30px #15f4ee inset, 0 5px 30px #15f4ee;
@@ -265,7 +268,7 @@ width: 180px;
         font-size: 18px;
         color: #c0c0c0;
     }
-    button {
+    button:not(.noneStyle) {
         margin-left:35%;
         padding: 5px;
         width: fit-content;
@@ -311,8 +314,61 @@ width: 180px;
         width: fit-content;
         padding: 7px;
     }
+    img {
+        max-width: 360px;
+        height: auto;
+    }
+    
+    .button {
+        text-align: center;
+    }
+    .noneStyle {
+        margin-top: 4px;
+        border-radius: 5px;
+        padding: 3px;
+        text-align: center;
+        background-color: darkgrey;
+    }
+    
+    /* @media(min-width:370px) {
+        button, p, figcaption, em, i, span {
+            font-size: 2.2rem;
+        }
+        h1 {
+            font-size: 4rem;
+        }
+        h2 {
+            font-size: 3rem;
+        }
+        h3, h4 {
+            font-size: 2.7rem;
+        }
+        li, b, strong, h5 {
+            font-size: 2.6rem;
+        }
+        a {
+            font-size: 2rem;
+        }
+        .menu-bar, .menu-list {
+            width: 320px;
+            height: 200px;
+        }
+        .menu-list li {
+            width: 320px;
+            padding: 2.4px 0 2.4px 3px;
+            display: inline;
+            text-align: left;
+        }
+        height {
+            max-width: 100%;
+            height: auto;
+        }
+    } */
     </style>
     </head>
+    
+    
+    
     <body>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -350,6 +406,12 @@ width: 180px;
     
         
     }
+    
+    /* Default styles for modern browsers */
+/* Specific style for older Microsoft Edge */
+@supports (-ms-ime-align: auto) {
+  width: -ms-fit-content;
+}
     </style>
     
     <header>
@@ -404,6 +466,8 @@ width: 180px;
         <li><a href="#JS_DOM_Nodes">JS_DOM_Nodes</a></li>
         <li><a href="#JS_DOM_Navigation">JS_DOM_Navigation</a></li>
         <li><a href="#JS_DOM_HTML">JS_DOM_HTML</a></li>
+        <li><a href="#JS_DOM_CSS_or_Style">JS_DOM_CSS_or_Style</a></li>
+        <li><a href="#JS_DOM_effect">JS_DOM_effect</a></li>
         
         
         </ul>
@@ -412,6 +476,14 @@ width: 180px;
     
     
   <main class="sections">
+      
+
+<!-- <video width="300" height="240" controls>
+  <source src="/storage/emulated/0/snaptube/download/SnapTube Video/Free hosting (PHP MySQL) website on infinityfree(1080P_HD).mp4" type="video/mp4">
+  added subtitle file this way
+  <track src="/storage/emulated/0/snaptube/subtitle.vtt" kind="subtitles" srclang="en" label="English">
+</video> -->
+
     <section id="JS-Output">
     <h1> JavaScript Displaying Output</h1>
     <ol>
@@ -4250,11 +4322,11 @@ for (var i = 0; i < h2Elements.length; i++) {
         var h2container = h2containers[i];
         // let's style each selected element
         h2container.style.margin = "auto";
-        h2container.style.width= "fit-content";
+        h2container.style.width = "auto";
+        h2container.style.width = "-webkit-auto";
+        h2container.style.width = "-ms-auto";
         h2container.style.margin = "3px auto";
         h2container.style.textAlign = "center";
-        h2container.style.backgroundColor = "green";
-        h2container.style.borderRadius = "4px";
     }
     </script>
     
@@ -4705,10 +4777,156 @@ for (var i = 0; i < h2Elements.length; i++) {
              img1.setAttribute("src", "/storage/emulated/0/DCIM/Facebook/FB_IMG_1694609186425.jpg");
          }
      </script>
-    
-    
     </section>
     
+    <section id="JS_DOM_CSS_or_Style">
+        <h1>JavaScript <abbr title="Document Object Model">DOM</abbr> <abbr title="Cascading Stylesheet"> CSS</abbr> or Style</h1>
+        <p>With javascript and DOM, we can style HTML elements.</p>
+        <p>As you already know, styling elements means changing their properties.</p>
+        <p>It's the same with JavaScript.</p>
+        
+        <h2>Styling Elements With DOM</h2>
+        <p>To change the styles of an element use the style object of a node.</p>
+        <h4>Here is a syntax:</h4>
+        <p style="background:gray; border-radius:4px; text-align:center" ><span>node</span>.<em>style</em>.<span>property</span> = <em>"value";</em></p>
+
+        <h4>Example:</h4>
+    <p>In this example, we will change the color property of the &lt;p&gt; element.</p>
+    <br>
+    <p id="did265">Lorem ipsum dolor sit amet.</p>
+    
+    <script>
+        document.getElementById("did265").style.color ="green";
+    </script>
+    
+    <h2>Hiding and Showing an Element</h2>
+    <p>To hide and show an element. set the <b>display</b> property to <b>none</b> and <b>block</b> respectivly.</p>
+    <style>
+       div#did266 {
+           margin: 0 auto;
+         width: 300px;
+         height: 300px;
+         background: #173459;
+         color: white;
+         border-radius: 10%;
+      }
+        
+    </style>
+    <div id="did266"></div>
+        <div class="button">
+    <button class="noneStyle" onclick="hide()">click to hide</button> <button class="noneStyle" onclick="show()">click to show</button>
+        </div>
+            
+    
+    <script>
+       var hideShow = document.getElementById("did266");
+        function hide() {
+            hideShow.style.display = "none";
+        }
+        
+        function show() {
+            hideShow.style.display = "block";
+        }
+    </script>
+    
+    <h2>What About Propetties with Hyphen?</h2>
+    <p>Properties with hyphen, like <span>font-size</span>, <span>text-decoration</span> and <span>background-color</span> should be written in <b>camelCase</b>.</p>
+    <h4>For Example:</h4>
+    <ul>
+        <li>font-size = fontSize</li>
+        <li>text-decoration = textDecoration</li>
+        <li>background-color = backgroundColor</li>
+    </ul>
+    </section>
+    
+    
+    <section id="JS_DOM_effect">
+        <h1>JavaScript DOM effect</h1>
+        <p>With CSS, JavaScript and DOM we can create effect that can be applied to elements.</p>
+        <h2>Fading effect</h2>
+        <p>In this lesson we will show or hide elements with a fading effect.</p>
+        <p>First we need to create and style an element. Let's create a &lt;div&gt; element with the folllowing style</p>
+        <style>
+            div.fadeInOut {
+                width: 300px;
+                height: 300px;
+                background-color: #173459;
+                
+                opacity: 1; /*default*/
+                webkit-opacity:1;
+                display: block; /*default*/
+                /* This will animate the element for 1 second when its properties change*/
+                transition: all 1s;
+                webkit-transition: all 1s;
+                margin: 0 auto;
+            }
+        </style>
+        <br>
+        <p>The transition:all 1s; CSS declaration will animate the element for 1 second whenever we make change to its properties.</p>
+        <h2>Fade Out</h2>
+        <p>To fade out an element, set opacity property to <b>0</b> using JavaScript. To completely hide ti, use the display property to none. But we have to wait 1 second (timen specified in transition property), before completety hiding the element so that we can see the effect.</p>
+        <br>
+        <h2>Fade In</h2>
+        <p>To fade in an element its display and opacity to block and <em>0</em> respectively.</p>
+        <div class="fadeInOut"></div>
+        <div class="button">
+        <button class="noneStyle" onclick="fadeOut()">Click to see effect</button>
+        <button class="noneStyle" onclick="fadeIn()">Click to see effect</button>
+        </div>
+        <br>
+        <script>
+            function fadeOut() {
+                var elem = document.getElementsByClassName("fadeInOut")[0];
+                elem.style.opacity = "0";
+                setTimeout(function() {
+                    elem.style.display = "none";
+                }, 1000);
+            };
+            
+            function fadeIn() {
+                var elem =document.getElementsByClassName("fadeInOut")[0];
+                    elem.style.display = "block";
+                setTimeout(function() {
+                elem.style.opacity = "1";
+                }, 1000);
+            }
+                
+        </script>
+        <br>
+        <h2>Sliding Effect</h2>
+        <p>To make a sliding effect, use the <b>max-height</b> and <b>overflow-y</b> CSS properties.</p>
+        <p>Set the <b>max-height</b> of the element</p>
+        <p>And set the <b>overflow-y</b> property to <b>hidden</b>.</p>
+        <br>
+        <p>To slide up the element, set the max-height property to <i>0</i> using JavaScript.</p>
+        <p>To slide down, set the max-height CSS to property to its approximate height (in this case it's 100).</p>
+        <br>
+        <style>
+            ul#did267 {
+                background-color: darkgray;
+                border-radius: 4px;
+                max-height: 200px;
+                overflow: hidden;
+                transition: all 1s;
+                margin: 0 auto;
+                width: 200px;
+                padding-left: 5px;
+            }
+        </style>
+        <ul id="did267">
+            <li>Mercury</li>
+            <li>Venus</li>
+            <li>Earth</li>
+            <li>Mars</li>
+        </ul>
+        <div class="button">
+        <button class="noneStyle" onclick="slideUp()">Slide Up</button>
+        <button class="noneStyle" onclick="slideDown()">slide Down</button>
+        </div>
+            
+        
+        
+    </section>
     
     
       

@@ -330,7 +330,7 @@ width: 180px;
         background-color: darkgrey;
     }
     
-     @media(min-width:370px) {
+    /* @media(min-width:370px) {
         button, p, figcaption, em, i, span {
             font-size: 2.2rem;
         }
@@ -363,7 +363,7 @@ width: 180px;
             max-width: 100%;
             height: auto;
         }
-    }
+    } */
     </style>
     </head>
     
@@ -467,7 +467,8 @@ width: 180px;
         <li><a href="#JS_DOM_Navigation">JS_DOM_Navigation</a></li>
         <li><a href="#JS_DOM_HTML">JS_DOM_HTML</a></li>
         <li><a href="#JS_DOM_CSS_or_Style">JS_DOM_CSS_or_Style</a></li>
-        <li><a href="#JS_DOM_effect">JS_DOM_effect</a></li>
+        <li><a href="#JS_DOM_Effect">JS_DOM_Effect</a></li>
+        <li><a href="#JS_DOM_Event">JS_DOM_Event</a></li>
         
         
         </ul>
@@ -4911,6 +4912,7 @@ for (var i = 0; i < h2Elements.length; i++) {
                 margin: 0 auto;
                 width: 200px;
                 padding-left: 5px;
+                transition-duration: 2s;
             }
         </style>
         <ul id="did267">
@@ -4923,8 +4925,68 @@ for (var i = 0; i < h2Elements.length; i++) {
         <button class="noneStyle" onclick="slideUp()">Slide Up</button>
         <button class="noneStyle" onclick="slideDown()">slide Down</button>
         </div>
-            
         
+        <script type="text/javascript" charset="utf-8">
+            function slideUp() {
+                var slideUp = document.getElementById("did267");
+                slideUp.style.maxHeight = "0";
+            }
+            function slideDown() {
+                document.getElementById("did267").style.maxHeight = "200px";
+            }
+        </script>
+            
+        <br>
+        
+    </section>
+    
+    <section id="JS_DOM_Event">
+        <h1>JavaScript DOM Events</h1>
+        <p>Whit JavaScript and DOM, we can <b>listen</b> to events that happen to elements.</p>
+        <p>For example. we can <b>listen</b> then do <b>something</b> when a button is clicked</p>
+        <h2>The addEventListener( ) Method</h2>
+        <p>The <b>addEventListener( )</b> method set up a function that will be called whenever the specified event is fired to the element.</p>
+        <h4>Syntax:</h4>
+        <p><code>element.addEventListener(eventType, listenerFunction( )</code><br>
+        <ol>
+            <li>eventType<s>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</s>a string representing the event type</li>
+            <li>listenerFunction<s>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</s>a listener, it will be called when the event fires</li>
+        </ol></p>
+        <br>
+        
+        <h2>Click Event</h2>
+        <p>In this example, when the button is clicked a pop-up dialog will be shown.</p>
+        <button id="did268">click me</button>
+        <script type="text/javascript" charset="utf-8">
+            var clickEvent = document.getElementById("did268");
+            clickEvent.addEventListener("click", function() {
+                alert("Hello world!");
+            });
+        </script>
+        
+        <h2>Load Event</h2>
+        <p>In this example, when the image file is loaded a pop-up dialog will be shown.</p>
+        <br>
+        <img id="did269" src="/storage/emulated/0/Pictures/Threads/IMG_20230713_053300_457.jpg" alt="this is an image" />
+        <script>
+            var loadEvent = document.getElementById("did269");
+            loadEvent.addEventListener("load", function() {
+            alert("The image is loaded!");
+            });
+        </script>
+        
+        <h2>Change Element</h2>
+        <p>In this example, every time the value of the &lt;input&gt; change will its value and write it to a &lt;p&gt; element.</p>
+        <input type="text" id="did270">
+        <p><apan id="did271"></span></p>
+        
+        <script>
+            var input = document.getElementById("did270");
+            input.addEventListener("change", function() {
+                document.getElementById("did271").innerHTML = input.value;
+            })
+        </script>
+        <script></script>
         
     </section>
     

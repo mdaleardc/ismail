@@ -78,7 +78,8 @@
         background-color: green;
         border-radius: 4px;
         padding: 2px;
-        margin: 3px;
+        display: inline-block;
+        margin: 3px auto;
     }
     i * , i {
         color: #FB0;
@@ -469,7 +470,10 @@ width: 180px;
         <li><a href="#JS_DOM_CSS_or_Style">JS_DOM_CSS_or_Style</a></li>
         <li><a href="#JS_DOM_Effect">JS_DOM_Effect</a></li>
         <li><a href="#JS_DOM_Event">JS_DOM_Event</a></li>
-        
+        <li><a href="#JS_BOM_Window">JS_BOM_Window</a></li>
+        <li><a href="#JS_BOM_Screen">JS_BOM_Screen</a></li>
+        <li><a href="#JS_BOM_Location">JS_BOM_Location</a></li>
+        <li><a href="#JS_BOM_History">JS_BOM_History</a></li>
         
         </ul>
     </div>
@@ -4963,7 +4967,7 @@ for (var i = 0; i < h2Elements.length; i++) {
                 alert("Hello world!");
             });
         </script>
-        
+        <br>
         <h2>Load Event</h2>
         <p>In this example, when the image file is loaded a pop-up dialog will be shown.</p>
         <br>
@@ -4971,7 +4975,7 @@ for (var i = 0; i < h2Elements.length; i++) {
         <script>
             var loadEvent = document.getElementById("did269");
             loadEvent.addEventListener("load", function() {
-            alert("The image is loaded!");
+            console.log("The image is loaded!");
             });
         </script>
         
@@ -4984,13 +4988,194 @@ for (var i = 0; i < h2Elements.length; i++) {
             var input = document.getElementById("did270");
             input.addEventListener("change", function() {
                 document.getElementById("did271").innerHTML = input.value;
-            })
+            });
         </script>
         <script></script>
         
     </section>
+    <hr>
+    <section id="JS_BOM_Window">
+        <h1>JavaScript <abbr title="Browser Object Model">BOM</abbr> Window</h1>
+        <ul>
+            <li>BOM stands for Browser Object Modek.</li>
+            <li>BOM deals with Browser Components</li>
+        </ul>
+        <h2>The Window Object</h2>
+        <p>The <b>window</b> represents the current browser window.</p>
+        <p>All variables and functions declared in the <b>global</b> scope become properties of the window object.</p>
+        <br>
+        <script>
+            var txt = "Hello World!";
+        function sayHello3() {
+            //window.txt refers to the txt variable above
+            document.write(window.txt);
+        }
+        window.sayHello3();
+        </script>
+        <br>
+        <h2>Window Width and Height</h2>
+        <p>The window object contains the <b>innerWidth and innerHeight</b> properties. These properties retun the <i>width</i> and <i>height</i> of the current browser window in pixels.</p>
+        <br>
+        <p><strong id="did272"></strong></p>
+        
+        <script>
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            
+            document.getElementById("did272").innerHTML = "Window Width: " + width + "<br> Window Height: " + height;
+        </script>
+        
+        <h2>Window Object Properties</h2>
+        <p>The window object also contains the following properties:</p>
+        <ul>
+            <li>document</li>
+            <li>screen</li>
+            <li>location</li>
+            <li>history</li>
+            <li>navigator</li>
+        </ul>
+    </section>
+    <br>
     
+    <section id="JS_BOM_Screen">
+        <h1>JavaScript BOM Screen</h1>
+        <p>The <b>window.screen</b> objectis used for inspecting properties for the screen.</p>
+        <br>
+        <p>Just like other window properties, it can be accessed without the window prefix.</p>
+        <details>
+            <summary>
+            The screen object contains the following properties:
+        </summary>
+        <ul>
+            <li>width</li>
+            <li>availWidth</li>
+            <li>height</li>
+            <li>availHeight</li>
+            <li>orientation</li>
+            <li>pixelDepth</li>
+            <li>colorDepth</li>
+        </ul>
+        </details>
+        <br>
+        <h2>The <b>width</b> Property</h2>
+        <p>The width propery returns the width of the screen.</p>
+        <br>
+        <h2>The <b>availWidth</b> Property</h2>
+        <p>The availWidth property returns the amount of <i>horizontal</i> space in pixels available to the window.</p>
+        <br>
+        <h2>The <b>height</b> Property</h2>
+        <p>The height property returns the height of the screen.</p>
+        <br>
+        <h2>The <b>availHeight</b> Property</h2>
+        <p>The availHeight property retuns the amount of the <i>vertical</i> space in pixels available to window.</p>
+        <br>
+        <h2>The <b>orientation</b> Property</h2>
+        <p>The orientation property returns <b>ScreenOrientation</b> object associated with the screen.</p>
+        <p>To get current orientation type, use its <i>type</i> property.</p>
+        <br>
+        <h2>The <b>pixelDepth</b> Property</h2>
+        <p>The pixelDepth property returns the bit depth of the screen.</p>
+        <br>
+        <h2>The <b>colorDepth</b> Property</h2>
+        <p>The colorDepth property returns the color depth of the screen.</p>
+        <br>
+        <div class="display">
+            <p>Device Info: <br> <i id="did273"></i></p>
+        </div>
     
+    <script>
+        const screenWidth = screen.width;
+        const availWidth = screen.availWidth;
+        const screenHeight = screen.height;
+        const availHeight = screen.availHeight;
+        //use type property to get current orientation
+        const orientation = screen.orientation.type;
+        const pixelDepth = screen.pixelDepth;
+        const colorDepth = screen.colorDepth;
+        
+        const deviceInfo = "Width of the screen: " +  screenWidth +"px. <br>" +  "Available horizontal space of the screen: " + availWidth + "px. <br>" + "Height of the screen: " + screenHeight + "px. <br>" + "Available vertical space of the screen: " + availHeight + "px. <br>" + "Orientation of the screen: " + orientation + "<br>" + "Bit or pixel depth of the screen: " + pixelDepth + "bit. <br>" + "Color depth of the screen: " + colorDepth + "bit. <br>";
+        document.getElementById("did273").innerHTML = deviceInfo;
+    </script>
+    
+    </section>
+    <br>
+    
+    <section id="JS_BOM_Location">
+        <h1>JavaScript BOM Location</h1>
+        <p>The <b>window.location</b> object is used to return information about the current location of the page.</p>
+        <p>Just ike other window properties, it can be accessed without the window prefix.</p>
+        <p>The location object contains the following properties.</p>
+        <ul>
+            <li>href</li>
+            <li>protocol</li>
+            <li>hostname</li>
+            <li>pathname</li>
+        </ul>
+        <br>
+        <h2>The <b>href</b> Property</h2>
+        <p>The href property rerurns whole URL of the current page.</p>
+        <br>
+        <h2>The <b>protocol</b> Property</h2>
+        <p>The protocol Property returns the protocol schemes of the URL of the page e.g <i>http:</i> and <i>https:</i>.</p>
+        <br>
+        <h2>The <b>hostname</b> Property</h2>
+        <p>The hostname property returns the domain name of the URL of the page.</p>
+        <br>
+        <h2>The <b>pathname</b> Property</h2>
+        <p>The pathname property returns the path of the URL of the page.</p>
+        <br>
+        <details>
+            <summary><b>The url info:</b></summary>
+            <p id="did274"></p>
+        </details>
+            
+    <script type="text/javascript" charset="utf-8">
+        var url = Array(location.href, location.protocol, location.port, location.host, location.hostname, location.pathname);
+        for(let i = 0; i < url.length; i++) {
+       // document.getElementById("did274").innerHTML = url[i]+"<br>";
+        console.log(url[i]);
+        document.write(url[i]+"<br>");
+        
+        }
+    
+    </script>
+    </section>
+    <br>    
+    <section id="JS_BOM_History">
+        <h1>JavaScript BOM History</h1>
+        <p>The <b>window.history</b> object provides an interface for manipulating the browser history. Just like other window properties, it can be accessed without the  window prefix.</p>
+        <p>The history object contains the following properties and method:</p>
+        <ul>
+            <li>length</li>
+            <li>back( )</li>
+            <li>forward( )</li>
+        </ul>
+        <br>
+        <h2>The <b>length</b> property</h2>
+        <p>The length property returns an integer representing the numbers of pages in the session history.</p>
+        <p><b>If you want</b> to try this property:
+        <br> Go browser or window console and type <i>history.length</i>.</p>
+        <script>
+            console.log(history.length);
+        </script>
+        <br>
+        <h2>The <b>back( )</b> Method</h2>
+        <p>The back() method loads the previous page from the history lsit.</p>
+        <p>To <b>try this</b> go to borowser or window console, and type: <b>history.back()</b>.</p>
+        
+        <script>
+            console.log(history.back());
+        </script>
+        <br>
+        <h2>The <b>forward( )</b> Mehtod</h2>
+        <p>The forward() method loads the next page from the history list.</p>
+        <p>To <b>try this method, </b> go to browser or window console and type: <b>history.forward()</b>.</p>
+    <script>
+        console.log(history.forward());
+        console.log(navigator.platform);
+    </script>
+    </section>
+        
       
 <!-- all javascript code
 <script type="text/javascript" charset="utf-8">
@@ -6171,15 +6356,13 @@ html += "<li> Number" + i +" </li>";
 };
 document.getElementById("did182").innerHTML = html;
 
+
 </script>
     <br>
 <!--iframe src="/storage/emulated/0/myDocuments/myProject/HtmlFiles/NewProject.html" frameborder="3px" width="100%" height="400px">HTML PAGE</iframe-->
    <!--a href="/storage/emulated/0/myDocuments/myProject/JavaScript/JavaScript.html" download> Save file</a-->
      <br>
 <a href="mailto:mdi258470@gmail.com" id="end">Send mail</a>
-<div class="home-link">
-<a href="#Home">Home</a>
-</div>
 </main>
 </body>
 </html>

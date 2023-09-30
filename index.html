@@ -331,7 +331,7 @@ width: 180px;
         background-color: darkgrey;
     }
     
-    /* @media(min-width:370px) {
+     @media(min-width:370px) {
         button, p, figcaption, em, i, span {
             font-size: 2.2rem;
         }
@@ -364,7 +364,7 @@ width: 180px;
             max-width: 100%;
             height: auto;
         }
-    } */
+    } 
     </style>
     </head>
     
@@ -474,6 +474,10 @@ width: 180px;
         <li><a href="#JS_BOM_Screen">JS_BOM_Screen</a></li>
         <li><a href="#JS_BOM_Location">JS_BOM_Location</a></li>
         <li><a href="#JS_BOM_History">JS_BOM_History</a></li>
+        <li><a href="#JS_BOM_Navigator">JS_BOM_Navigator</a></li>
+        <li><a href="#JS_BOM_Pop-up">JS_BOM_Pop-up</a></li>
+        <li><a href="#JS_BOM_Cookies">JS_BOM_Cookies</a></li>
+        
         
         </ul>
     </div>
@@ -5172,16 +5176,182 @@ for (var i = 0; i < h2Elements.length; i++) {
         <p>To <b>try this method, </b> go to browser or window console and type: <b>history.forward()</b>.</p>
     <script>
         console.log(history.forward());
-        console.log(navigator.platform);
     </script>
     </section>
+    <br>
+    
+    <section id="JS_BOM_Navigator">
+        <h1>The javaScript BOM Navigator</h1>
+        <p>The <b>window.navigator</b> object represents the <em>state</em> and <em>identity</em> of the user's browser</p>
+        <p>Just like other properties it can be accessed without the window prefix.</p>
+        <p>The navigator object contains the following properties:</p>
+        <ul>
+            <li>platform</li>
+            <li>language</li>
+            <li>appName</li>
+            <li>appCodeName</li>
+            <li>appVersion</li>
+            <li>userAgent</li>
+            <li>onLine</li>
+        </ul>
         
+        <h2>The <b>platform</b> Property</h2>
+        <p>The platform property returne a string representing of the browser.</p>
+        <br>
+        <p>Platform of the Browser: <b id="did275"></b></p>
+        <script>
+            document.getElementById("did275").innerHTML = navigator.platform;
+        </script>
+        <br>
+        <h2>The <b>language</b> Property</h2>
+        <p>The language property returns a string representing the language of the browser.</p>
+        <br>
+        <p>Language of the Browser: <b id="did276"></b></p>
+        <script>
+            document.getElementById("did276").innerHTML = navigator.language;
+        </script>
+        <br>
+        <h2>The <b>appName</b> Property</h2>
+        <p>The appName property returns a string representing the official name of the browser.</p>
+        <br>
+        <p>official Name of the Browser: <b id="did277"></b></p>
+        
+        <script>
+            document.getElementById("did277").innerHTML = navigator.appName;
+        </script>
+        <br>
+        <h2>The <b>appCodeName</b> Property</h2>
+        <p>The appCodeName returns the internal "<b>code</b>" name of the browser.</p>
+        <br>
+        <p>Code name of the Browser: <b id="did278"></b></p>
+        
+        <script>
+            document.getElementById("did278").innerHTML = navigator.appCodeName;
+        </script>
+        <br>
+        <h2>The <b>appVersion</b> Property</h2>
+        <p>The appVersion property returns the version of the browser.</p>
+        <br>
+        <p>Version of the Browser: <b id="did279"></b></p>
+        
+        <script>
+            document.getElementById("did279").innerHTML = navigator.appVersion;
+        </script>
+        <br>
+        <h2>The <b>userAgent</b> Property</h2>
+        <p>The userAgent property returns the user agent of the browser.</p>
+        <br>
+        <p>The User Agent of the Browser: <b id="did280"></b></p>
+        
+        <script>
+            document.getElementById("did280").innerHTML = navigator.userAgent;
+        </script>
+        <br>
+        <h2>The <b>onLine</b> Property</h2>
+        <p>The onLine property neturns a <b>boolean</b> indicating whether the browser is working online.</p>
+        <br>
+        <p>Online: <b id="did281"></b></p>
+        <script>
+            document.getElementById("did281").innerHTML = navigator.onLine;
+        </script>
+    </section>
+        
+        <br>
+        
+    <section id="JS_BOM_Pop-up">
+        <h1>JavaScript BOM Pop-Up Boxes</h1>
+        <p>With JavaScript, we can show pop-up (dialog) boxes to the user.</p>
+        <p>The are three types of pop-up boxes</p>
+        <ol>
+            <li>Alert Pop-up box</li>
+            <li>Confirm Pop-up box</li>
+            <li>Prompt Pop-up box</li>
+        </ol>
+        
+        <h2>Alert Pop-up Box</h2>
+        <p>The <i>window.alert( )</i> method let's us display a pop-up box with a specified content and an "<i>OK</i>" button.</p>
+        <p>We can use window.aler() without the <b>window</b> prefix.</p>
+        <!-- <script>
+            alert("Hello World!");
+        </script> -->
+        <br>
+        <h2>Confirm Pop-up Box</h2>
+        <p>The window.confirm() method a pop-up with a message and two button : <i>OK</i> and <i>Cancel</i>. It returns a Boolean indicating whether "OK" (true) or "Cancel" (false) was selected.</p>
+        <!-- <script>
+            if(confirm("Do you love programming?")) {
+                alert("You pressed OK, thank you.");
+            } else {
+                alert("You pressed Cancel.");
+            }
+        </script> -->
+        <br>
+        <h2>The <b>Prompt</b> pop-up Box</h2>
+        <p>The window.prompt() method displays a pop-up box with a message asking the  user for a text input.</p>
+        <p>It returns a string containing teh text entered by the user.</p>
+        <p>If the user did not enter any value, it returns emty string or null.</p>
+        
+        <!-- <script>
+            var firstName = prompt("What's your name?");
+            if(firstName == "" || firstName == null) {
+                alert("You dit not enter any value!");
+            }  else {
+                alert("Hello, "+firstName+ " always remember you're special!");
+            }
+        </script> -->
+    </section>
+    <br>
+    <section id="JS_BOM_Cookies">
+        <h1>JavaScript BOM Cookies</h1>
+        <p>A web cookie or a cookie is a small peice of data that a server to a user's browser.</p>
+        <p>The browser may store it and send it back to the some server with the next requrest.</p>
+        <details><summary><h3>Cookies are used for these purposes:</h3></summary>
+        <ul>
+            <li>Session Mnagement</li> <s>&nbsp;&nbsp;&nbsp;&nbsp;</s> Login, shopping carts, games score, or anything else the server should remember.
+            <li>Personalization</li> <s>&nbsp;&nbsp;&nbsp;&nbsp;</s> user preferences, themes, and other setting.
+            <li>Tracking</li> <s>&nbsp;&nbsp;&nbsp;&nbsp;</s> recoding and analyzing user behavior.
+        </ul>
+        </details>
+        <br>
+        <h2>Creating a Cookie</h2>
+        <p>To create a cookie, use the <i>document.cookie</i> property.</p>
+        <p><em>It can be created like this:</em></p>
+        <p><code>document.cookie = "name=value";</code></p>
+        <br>
+        <p>To create multiple cookies, sperate the <b>name=value</b> pairs with semicolon(;).</p>
+        <p>Cookies are deleted when the browser is closed.</p>
+        <p>Add an expiry date in <b>UTC</b> so that it does not get deleted when the browser is closed.</p>
+        <h2>Getting a Cookie Value</h2>
+        <p>The document.cookie property returns a string that contains all the cookies.</p>
+        <h2>Changing Cookie Value</h2>
+        <p>To change cookie value, do the same way as you created it but with different value.</p>
+        <h2>Deleting a Cookie</h2>
+        <p>To delete a cookie, set the its <b>name</b> to an empty <b>value</b> and use <b>max-age=0</b>.</p>
+        <script>
+        // create a cookie,
+            var create = document.cookie = "firstName=John";
+        // to create multiple cookies
+        document.cookie = "firstName=John; LastName=Doe";
+        // to set expiry date
+        document.cookie = "firstName=John; LastName=Doe; expires=Mon, 22 Apr 2024 12:00:00 UTC";
+        //Getting cookies value
+        var getCookie = document.cookie;
+        console.log(getCookie);
+        //to change cookie value
+        document.cookie = "firstName=Jane";
+      console.log(document.cookie);
+        //To delete cookie
+        console.log(document.cookie= "firstName=; max-age=0");
+        //to check if deleted or not 
+        console.log(document.cookie);
+        </script>
+    </section>
       
 <!-- all javascript code
 <script type="text/javascript" charset="utf-8">
      console.log(document.firstElementChild.innerHTML);
 </script>-->
     <script type="text/javascript" charset="utf-8">
+        console.log(navigator.platform);
 var x = 6;
 var y = 9;
 var sum = x + y;

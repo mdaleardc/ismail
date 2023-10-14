@@ -54,8 +54,7 @@
         padding: 5px;
     }
     li {
-        font-weight: 700;
-        font-size: 1em;
+        font-weight: 600;
         color: #58FF00;
         list-style-position:inside;
     }
@@ -128,30 +127,19 @@
         font-weight: 200;
         font-size: 1em;
     }
-    .table1, th, td {
+    .table {
+        background-color: gray;
+    }
+    .table, th, td {
         color: #fff;
-        border: 0.3em groove #f0ff00;
+        border: 0.2em groove #FF0077;
         border-collapse: collapse;
-        text-align: left;
         font-size: 1.2em;
         font-weight: 400;
         margin: auto;
         padding: 5px 5px;
         width: auto;
         height: auto;
-    }
-    .table1 thead th, table thead th {
-        color: #fff;
-        font-size: 1.2em;
-        font-weight: 500;
-    }
-    table, th, td {
-        border-collapse: collapse;
-        word-break: none;
-        word-wrap: none;
-        margin: auto;
-        text-align: center;
-        padding: 3px;
     }
     
     .menu-bar {
@@ -269,6 +257,11 @@ width: 180px;
         font-size: 18px;
         color: #c0c0c0;
     }
+    code {
+        background:black;
+        padding: 4px;
+        border-radius: 3px;
+    }
     button:not(.noneStyle) {
         margin-left:35%;
         padding: 5px;
@@ -331,40 +324,36 @@ width: 180px;
         background-color: darkgrey;
     }
     
-     @media(min-width:370px) {
-        button, p, figcaption, em, i, span {
-            font-size: 2.2rem;
+      @media(min-width:370px) {
+        p, figcaption, summary,button, em, i, input, span, a {
+            font-size: 1.3rem;
         }
         h1 {
-            font-size: 4rem;
+            font-size: 2.5rem;
         }
         h2 {
-            font-size: 3rem;
+            font-size: 2.2rem;
         }
         h3, h4 {
-            font-size: 2.7rem;
+            font-size: 1.7rem;
         }
-        li, b, strong, h5 {
-            font-size: 2.6rem;
-        }
-        a {
-            font-size: 2rem;
+     li, b, strong, h5, button, code {
+            font-size: 1.5rem;
         }
         .menu-bar, .menu-list {
-            width: 320px;
-            height: 200px;
+            width: 200px;
+            height: 130px;
         }
         .menu-list li {
-            width: 320px;
+            width: 200px;
             padding: 2.4px 0 2.4px 3px;
             display: inline;
             text-align: left;
         }
-        height {
-            max-width: 100%;
-            height: auto;
+        ul li a {
+            font-size: 1rem;
         }
-    } 
+         } 
     </style>
     </head>
     
@@ -385,29 +374,16 @@ width: 180px;
     </script>
     
     <style>
-    
     #panel, #flip {
-    
     padding: 5px;
-    
     text-align: center;
-    
     background-color: #de45a3;
-    
     border: solid 1px #c3c3c3;
-    
-        
     }
-    
     #panel {
-    
     padding: 50px;
-    
     display: none;
-    
-        
     }
-    
     /* Default styles for modern browsers */
 /* Specific style for older Microsoft Edge */
 @supports (-ms-ime-align: auto) {
@@ -477,6 +453,9 @@ width: 180px;
         <li><a href="#JS_BOM_Navigator">JS_BOM_Navigator</a></li>
         <li><a href="#JS_BOM_Pop-up">JS_BOM_Pop-up</a></li>
         <li><a href="#JS_BOM_Cookies">JS_BOM_Cookies</a></li>
+        <li><a href="#JS_AJAX">JS_AJAX</a></li>
+        <li><a href="#AJAX_Send_Request">AJAX_Send_Request</a></li>
+        
         
         
         </ul>
@@ -504,7 +483,7 @@ width: 180px;
   <li>
     Output using dialog box or Alert funtion.
   </li>
-    <figcaption> By using //alert() funtion, we can output data on the dialog box.</figcaption>
+    <figcaption> By using alert() funtion, we can output data on the dialog box.</figcaption>
     <br>
     <div class="btn">
     <button type="button" onclick="myFun()">Show</button>
@@ -699,7 +678,7 @@ returns a string.</p>
         <h1> JavaScript Arithmetic Operators</h1>
         <p><b>Arithmetic Operators</b> take numerical values as thier operand and return a single numerical value.</p>
         <p>In JavaScript there are 8 basic arithmetic operators.</p>
-        <table class="table1" id="table">
+        <table class="table" id="table">
           <thead>
             <th> Operator</th>
             <th> Description</th>
@@ -780,7 +759,7 @@ returns a string.</p>
       <h1> JavaScript Assignment Operator</h1>
       <p>An assignment operator assigns value to its left operand based on the value of ite right operand.</p>
       <p>In javascript, there are <b>7<sup>th</sup> basic assignment operators.</b></p>
-      <table class="table1" id="table1">
+      <table class="table" id="table1">
         <thead>
           <th>Name</th>
           <th> Operator</th>
@@ -843,7 +822,7 @@ returns a string.</p>
       <p id="did25"></p>
       <h1>Advanced Assignment Operators</h1>
       <p>Here are the other assignment operators:</p>
-      <table class="table1" id="table2">
+      <table class="table" id="table2">
         <thead>
           <th>Name</th>
           <th>Operator</th>
@@ -893,7 +872,7 @@ returns a string.</p>
       <p>It can be used to compare strings, numbers, Booleans (logical), or object values.</p>
       <br>
       <p>In JavaScript, there are <b>8 comparison operators </b>: </p>
-      <table class="table1" id="table3">
+      <table class="table" id="table3">
         <thead>
           <th> Name</th>
           <th> Operator</th>
@@ -977,7 +956,7 @@ returns a string.</p>
       <p><i>Logical operators</i> are commonly used with<b> boolean </b>.</p>
       <br>
       <p><i>In JavaScript there are 3 logical operators</i>:</p>
-      <table class="table1" id="table4">
+      <table class="table" id="table4">
         <thead>
           <th>Name</th>
           <th>Operator</th>
@@ -1663,7 +1642,7 @@ returns a string.</p>
       <p>we can also write even handler inside an HTML element.<br><br>
       It can be done using <i> event handler attributes.</i></p>
       <div class="btn">
-        <button onclick='////alert("Hello there, the button was clicked and the task is to show this dialogue box.");'> Click me</button>
+        <button onclick='alert("Hello there, the button was clicked and the task is to show this dialogue box.");'> Click me</button>
       </div>
       <p>another example,when the button is clicked the function will be called</p>
       <div class="btn">
@@ -2208,7 +2187,7 @@ In this example, a pop-up dialog will be shown after 3 seconds (3000 millisecond
       <br>
    <script type="text/javascript" charset="utf-8">
      var timeOut=setTimeout(function() {
-       ////alert("Sorry for late to pop up!")
+       alert("Sorry for late to pop up!")
     }, 14000);
 
 var text10 = "Hello world!";
@@ -2238,7 +2217,7 @@ var button = "Tell Us";
  <button onclick="cancelTimeout()">Cancel Timeout</button>
  <script type="text/javascript" charset="utf-8">
    var myTimeout2= setTimeout(function() {
-   ////alert('JavaScript Timeout Function');
+   alert('JavaScript Timeout Function');
    }, 15000);
    
    function cancelTimeout() {
@@ -2524,7 +2503,7 @@ In this example, myInterval will be stopped when you press the button.
   <h2>Error objects</h2>
   <p>Error objects are thrown when runtimw err occur, <br> 
   The following are the different types of error.</p>
-  <table border="1px">
+  <table class="table">
     <thead id="flip">
       <th style="color:#008FFF; font-size:1.5em; width:30%">Error Name</th>
       <th style="color:#008FFF ;  font-size:1.5em">Error Description</th>
@@ -2556,7 +2535,7 @@ In this example, myInterval will be stopped when you press the button.
   
   <br />
   <p>All the mentioned obeject above cotains the follwing properties:</p>
-  <table border="2px">
+  <table class="table">
     <thead>
       <th style="color:#008FFF ;  font-size:1.5em">property </th>
       <th style="color:#008FFF ;  font-size:1.5em">Desctiption</th>
@@ -2694,7 +2673,7 @@ In this example, myInterval will be stopped when you press the button.
   "I Love" + fruit1;
   function myFunc4( ) {
   fruit1 = "mango";
-  //alert(fruit1);
+  alert(fruit1);
   //fruit1 can be used here 
   }
 </pre>
@@ -2748,7 +2727,7 @@ In this example, myInterval will be stopped when you press the button.
   document.getElementById("did209").innerHTML = "I Love " + fruit1;
   function myFunc4() {
 fruit1 = "strawberry";
-//alert(fruit1);
+alert(fruit1);
 //fruit1 can be used here
 };
 
@@ -2757,7 +2736,7 @@ document.getElementById("did210").innerHTML = fruit2;
 
 function myFunc5() {
   var fruit2 = "mango";
-  //alert(fruit2);
+  alert(fruit2);
 };
 
 function myFunc6() {
@@ -2885,14 +2864,14 @@ function myFunc8() {
    <br>
    <p><b>We can see the error by calling myfunc10() function inside the <i>try...catch </i> statement.</b></p>
    <br>
-   <p>myVariable = "Hello world"; // does not cause error. <br>function myfunc10() { <br> "use strict"; <br> fruit5 = "guava"; // causes an error <br> //alert(fruit5); } <br> try { <br> myfunc10(); <br> } <br> catch(err) {<br> document.write(err); </p>
+   <p>myVariable = "Hello world"; // does not cause error. <br>function myfunc10() { <br> "use strict"; <br> fruit5 = "guava"; // causes an error <br> alert(fruit5); } <br> try { <br> myfunc10(); <br> } <br> catch(err) {<br> document.write(err); </p>
       
       <script>
         myVariable = "Hello world"; // does not cause an error
         function myfunc10() {
           "use strict";
           fruit5 = "guava"; // cause an error
-          //alert(fruit5);
+          alert(fruit5);
         }
         try {
           myfunc10();
@@ -2910,7 +2889,7 @@ function myFunc8() {
       <script>
         function bvb(x,x,y) { // cause syntax error 
           "use strict";
-          //alert(x+x+y);
+          alert(x+x+y);
         };
     </script>
     <p><b>In strict mode, a leading zero will cause an error.</b></p>
@@ -2919,7 +2898,7 @@ function myFunc8() {
     <script>
     "use strict";
       var num0 = 04 + 7;
-      //alert(num0);
+      alert(num0);
     </script>
       </section>
       
@@ -3172,7 +3151,7 @@ For example, reassigning a const variable will throw an error.</p>
   <section id="JS_Datef_Format">
     <h1>JavaScript Date Formats</h1>
     <h4>In JavaScript there are 3 date input formats:</h4>
-  <table id="table" border="0">
+  <table class="table" id="table">
     <thead style="background:#78afec; font-size:20px">
       <th>Format Name</th>
       <th>Example</th>
@@ -3265,8 +3244,8 @@ document.write("<b>"+date+"</b>");
 <h1>JavaScript Date Get Method</h1>
 <p>The following methods are used to get information from a Date object.</p>
 <br>
-<table border="0">
-<thead style="font-weight:bold; background:#00AAFF; color:green">
+<table class="table">
+<thead>
 <th>Method </th>
 <th>Description</th>
 </thead>
@@ -3403,7 +3382,7 @@ document.getElementById("did230").innerHTML = millisecond;
           <h1>JavaScript Date Set Methods</h1>
       <p>The following methods allow us to set Date values such as year, month, day and more.</p>
   
-  <table>
+  <table class="table">
       <thead style="font-weight:bold; background:#00AAFF; color:green;">
           <th>Method</th>
           <th> Description</th>
@@ -3938,7 +3917,7 @@ document.getElementById("did230").innerHTML = millisecond;
         function validateForm0() {
             var firstName = document.getElementById("firstName").value;
             if (firstName =="") {
-                //alert("Please enter a value on text field");
+                alert("Please enter a value on text field");
                 return false;
             };
         };
@@ -5160,7 +5139,7 @@ for (var i = 0; i < h2Elements.length; i++) {
         <p><b>If you want</b> to try this property:
         <br> Go browser or window console and type <i>history.length</i>.</p>
         <script>
-            //console.log(history.length);
+            console.log(history.length);
         </script>
         <br>
         <h2>The <b>back( )</b> Method</h2>
@@ -5168,10 +5147,10 @@ for (var i = 0; i < h2Elements.length; i++) {
         <p>To <b>try this</b> go to borowser or window console, and type: <b>history.back()</b>.</p>
         
         <script>
-           // console.log(history.back());
+            //console.log(history.back());
         </script>
         <br>
-        <h2>The <b>forward( )</b> Mehtod</h2>
+        <h2>The <b>forward( )</b> Method</h2>
         <p>The forward() method loads the next page from the history list.</p>
         <p>To <b>try this method, </b> go to browser or window console and type: <b>history.forward()</b>.</p>
     <script>
@@ -5277,27 +5256,27 @@ for (var i = 0; i < h2Elements.length; i++) {
         <br>
         <h2>Confirm Pop-up Box</h2>
         <p>The window.confirm() method a pop-up with a message and two button : <i>OK</i> and <i>Cancel</i>. It returns a Boolean indicating whether "OK" (true) or "Cancel" (false) was selected.</p>
-        <!-- <script>
+         <script>
             if(confirm("Do you love programming?")) {
                 alert("You pressed OK, thank you.");
             } else {
                 alert("You pressed Cancel.");
             }
-        </script> -->
+        </script>
         <br>
         <h2>The <b>Prompt</b> pop-up Box</h2>
         <p>The window.prompt() method displays a pop-up box with a message asking the  user for a text input.</p>
         <p>It returns a string containing teh text entered by the user.</p>
         <p>If the user did not enter any value, it returns emty string or null.</p>
         
-        <!-- <script>
+        <script>
             var firstName = prompt("What's your name?");
             if(firstName == "" || firstName == null) {
                 alert("You dit not enter any value!");
             }  else {
                 alert("Hello, "+firstName+ " always remember you're special!");
             }
-        </script> -->
+        </script>
     </section>
     <br>
     <section id="JS_BOM_Cookies">
@@ -5345,6 +5324,277 @@ for (var i = 0; i < h2Elements.length; i++) {
         console.log(document.cookie);
         </script>
     </section>
+    <br>
+    
+    <section id="JS_AJAX">
+        <h1>JavaScript AJAX INTRODUCTION</h1>
+        <h2>What is AJAX?</h2>
+        <ul>
+            <li>AJAX stands for Asynchronous JavaScript and XML.</li>
+            <li>AJAX can send information to a server.</li>
+            <li>AJAX can receive from a server.</li>
+        </ul>
+        <br>
+        <h2>Major Feature of AJAX</h2>
+        <ul>
+            <li>Make requrest to a server without loading the page.</li>
+            <li>Receive and work with data from the server.</li>
+        </ul>
+        <h3>Simple Example:</h3>
+        <p>In this example, we will send a simple <b>http request</b> to the <b>"https://codeliber.com/text.php"</b> page.</p>
+        <p>Then we will receive the content and write it to a <b>&lt;div&gt;</b> element.</p>
+        <br>
+        <button onclick="makeRequest()">makeRequest</button>
+        <br>
+        <div id="did282"></div>
+        
+        <script type="text/javascript" charset="utf-8">
+            var xhr = new XMLHttpRequest();
+            function makeRequest() {
+                xhr.onreadystatechange = writeContent;
+                xhr.open("GET", "https://codeliber.com/test.php");
+                xhr.send();
+            }
+            function writeContent() {
+                if(xhr.readyState === 4) {
+                if(xhr.status == 200) {
+                    document.getElementById("did282").innerHTML = xhr.responseText;
+                } else {
+                    alert('There was a problem with request!');
+                }
+            }
+        }
+            
+        </script>
+        <h2>The <b>XMLHttpRequest</b> Object</h2>
+        <p>AJAX uses the <i>XMLHttpRequest</i> object to send and receive data from a server.</p>
+        <p>The below will create an XMLHttpRequest object:</p>
+        <br>
+        <p><code><span style="color:#FF0077">var</span> <span style="color:gold">variableName</span> <span style="color:white">=</span> <span style="color:#FF0077">new</span> <span style="color:white">XMLHttpRequest();</span></code></p>
+        <br>
+        <h4>For Exampe:</h4>
+        <p><code><span style="color:#FF0077">var</span> <span style="color:gold">httpRequest</span> <span style="color:white">=</span> <span style="color:#FF0077">new</span> <span style="color:white">XMLHttpRequest();</span></code></p>
+        <br>
+        <p>Now we use this <em>object</em> to make <em>HTTP</em> request to server.</p>
+        <h2>The XMLHttpRequest Properties</h2>
+        <p>The XMLHttpRequest object contains the following properties:</p>
+    <details>
+        <summary>
+    <h4>The XMLHttpRequest Properties</h4>
+        </summary>
+        <table class="table">
+            <thead>
+                <th>Property Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>onreadystatechange</td>
+                    <td>An event handler that is called whenever the readyState property changes.</td>
+                </tr>
+                <tr>
+                    <td>readyState</td>
+                    <td>Returns the state of the request.</td>
+                </tr>
+                <tr>
+                    <td>responseType</td>
+                    <td>Returns value that defines the response</td>
+                </tr>
+                <tr>
+                    <td>responseText</td>
+                    <td>Returns the text received from the server following a request being sent.</td>
+                </tr>
+                <tr>
+                    <td>status</td>
+                    <td>Returns the numerical HTTP status code of the XMLHttpRequest's response.</td>
+                </tr>
+                <tr>
+                    <td>statusText</td>
+                    <td>Returns a string containing the response string returned by the HTTP server.</td>
+                </tr>
+            </tbody>
+        </table>
+    </details>
+    <details>
+        <summary>
+            <h4>The <i>XMLHttpRequest</i> Methods</h4>
+        </summary>
+        <table class="table">
+            <thead>
+                <th>Method</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>open()</td>
+                    <td>Initialize a request.</td>
+                </tr>
+                <tr>
+                    <td>send()</td>
+                    <td>Send a request.</td>
+                </tr>
+                <tr>
+                    <td>abort()</td>
+                    <td>Abort a request if it has already been sent.</td>
+                </tr>
+                <tr>
+                    <td>getAllResponseHeader()</td>
+                    <td>Returns the response header.</td>
+                </tr>
+                <tr>
+                    <td>getResponseHeader()</td>
+                    <td>Returns string containing the text of the specified header.</td>
+                </tr>
+                <tr>
+                    <td>sendRequestHeader()</td>
+                    <td>Sets the value of an HTTP request header.</td>
+                </tr>
+            </tbody>
+        </table>
+    </details>
+    </section>
+    <br>
+    <section id="AJAX_Send_Request">
+        <h1>JavaScript AJAX Send Request</h1>
+        <h2>Sending Request to a Server</h2>
+        <p>To send a request, you need to initialize a request first before sending it to a server.</p>
+        <p>The <b>open()</b> method initializes a request.</p>
+        <br>
+        <p><i>Syntax:</i></p>
+        <p><code style="color:white">XMLHttpRequest.<span style="color:green">open</span>(method, url)</code></p>
+        <br>
+        <p>The method is the HTTP request method to use.</p>
+        <p>It can be a <b>"GET"</b> or a <b>"POST"</b> method.</p>
+        <p>The <b>url</b> is a string representing the <i>URL</i> to send the request to.</p>
+        <h2>Sending a <b>GET</b> Request</h2>
+        <p>Use the "GET" method when sending <b>insensitive data</b>.</p>
+        <p>This will send a <i>"GET"</i> request to <em>"https://codeliber.com/test-server.php"</em></p>
+        <br>
+        <button onclick="sendGetRequest()"> rend get request</button>
+        <div id="did283">
+            
+        </div>
+        
+        <script>
+            var httpRequest = new XMLHttpRequest();
+            
+            function sendGetRequest() {
+                httpRequest.onreadystatechange = writeContent1;
+                httpRequest.open("GET", "https://codeliber.com/test-server.php");
+                httpRequest.send();
+            }
+            function writeContent1() {
+                if(httpRequest.readyState ===4) {
+                    if(httpRequest.status ===200) {
+                        document.getElementById("did283").innerHTML = httpRequest.responseText;
+                    } else {
+                        alert("There was a problem with the the request!");
+                    }
+                }
+            }
+        </script>
+        <br>
+        <p>The <em>send()</em> method will send the request to server.</p>
+        <p>We can also send <i>additional information</i> with the "GET" request using <i>URL</i> parameters look like this <i>?name1=value1&name2=value2</i>.</p>
+        <p><em>For example::</em></p>
+        <br>
+        <button onclick="httpRequest1()">send get request</button>
+        <br>
+        <div id="did284"></div>
+        
+        <script>
+            var xhr = new XMLHttpRequest();
+            
+            function httpRequest1() {
+                xhr.onreadystatechange =writeContent2;
+                xhr.open("GET", "https://codeliber.com/test-server.php?firstName=Mohammed&lastName=Ismail");
+                xhr.send();
+            }
+            function writeContent2() {
+                if(xhr.readyState === 4) {
+                    if(xhr.status ===200) {
+                        document.getElementById("did284").innerHTML = xhr.responseText;
+                    } else {
+                        alert("There was a problem with the request");
+                    }
+                }
+            }
+        </script>
+        
+        <h2>Sending a <i>POST</i> Request</h2>
+        <p>Use the <b>"POST"</b> method when sending <b>sensitive data</b> like <em>passwords</em> or any <em>private personal informntion</em>.</p>
+        <p>Sending a <i>"POST"</i> request is somehow similar to sending a <b>GET</b> request.</p>
+        <p>But you need to specify a <em>request header</em> using the <b>setRequestHeader()</b> method.</p>
+        <p>And you need to put the <em>URL</em> parameters <i>inside</i> the <i>send()</i> method, <em>not with url when you initialize a request</em>.</p>
+        <br>
+        <button onclick="postRequest()">send post request</button>
+        <br>
+        <div id="did285"></div>
+        
+        <script>
+            var xhr = new XMLHttpRequest();
+            
+            function postRequest() {
+                xhr.onreadystatechange = writeContent3;
+                xhr.open("POST", "https://codeliber.com/test-server.php");
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.send("firstName=John&lastName=Doe");
+            }
+            
+            function writeContent3() {
+                if(xhr.readyState === 4) {
+                    if(xhr.status ==  200) {
+                        document.getElementById("did285").innerHTML = xhr.responseText;
+                    } else {
+                        alert("There was a problem with the request!");
+                    }
+                }
+            }
+        </script>
+        
+        <h1>AJAX Receiving Response</h1>
+        <p>Receiving or Handling Request fron Server</p>
+        <br>
+        <div>
+            <p id="did286"></p>
+            <button onclick="handlingResponse()">Send Request</button>
+        </div>
+        
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = receiveContent;
+            
+        function handlingResponse() {
+            xhr.open("GET", "https://codeliber.com/test-server.php");
+            xhr.send();
+        }
+        function receiveContent() {
+            if(xhr.readyState === 4) {
+            if(xhr.status ===200) {
+                document.getElementById("did286").innerHTML = xhr.responseText;
+            } else {
+                alert("Something went wrong!");
+        }
+    } else {
+//        alert("response not ready");
+    }
+}
+        </script>
+        
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
       
 <!-- all javascript code
 <script type="text/javascript" charset="utf-8">
@@ -5360,7 +5610,7 @@ function myFun() {
 var x = 7;
 var y = 5;
 var multiply = x * y;
-//alert(multiply); //using alert
+alert(multiply); //using alert
 }
 
 function myFun1() {
@@ -5651,7 +5901,7 @@ document.getElementById("did46").innerHTML = sum;
 }
 
 function showDailog() {
-//alert("Hello! Md Ismail");
+alert("Hello! Md Ismail");
 }
 
 function addNumbers(num1, num2) {
@@ -5695,7 +5945,7 @@ return kilometer + " " + "kilometer" + " "+ "equel" + " " + miles + " " + "miles
 }
 
 // we can use the function as many times as we want
-////alert(toMiles(4));
+alert(toMiles(4));
 document.getElementById("did52").innerHTML = toMiles(10);
 
 //JavaScript Object
@@ -5717,10 +5967,10 @@ hobbies: ["coding",
 "reading"],
 isMarried: true,
 showName: function() {
-//alert(this.fullName);
+alert(this.fullName);
 },
 showAge: function() {
-//alert(this.age);
+alert(this.age);
 }
 }
 document.getElementById("did55").innerHTML = this.fullName + " " + " is" + " " + person.age + " years old.";
@@ -5745,7 +5995,7 @@ hobbies: ["playing",
 
 showDetails: function() {
 console.log(this.hobbies[1]);
-//alert(this.name + " is " + this.age + " year old" + " hobby is " + this.hobbies[1]);
+alert(this.name + " is " + this.age + " year old" + " hobby is " + this.hobbies[1]);
 }
 }
 
@@ -5776,7 +6026,7 @@ function greeting() {
 var userName = window.prompt("Hello, welcome to the tutorial. May I know your name?");
 var str = "Nice to meet you " + userName + "! " + "Welcome to Learndg, I hope you're enjoying the lessons!";
 
-//alert(str);
+alert(str);
 }
 
 var str4 = "He is called \"Abosoyed.\""; // escaping "
@@ -6127,17 +6377,17 @@ var btn = document.getElementById("btn");
 
 // the block of codes below is called event handler
 btn.onclick = function() {
-//alert("The button was clicked and task is that to show the dialogue box.");
+alert("The button was clicked and task is that to show the dialogue box.");
 };
 
 function myFunc() {
-//alert(tools + "," + "key" + fruits);
+alert(tools + "," + "key" + fruits);
 };
 
 var volunteers = ["Imran", " Gulap", " Roshid", " Mustafa"];
 //var btn = document.getElementById("btn2");
 btn2.addEventListener("click", function() {
-//alert(volunteers);
+alert(volunteers);
 });
 
 document.getElementById("img1").onmouseover = abc;
@@ -6284,21 +6534,21 @@ document.getElementById("did163").innerHTML = Math.floor(Math.random() *(max-min
 
 var age = 10;
 if (age >= 10) {
-//alert("The user is old enough to enter this site.");
+alert("The user is old enough to enter this site.");
 };
 
 if (age >= 12) {
-//alert("The user is old enough to enter.")
+alert("The user is old enough to enter.")
 } else {
-//alert("The user not old enough to enter.")
+alert("The user not old enough to enter.")
 };
 
 document.getElementById("submit").addEventListener("click", function() {
 var Age = document.getElementById("Age").value;
 if (Age >= 18) {
-//alert(" The user is allowed to enter.");
+alert(" The user is allowed to enter.");
 } else {
-//alert("The user isn't allowed to enter.");
+alert("The user isn't allowed to enter.");
 }
 });
 
@@ -6438,7 +6688,7 @@ var amount = "$3.14";
 document.getElementById("did171").innerHTML = "The price of " + fruitP + " is " + amount;
 break;
 default:
-/*document.getElementById("did171").innerHTML = */ //alert("Sorry for the inconvenience, " + fruitP + " is currently not available.");
+/*document.getElementById("did171").innerHTML = */ alert("Sorry for the inconvenience, " + fruitP + " is currently not available.");
 console.log(fruitP);
 }
 };

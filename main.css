@@ -367,8 +367,8 @@ section.section {
 	width: 90%;
 }
 
-.progress-line.react span {
-	width:35%;
+.progress-line.javascript span {
+	width:65%;
 }
 
 .progress-line span::after {
@@ -391,8 +391,8 @@ section.section {
 	content: "90%";
 }
 
-.progress-line.react span::after {
-	content: "35%";
+.progress-line.javascript span::after {
+	content: "65%";
 }
 
 .progress-line span::before {

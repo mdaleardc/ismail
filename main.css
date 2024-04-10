@@ -1,4 +1,6 @@
-* {
+*,
+::befor,
+::after {
 	margin:0;
 	padding: 0;
 	box-sizing: border-box;
@@ -367,8 +369,12 @@ section.section {
 	width: 90%;
 }
 
+.progress-line.javascript span {
+	width: 75%;
+}
+
 .progress-line.react span {
-	width:65%;
+	width:30%;
 }
 
 .progress-line span::after {
@@ -390,9 +396,11 @@ section.section {
 .progress-line.css span::after {
 	content: "90%";
 }
-
+.progress-line.javascript span::after {
+	content: "75%";
+}
 .progress-line.react span::after {
-	content: "65%";
+	content: "30%";
 }
 
 .progress-line span::before {
@@ -598,8 +606,9 @@ section.section {
 /*	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 3rem;*/
-	padding-left: 30px;
-	margin-top: 130px;
+	width: 100%;
+	padding-left: 10px;
+	margin-top: 100px;
 }
 
 .contact-text h2 {
@@ -612,6 +621,13 @@ section.section {
 	color: #0ef;
 }
 
+.contact-text h3 {
+    color: #009EFF;
+    font-size: 1.8rem;
+    font-weight: 700;
+    
+}
+
 .contact-text h4 {
 	margin: 15px 0;
 	color: rgb(228, 228 228);
@@ -621,9 +637,31 @@ section.section {
 
 .contact-text p {
 	color: rgb(177, 177, 177);
-	font-size: 20px;
+	font-size: 23px;
 	line-height: 30px;
 	margin-bottom: 2rem;
+	padding-right: 4px;
+}
+
+.contact-text ul {
+    padding: 7px;
+}
+
+.contact-text ul li {
+    color: rgb(228, 228, 228);
+    font-size: 1.3rem;
+}
+
+.contact-text ul li span {
+    font-size: 1.4rem;
+    color: #FeedDc;
+    font-weight: 600;
+    font-family: Times New Roman;
+}
+
+.contact-text p span {
+    font-weight: bold;
+    font-style: italic;
 }
 
 .contact-list {
@@ -641,6 +679,11 @@ section.section {
 	font-size: 20px;
 	font-weight: 600;
 	transition: all .40s ease;
+}
+
+.contact-list li a {
+    text-decoration: none;
+    color: #00ffcc;
 }
 
 .contact-list li a:hover {
@@ -676,8 +719,8 @@ section.section {
 	outline: none;
 	width: 90%;
 	padding: 10px;
-	background: #555557;
-	color: #000;
+	background: #000;
+	color: #fffffe;
 	font-size: 1rem;
 	font-weight: 600;
 	margin-bottom: 0.5rem;
@@ -707,7 +750,7 @@ section.section {
 }
 
 div.last-text {
-	width: 90vw;
+	width: 100vw;
 	margin: 0 auto;
 }
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./calculator.css" />
+</head>
+<body>
+<main>
+<div class="container">
+    
+<table border="3px">
+<thead>
+<tr>
+  <th colspan="4" id="user-input"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td onclick="allClearFunction()">AC</td>
+    <td onclick="storeData('%')">%</td>
+    <td onclick="deleteLast()">Del</td>
+    <td onclick="storeData('/')">/</td>
+    </tr>
+<tr>
+    <td onclick="storeData('7')">7</td>
+    <td onclick="storeData('8')">8</td>
+    <td onclick="storeData('9')">9</td>
+    <td onclick="storeData('*')">×</td>
+</tr>
+<tr>
+    <td onclick="storeData('4')">4</td>
+    <td onclick="storeData('5')">5</td>
+    <td onclick="storeData('6')">6</td>
+    <td onclick="storeData('-')">-</td>
+</tr>
+<tr>
+    <td onclick="storeData('1')">1</td>
+    <td onclick="storeData('2')">2</td>
+    <td onclick="storeData('3')">3</td>
+    <td onclick="storeData('+')">+</td>
+</tr>
+<tr>
+    <td onclick="storeData('0')">0</td>
+    <td onclick="storeData('.')">.</td>
+    <td colspan="2" onclick="calculated()">=</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+<script src="calculator.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

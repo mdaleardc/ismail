@@ -4,6 +4,7 @@ h1 = document.getElementsByTagName('h1'),
 jsBasic = document.querySelector(".js-basic"),
 h2 = document.getElementsByTagName('h2'),
 h3 = document.getElementsByTagName('h3'),
+h4 = document.getElementsByTagName("h4"),
 h5 = document.getElementsByTagName('h5'),
 paragraph = document.getElementsByTagName('p'),
 code_Sample = document.getElementsByClassName('code-sample'),
@@ -15,10 +16,14 @@ comment = document.getElementsByClassName('code-comment'),
 anchor = document.getElementsByTagName('a'),
 highlight = document.getElementsByClassName('highlight'),
 fushcia = document.getElementsByClassName('fushcia'),
-table = document.getElementsByTagName('table');
+table = document.getElementsByTagName('table'),
+tableHead =document.getElementsByTagName("th");
+tableRow = document.getElementsByTagName("td");
+
 
 html.style.backgroundColor = '#222';
 html.style.paddingLeft = "5px";
+html.style.scrollBehavior = "smooth";
 
 
 // for loops
@@ -96,6 +101,11 @@ for (let i = 0; i < fushcia.length; i++) {
 	fushcia[i].style.color = "#FF0077";
 }
 
+for (let i = 0; i < h4.length; i++) {
+  h4[i].style.color = "#FF1";
+  h4[i].style.textAlign = "center";
+} 
+
 for(let i = 0; i < h5.length; i++) {
 	h5[i].style.color = '#006DFF';
 }
@@ -103,8 +113,18 @@ for(let i = 0; i < h5.length; i++) {
 for(let i = 0; i < table.length; i++) {
 	table[i].style.backgroundColor = '#fff';
 	table[i].style.color = '#000';
+	table[i].style.border = "3px solid #e10";
+	table[i].style.borderCollapse = "collapse";
+	table[i].style.margin = "10px auto";
 }
 
-// test console
+for (let i = 0; i < tableHead.length; i++) {
+  tableHead[i].style.border = "3.5px solid #0ef";
+  tableHead[i].style.padding = "6px";
+}
 
-console.log(3%2);
+for (let i = 0; i < tableRow.length; i++) {
+  tableRow[i].style.border = "2.5px solid #e10";
+  tableRow[i].style.padding = "6px"
+} 
+// test console

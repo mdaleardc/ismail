@@ -1,17 +1,21 @@
+// Function to create html elements
+
+const createHtmlElem = (elem, text, htmlClass) => {
+  const htmlElement = document.createElement(elem);
+  htmlElement.className = htmlClass;
+  htmlElement.innerHTML = text;
+  return htmlElement;
+}
+
+
 document.getElementById('js-basic').innerHTML = "BASICS JAVASCRIPT";
 
 /*JavaScript Statements*/
 
 document.getElementById('js-statement').innerHTML = "JavaScript Statements";
 
-document.querySelector('.js-statement-p').innerHTML = "JavasScript programs consist of statements with appropriate syntax.<br> A single JavaScript statement may span single or multiple lines. <br> JavaScript statements should be ended or seperated by semicolons (;).";
+document.querySelector('.js-statement-p').innerHTML = "JavasScript programs consist of statements with appropriate syntax.<br> A single JavaScript statement may span single or multiple lines. <br> JavaScript statements should be ended or separated by semicolons (;).";
 
-const codeSample = document.getElementsByClassName('code-sample');
-
-for (let i = 0; i < codeSample.length; i++) {
-    const result = codeSample[i];
-    result.innerHTML = "Code Samples";
-}
 
 document.querySelector('.single-line').innerHTML = "Below is a program that consist of <b>two single-line statements</b>.";
 
@@ -22,8 +26,6 @@ document.querySelector('.multi-line-span').innerHTML = 'Below is a program that 
 
 document.querySelector('.basicEx1').innerHTML = `document.getElementById('elem').innerHTML = <br>
 'Hello world!';`;
-
-
 
 document.querySelector('.grouping-js-statement').innerHTML = "Grouping JavaScript Statements";
 
@@ -180,7 +182,7 @@ var y = '3'; <span class='code-comment'>// string</span><br>
 console.log(x === y); <span class='code-comment'>//returns false</span>`;
 
 document.querySelector('.undefined-data-type').innerHTML = 'Undefined Data Type';
-document.querySelector('.undefined-data-type-p').innerHTML = 'If a variable has no assigned value, the value is <b>undefined</b>. <br> In the example below, the <em>title</em> is declared but is not assigned to any value. <br> Therefor, the value is <b>undefined</b>.';
+document.querySelector('.undefined-data-type-p').innerHTML = 'If a variable has no assigned value, the value is <b>undefined</b>. <br> In the example below, the <em>title</em> is declared but is not assigned to any value. <br> Therefore, the value is <b>undefined</b>.';
 document.querySelector('.basicEx20').innerHTML = `var title; <br> console.log(title); <span class='code-comment'> // returns undefined`;
 document.querySelector('.undefined-data-type-p').innerHTML = 'If a variable is not declared, it also returns <em>undefined</em>.';
 
@@ -190,7 +192,7 @@ document.querySelector('.basicEx21').innerHTML = `var fruit = "apple"; <br>
 fruit = null; <span class='code-comment'>// sets the value to null</span>`;
 
 document.querySelector('.object-data-type').innerHTML = 'Object Data Type';
-document.querySelector('.object-data-type-p').innerHTML = 'In this lesson, we will only learn most basic concept of JavaScript <b>Objects</b>. <br> <em>There is a designated lesson for <b>Objects</b>, that will teach it in depth</em>. <br>The object data type is a collection of related data. <br> Objects contain properties written in <b>key: value</b> pairs. <br> Each pair is seperated by a comma (<b>,</b>). <br> Objects are written inside curly braces <em>{ }</em>.';
+document.querySelector('.object-data-type-p').innerHTML = 'In this lesson, we will only learn most basic concept of JavaScript <b>Objects</b>. <br> <em>There is a designated lesson for <b>Objects</b>, that will teach it in depth</em>. <br>The object data type is a collection of related data. <br> Objects contain properties written in <b>key: value</b> pairs. <br> Each pair is separated by a comma (<b>,</b>). <br> Objects are written inside curly braces <em>{ }</em>.';
 document.querySelector('.basicEx22').innerHTML = `
 var banana = {<br>
 color: "yellow",<br>
@@ -201,7 +203,7 @@ isSweet: true,<br>
 document.querySelector('.object-data-type-p1').innerHTML = 'In the example above, the <b>banana</b> object has 4 properties: <b>color</b>, <b>size</b>, <b>quantity</b> and <b>isSweet</b>.';
 
 document.querySelector('.bjavascript-array').innerHTML = 'JavasScript Array';
-document.querySelector('.bjavascript-array-p').innerHTML = 'JavasScript array is a collection values, each value is seperated with a comma ( , ). <br> It is written with square brackets <b>[</b> <b>]</b>.<br> The data type of array is <em>object</em>.';
+document.querySelector('.bjavascript-array-p').innerHTML = 'JavasScript array is a collection values, each value is separated with a comma ( , ). <br> It is written with square brackets <b>[</b> <b>]</b>.<br> The data type of array is <em>object</em>.';
 document.querySelector('.basicEx23').innerHTML = `var fruits = ["apple", "oranges", "bananas"]; <br>
 document.getElementById("demo").innerHTML =
 fruits[0] + " " + fruits[1] + " " + fruits[2];`;
@@ -302,7 +304,7 @@ var test = x == y; <span class='code-comment'>// prints true because x and y are
 document.querySelector('.logical-operator').innerHTML = 'Logical Operators';
 document.querySelector('.logical-operator-p').innerHTML = '<b>Logical operators</b> are typically use with <b>boolean</b> values. <br> They are used to determine the logic between its operands. <br><br> You will learn about ligical operator later in the course.';
 
-document.querySelector('.bitwise-operator').innerHTML = 'Bitwise Opetators';
+document.querySelector('.bitwise-operator').innerHTML = 'Bitwise Operators';
 document.querySelector('.bitwise-operator-p').innerHTML = 'A <b>bitwise operator</b> treats its operands as a set of <b>32 bits</b> or zero and one. <br> It performs its operarion with <b>binary</b> representation. <br> It returns numerical values. <br> <br> You will learn about bitwise opeatators later in the course.';
 
 //Javascript arithmetic operator
@@ -641,7 +643,7 @@ document.querySelector('.basicEx62').innerText = `document.getElementById("demo"
 (4 <= 4)        /* returns true */ + "<br>" +
 (2.25 <= 2.25); /* returns true */`;
 
-document.querySelector('.less-than-or-equal-operator-p1').innerHTML = 'As you may notice, I have only used the returned Booleans of the comparison oprerators. And I have not yet make any use of them.';
+document.querySelector('.less-than-or-equal-operator-p1').innerHTML = 'As you may notice, I have only used the returned Booleans of the comparison operators. And I have not yet make any use of them.';
 document.querySelector('.how-can-it-be-used').innerText = 'How Can It Be Used?';
 document.querySelector('.how-can-it-be-used-p').innerText = `Comparison operators are mostly used in conditional statements.
 The most basic conditional statement is if statement.`;
@@ -650,27 +652,617 @@ console.log('Hello World!');
 }`;
 document.querySelector('.how-can-it-be-used-p1').innerHTML = 'As you may notice, the example above printed <em>Hello World!</em>, It because the condition (which is <b> 5 == 5 </b>) is <em>true</em>.<br> If the condition is false, <em>Hello World!</em> will not be printed.';
 
-const jsLogicalAndConditionalOperator = () => {
-        const container = document.getElementById('logical-and-conditional-operator');
-    const head2Func = () => {
-        const head2 = document.createElement("h2");
-        head2.className = "head2";
-        head2.textContent = "Javascript Logical and Conditional Operator";
-        container.appendChild(head2);
-        return container;
-    }
-    head2Func();
+// JavaScript logical and conditional operators
 
-    const textFunc = () => {
-        const createTextEl = document.createElement("p");
-        createTextEl.className = "textBox";
-        createTextEl.innerHTML = `<b>Logical operators</b> are commonly used with <b>Booleans</b>. When they are used with <b>Booleans</b> (logical) values, they returns a boolean value.`;
-        container.appendChild(createTextEl);
-        return container;
-    }
-    textFunc();
+const jsLogicalAndConditionalOperator = () => {
+  const jsLogicalAndConditonalDiv = document.getElementById('logical-and-conditional-operator');
+  const head2Func = () => {
+    const head2 = document.createElement("h2");
+    head2.className = "head2";
+    head2.textContent = "Javascript Logical and Conditional Operator";
+    jsLogicalAndConditonalDiv.appendChild(head2);
+    return jsLogicalAndConditonalDiv;
+  }
+  head2Func();
+
+  const textFunc = () => {
+    const createTextEl = document.createElement("p");
+    createTextEl.className = "textBox";
+    createTextEl.innerHTML = `<b>Logical operators</b> are commonly used with <b>Booleans</b>. When they are used with <b>Booleans</b> (logical) values, they returns a boolean value. <br>
+    In JavaScript, there are 3 logical operators:`;
+    jsLogicalAndConditonalDiv.appendChild(createTextEl);
+    return jsLogicalAndConditonalDiv;
+  }
+  textFunc();
+
+  const tableFunction = () => {
+    const createTableElem = document.createElement("table");
+    createTableElem.id = "logicalTable";
+    createTableElem.innerHTML = `
+    <thead>
+    <th> Name </th>
+    <th> Operator </th>
+    <th> Usage </th>
+    </thead>
+    <tbody>
+    <tr>
+    <td> Logical AND </td>
+    <td> && </td>
+    <td> expression1 && expression2 </td>
+    </tr>
+    <tr>
+    <td> Logical OR </td>
+    <td> || </td>
+    <td> expression1 || expression2 </td>
+    </tr>
+    <tr>
+    <td> Logical NOT </td>
+    <td> ! </td>
+    <td> !expression </td>
+    </tr>
+    </tbody>
+    `;
+    jsLogicalAndConditonalDiv.appendChild(createTableElem);
+    return jsLogicalAndConditonalDiv;
+  }
+  tableFunction();
+
+  const logicalAndFunc = () => {
+    const logicalAndElem = document.createElement("h3");
+    logicalAndElem.innerHTML = `<br> JavaScript Logical <b>AND</b> (<b>&&</b>)`;
+    jsLogicalAndConditonalDiv.appendChild(logicalAndElem);
+    return jsLogicalAndConditonalDiv;
+  }
+  logicalAndFunc();
+
+  const logicalAndDescribeFunc = () => {
+    const logicalAndTextElem = document.createElement("p");
+    logicalAndTextElem.innerHTML = `
+    Logical AND (<em> && </em>) operator return <em>true</em> if <span>both operands</span> ( which are expressions) are <em>true</em>.
+    `;
+    jsLogicalAndConditonalDiv.appendChild(logicalAndTextElem);
+    return jsLogicalAndConditonalDiv;
+  }
+  logicalAndDescribeFunc();
+
+
+  const logicalAndCodeSampleFunc = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("h4", "", "code-sample"));
+    return jsLogicalAndConditonalDiv;
+  };
+  logicalAndCodeSampleFunc();
+
+  const logicalAndExample = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("code", `(true && true)     /* returns true */ <br>
+      (true && false)    /* returns false */ <br>
+      (3 == 3 && 4 == 4)  /* returns true */ <br>
+      (3 == 4 && 4 == 4)   /* returns false */ <br>
+      (5 > 3 && 4 < 6)   /* returns true */ <br>
+      (3 > 5 && 6 < 4);   /* returns false */`, ''));
+    return jsLogicalAndConditonalDiv;
+  }
+  logicalAndExample();
+
+  const logicalOrFunc = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("h3", "<br> Logical <b>OR</b> (<b> || </b>)"));
+    return jsLogicalAndConditonalDiv;
+  }
+  logicalOrFunc();
+
+  const logicalOrDescribeFunc = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("p", "The logical OR (<em> || </em>) operator return <em>true</em> if <b>either of the operand</b> is <em> true </em>."));
+    return jsLogicalAndConditonalDiv;
+  }
+  logicalOrDescribeFunc();
+
+  const logicalOrCodeSampleFunc = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("h4", "", "code-sample"));
+    return jsLogicalAndConditonalDiv;
+  }
+  logicalOrCodeSampleFunc();
+
+  const logicalOrExample = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("code", `
+      (true || true)     /* returns true */ <br>
+      (true || false)    /* returns true */ <br>
+      (false || false)   /* returns false */ <br>
+      (2 == 2 || 2 == 3) /* returns true */ <br>
+      (1 == 2 || 2 == 3) /* returns false */ <br>
+      (10 > 5 || 5 > 10) /* returns true */ <br>
+      (10 < 5 || 5 > 10) /* returns false */
+      `, ''));
+    return jsLogicalAndConditonalDiv;
+  }
+  logicalOrExample();
+
+  const logicalNotFunc = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("h3", "Logical NOT (<b> ! </b>)"));
+    return jsLogicalAndConditonalDiv;
+  }
+  logicalNotFunc();
+
+  const logicalNotDescribeFunc = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("p", "The logical NOT (<em> ! </em>) operator returns <b>true</b> if the operand ( expression ) is <em> not true </em>.", ""));
+    return jsLogicalAndConditonalDiv;
+  }
+  logicalNotDescribeFunc();
+
+  const logicalNotCodeSample = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("h4", "", "code-sample"));
+    return jsLogicalAndConditonalDiv;
+  }
+
+  const logicalNotExample = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("code", `
+      !(true)   /* returns false */ <br>
+      !(false)  /* returns true */ <br>
+      !(1 == 1) /* returns false */ <br>
+      !(1 > 2); /* returns true */
+      `, ''));
+    return jsLogicalAndConditonalDiv;
+  }
+  logicalNotExample();
+
+  const useLogicalOperatorWithConditionalStatementFunc = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("h3", "<br> Using Logical Operators with Conditional Statement"));
+    return jsLogicalAndConditonalDiv;
+  }
+  useLogicalOperatorWithConditionalStatementFunc();
+
+  const useLogicalOperatorText = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("p", "Logical operators are commonly used with <b>Conditional Statements"));
+    return jsLogicalAndConditonalDiv;
+  }
+  useLogicalOperatorText();
+
+  const useLogicalOperatorCodeSample = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("h4", "", "code-sample"));
+    return jsLogicalAndConditonalDiv;
+  }
+  useLogicalOperatorCodeSample();
+
+  const useLogcalOperatorExample = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("code", `
+      if(3 == 3 && 4 == 4) { <br>
+      document.write("The condition is true."); <br>
+      }
+      <br>
+      if(3 == 3 && 3 == 4) { <br>
+      document.write("I will not be printed because the condition is false."); <br>
+      }
+      `, ''));
+    return jsLogicalAndConditonalDiv;
+  }
+  useLogcalOperatorExample();
+
+  const jsTernaryOperatorFunc = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("h3", "JavaScript Conditional (<b> Ternary </b>) Operator"));
+    return jsLogicalAndConditonalDiv;
+  }
+  jsTernaryOperatorFunc();
+
+  const jsTernaryOperatorDescribeFunc = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("p", "The conditional or the ternary operator is the only operator that takes three operands. <br> <code>condition ? value1 : value2 </code> <br> If the <i>condition</i> is true, the operator returns the value1, otherwise the value2. <br> This is commonly used with a <em>variable</em>"));
+    return jsLogicalAndConditonalDiv;
+  }
+  jsTernaryOperatorDescribeFunc();
+
+  const jsTernaryOperatorCodeSample = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("h4", "", "code-sample"));
+    return jsLogicalAndConditonalDiv;
+  }
+  jsTernaryOperatorCodeSample();
+
+  const jsTernaryOperatorExample = () => {
+    jsLogicalAndConditonalDiv.appendChild(createHtmlElem("code", `
+      var testScore = 80;
+      var testResult = (testScore > 75) ? "Passed" : "Failed";
+      document.getElementById("demo").innerHTML = testResult;
+      <br>
+      <p>Since <i>testScore</i> is greater than 75, then the value <em>"Passed"</em> was assigned to the <i>testResult</i> variable. <br> If <i>testScore</i> is less than 75, then the value <em>"Failed"</em> will be assigned to the <i>testResult</i> variable.</p>
+      `, ""));
+    return jsLogicalAndConditonalDiv;
+  }
+  jsTernaryOperatorExample();
 }
 
 jsLogicalAndConditionalOperator();
 
-const fetchingData = fetch("https://mdaleardc.github.io/ismail/index.html").then(res => res.text()).then(data => console.log(data)).catch(err => console.error(err));
+/*JavaScript Functions*/
+
+const javaScriptFunctions = () => {
+  const javaScriptFunctionsDiv = document.getElementById("javaScript-Function");
+
+  const jsFunc = () => {
+    javaScriptFunctionsDiv.appendChild(createHtmlElem("h2", "JavaScript Functions", ''));
+
+    const jsFuncDescribe = () => {
+      javaScriptFunctionsDiv.appendChild(createHtmlElem("p", `<b>Functions</b> are one of the fundamental building blocks of JavaScript. <br> A function is a <b>JavaScript Method</b>. <br> It is a set of statements that performs a task or produces a value. <br> It is executed when it is <b>invoked</b> (called) by somethings.`));
+      return javaScriptFunctionsDiv;
+    }
+    jsFuncDescribe();
+    return javaScriptFunctionsDiv;
+  }
+  jsFunc();
+
+  const jsFunctionDefinition = (htmTag, htmlText, classAttr = "html-class") => {
+    javaScriptFunctionsDiv.appendChild(createHtmlElem(htmTag, htmlText, classAttr));
+    return javaScriptFunctionsDiv;
+  }
+
+  jsFunctionDefinition("h3", "Function Definition");
+  jsFunctionDefinition("p", `JavaScript Functions are defined or declared with <em>function</em> keyword followed by:`);
+  jsFunctionDefinition("ul", `<li>The name of function.</li> <li>A list of parameters (optional) inclosed in parentheses. Multiple parameters separated by commas (<em> , </em>)</li> <li>The block of codes or statements are inclosed in curly braces <em>{ }</em></li>`);
+  jsFunctionDefinition("p", "Here is the syntax:");
+  jsFunctionDefinition("code", `<span class="fushcia">function</span> functionName(parameter1, parameter2, parameter3) { <br> /* codes or statements to be executed */ <br> }`);
+  jsFunctionDefinition("p", "Parameters act as <b>placeholder variable</b> inside the function.");
+  jsFunctionDefinition("p", "When the function called, variables are assigned to the <b>arguments</b> (value) provided when the function is called");
+
+  jsFunctionDefinition("h4", "", "code-sample");
+  jsFunctionDefinition("code", ` /* defining function */ <br>
+    function writeText(str) { <br>
+    document.getElementById("demo").innerHTML = str; <br>
+    } <br>
+    <br>
+    /* calling function */ <br>
+    writeText("Hello World!"); <br>`, "");
+  jsFunctionDefinition("p", "In the example below, the function's task is to add two numbers and then print the sum.");
+  jsFunctionDefinition("code", `<span class="fushcia">function</span> myFunc(num1, num2) { <br>
+    <span class="fushcia">var</span> sum = num1 + num2; <br>
+    console.log(sum); <br>
+    } <br>
+    myFunc(3, 5) /* will print 8 */`, '');
+
+}
+javaScriptFunctions();
+
+
+
+
+
+
+/* JavaScript Document Object Model*/
+const jsDOMIntro = () => {
+  const jsDomDiv = document.getElementById("js-dom-introduction");
+  const javaScriptDom = (htmlTag, htmlText, classAttr) => {
+    jsDomDiv.appendChild(createHtmlElem(htmlTag, htmlText, classAttr));
+    return jsDomDiv;
+  }
+  javaScriptDom("h2", "JavaScript DOM Introduction");
+  javaScriptDom("h3", "The Document Object Model (DOM)");
+  javaScriptDom("p", "As you know already, the backbone of an HTML document is elements. <br> When an HTML document is loaded, the browser creates an <b>HTML Document Object Model</b> or <b>DOM</b>.");
+  javaScriptDom("h3", "What is the DOM?");
+  javaScriptDom("p", "The <b>DOM</b> is created by the browser when an HTML document is loaded. <br> It is \"<b>tree structure</b>\" representation of an HTML structure. <br> The <b>DOM tree</b> contains all the elements in a document.");
+  javaScriptDom("p", "<b>Note!</b> In a DOM tree, all elements are <b>objects</b>", "highlight");
+  javaScriptDom("h3", "DOM and JavaScript");
+  javaScriptDom("p", "With JavaScript, we can do many useful things to the DOM");
+  javaScriptDom("ul", `
+    <li>JavaScript can change an HTML element's content.</li>
+    <li>JavaScript can add attributes to an HTML element.</li>
+    <li>JavaScript can change an HTML element's attribute value.</li>
+    <li>JavaScript can change an HTML element's styles.</li>
+    <li>JavaScript can add an HTML elements to other HTML elements.</li>
+    <li>JavaScript can remove an HTML element.</li>
+    <li>JavaScript can listen to events that happen to an HTML element.</li>
+    `);
+}
+jsDOMIntro();
+
+const javaScriptDOMSelectorFunc = () => {
+  const jsDomSelectorDiv = document.getElementById("js-dom-selector");
+  const jsDomSelector = (htmlTag, htmlText, classAttr) => {
+    jsDomSelectorDiv.appendChild(createHtmlElem(htmlTag, htmlText));
+    return jsDomSelectorDiv;
+  }
+  jsDomSelector("h2", "JavaScript DOM Selectors");
+  jsDomSelector("p", "With JavaScript, we can select any element from the <em>DOM tree</em> using <em>document</em> object.<br><br> Why do we select elements?");
+  jsDomSelector("ul", `
+    <li>To get their contents.</li>
+    <li>To change their contents.</li>
+    <li>To style them.</li>
+    <li>To get or change their attribute.</li>
+    <li>To remove them.</li>
+    <li>And many more...</li>
+    `);
+  jsDomSelector("h3", "Select the Topmost Elements");
+  jsDomSelector("p", "The topmost elements can be selected directly from the document object properties.");
+  jsDomSelector("ul", `
+    <li><i>document.documentElement;</i> selects <I>&lt;html&gt;</I></li> <br>
+    <li><I>document.head;</I> selects <I>&lt;head&gt;</I></li> <br>
+    <li><I>document.body;</I> selects <I>&lt;body&gt;</I></li>
+    `);
+  jsDomSelector("code", `
+    /* gets the value of the lang attribute of &lt;html&gt;*/ <br>
+    alert(document. documentElement.getAttribute("lang")); <br> <br>
+
+    /* gets the content of &lt;title&gt; inside the &lt;head&gt;*/  <br>
+    alert(document.head.firstElementChild.innerHTML); <br> <br>
+
+    /* changes the background color of the &lt;body&gt;*/ <br>
+    document.body.style.backgroundColor = "green"; <br> <br>
+    `);
+  jsDomSelector("h3", "Select Element By Id");
+  jsDomSelector("p", "The <em>document.getElementById( )</em> selects the element whose <em>id</em> attribute matches the specified string. <br> It is the best method to use when selecting a <b>single element</b>");
+  jsDomSelector("code", `document.getElementById("demo").innerHTML = "Hello World!";`);
+
+  jsDomSelector("h3", "Select Elements By Class Name");
+  jsDomSelector("p", "The <em>document.getElementsByClassName( );</em> selects all elements with the given class name. <br> It returns an array of objects. <I>Why object?</I> Because in a Dom tree all elements are objects. <br> In this example, we will select all the elements with the <em>\"big-green\"</em> class name. <br> <I>It needs to use <b>for loop</b> to access each element</em>.");
+  jsDomSelector("code", `
+    // let's select elements with "big-green" class name </br>
+    var elements = document.getElementsByClassName("big-green"); <br>
+    <br>
+    // let's access each selected element <br>
+    for(let i = 0; i < elements.length; i++) { <br>
+    // let's style each selected element <br>
+    elements[i].style.fontSize = "20px"; <br>
+    elements[i].style.color = "green"; <br>
+    }`);
+  jsDomSelector("h3", "Select Elements By Tag Name");
+  jsDomSelector("p", "The <em>document.getElementsByTagName( )</em> selects all elements with the given <I>Tag</I> name. <br> It returns an array of objects. <em>It needs <b>for loop</b> to access each element</em>. <br> <br> In this example, we will style all <b>&lt;h3&gt;</b> elements");
+  jsDomSelector("code", `
+    // let's select all &lt;h3&gt; elements <br>
+    var elements = document.getElementsByTagName("h3"); <br>
+    <br>
+    // let's access each selected element <br>
+    for(let i = 0; i < elements.length; i++) { <br>
+    // let's style each selected element <br>
+    elements[i].style.color = "green"; <br>
+    }`);
+
+  jsDomSelector("h3", "Select Elements By Name");
+  jsDomSelector("p", "The <em>document.getElementsByName( );</em> selects all elements with the given name. <br> It returns an array of objects.");
+  jsDomSelector("p", "In this example, we use <em>document.getElementsByName( )</em> to select inputs by their <b>name</b> attribute. <br> Since it return an array, we need to use the Bracket Notation ([0]) to select the first time of the array.");
+  jsDomSelector("code", `
+    &lt;!DOCTYPE html&gt; <br>
+    &lt;html&gt; <br>
+    &lt;head&gt; <br>
+    &lt;title&gt; Try It Yourself &lt;/title&gt; <br>
+    &lt;/head&gt; <br>
+    &lt;body&gt; <br>
+    &lt;p&gt;&lt;label&gt; First Name: &lt;input type="text" name="firstName"&gt; &lt;/label&gt;&lt;/p&gt; <br>
+    &lt;p&gt;&lt;label&gt; Last Name: &lt;input type="text" name="lastName"&gt; &lt;/label&gt;&lt;/p&gt; <br>
+    &lt;button onclick="getValues()"&gt; Get Values &lt;/button&gt; <br>
+    <br>
+    &lt;script&gt; <br>
+    function getValues() { <br>
+    var firstName = document.getElementsByName("firstName")[0].value; <br>
+    var lastName = document.getElementsByName("lastName")[0].value; <br>
+    var fullName = "Your full name is " + firstName + " " + lastName; <br>
+    <br>
+    alert(fullName); <br>
+    } <br>
+    &lt;/script&gt; <br>
+    &lt;/body&gt; <br>
+    &lt;/html&gt;`);
+
+  jsDomSelector("h3", "Select Elements Using CSS Selectors");
+  jsDomSelector("p", 'The <em>document.querySelectorAll( )</em> selects all elements that matcht the specified <b>selector</b>. <br> The selector must be valid <b>CSS Selector</b>. <br> It returns an array of the selected elements (nods).');
+  jsDomSelector('p', "In this example, the element with the <b>demo</b> id is selected.");
+  jsDomSelector("code", `&lt;!DOCTYPE html&gt; <br>
+    &lt;html&gt; <br>
+    &lt;head&gt; <br>
+    &lt;title&gt; <br> Try It Yourself &lt;/title&gt; <br>
+    &lt;/head&gt; <br>
+    &lt;body&gt; <br>
+    &lt;p&gt; Notice that we used <b>[0]</b> which selects the first item in an array. It is because the <b>document.querySelectorAll()</b> returns an array of objects (elements). &lt;/p&gt; <br>
+    &lt;p id="demo"&gt; Lorem ipsum. &lt;/p&gt; <br>
+
+    &lt;script&gt; <br>
+    document.querySelectorAll("#demo")[0].innerHTML = "Hello World!"; <br>
+    &lt;/script&gt; <br>
+    &lt;/body&gt; <br>
+    &lt;/html&gt; <br>`);
+
+  jsDomSelector("p", "In this example, all elements with the \"<em>big-green</em>\" class name are selected.");
+  jsDomSelector('code', `&lt;!DOCTYPE html&gt; <br>
+    &lt;html&gt; <br>
+    &lt;head&gt; <br>
+    &lt;title&gt; Try It Yourself &lt;/title&gt; <br>
+    &lt;/head&gt; <br>
+    &lt;body&gt; <br>
+    &lt;h3 class="big-green"&gt; Hello World &lt;/h3&gt; <br>
+    &lt;p&gt; Welcome to Codeliber, welcome to the tutorials. &lt;/p&gt; <br>
+    &lt;h3 class="big-green"&gt; Lorem Ipsum &lt;/h3&gt; <br>
+    &lt;p&gt; Lorem ipsum dolor sit amet. &lt;/p&gt; <br>
+
+    &lt;script&gt; <br>
+    // let's select elements with "big-green" class name  <br>
+    var elements = document.querySelectorAll(".big-green"); <br>
+    <br>
+    // let's access each selected element <br>
+    for(let i = 0; i &lt; elements.length; i++) { <br>
+    // let's style each selected element <br>
+    elements[i].style.color = "green"; <br>
+    } <br>
+    &lt;/script&gt; <br>
+    &lt;/body&gt; <br>
+    &lt;/html&gt;`);
+}
+javaScriptDOMSelectorFunc();
+
+
+/*JavaScript Dom node*/
+const javaScriptDomNodeFunc = () => {
+  const jsDomNodeDiv = document.getElementById("js-dom-node");
+  const jsDomNode = (htmlTag, htmlText, classAttr) => {
+    jsDomNodeDiv.appendChild(createHtmlElem(htmlTag, htmlText, classAttr));
+  }
+  jsDomNode("h2", "JavaScript DOM Nodes");
+  jsDomNode("p", "In a <b>DOM tree</b>, every element is an <b>object</b> <br> For example, the <em>document.body</em> object represents &lt;body&gt; element.");
+  jsDomNode("h3", "What is Node?");
+  jsDomNode("p", "A <b>node</b> is any object in the Dom tree.");
+  jsDomNode("p", "Therefore, a node can be any HTML element such as &lt;html&gt;, &lt;head&gt;, &lt;body&gt; and all the elements.");
+  jsDomNode("h3", "Example");
+  jsDomNode("code", `&lt;!DOCTYPE html&gt; <br>
+    &lt;html&gt; <br>
+    &lt;head&gt; <br>
+    &lt;title&gt; The Title &lt;/title&gt; <br>
+    &lt;/head&gt; <br>
+    &lt;body&gt; <br>
+    &lt;h1&gt; A Header &lt;/h1&gt; <br>
+    &lt;p&gt;  A Paragraph &lt;/p&gt; <br>
+    &lt;/body&gt; <br>
+    &lt;/html&gt;`);
+    jsDomNode("p", "The structure of the HTML example above can be represented by this <b>DOM tree</b>.<br>");;
+    jsDomNode("img", "", "image");
+    const image = document.querySelector(".image");
+    image.setAttribute("src", "/storage/emulated/0/Pictures/Screenshots/IMG_20240727_200623.jpg");
+    image.style.width = '98%';
+    image.style.height = "auto";
+    jsDomNode("p", "<br><em><b>In this dome tree:</b></em>");
+    jsDomNode("ul",`
+  <li>&lt;html&gt; is the root or top node meaning it has no parent.</li>
+	<li>&lt;html&gt; is the parent of &lt;head&lt; and &lt;body&gt;.</li>
+	<li>&lt;head&gt; is the first child of the &lt;html&gt;.</li>
+	<li>&lt;body&gt; is the last child of the &lt;html&gt;.</li>
+	<br>
+	<li>&lt;head&gt; has one child: &lt;title&gt;.</li>
+	<li>&lt;body&gt; has tow children &lt;h1&gt; and &lt;p&gt;.</li>
+	<li>&lt;h1&gt; is the first child if the &lt;body&gt;.</li>
+	<li>&lt;p&gt; is the last child of the &lt;body&gt;.</li>
+	<br>
+	<li>&lt;head&gt; and &lt;body&gt; are siblings.</li>
+	<li>&lt;h1&gt; and &lt;p&gt; are siblings.</li><br>`);
+	jsDomNode("p", "<I>Even the text inside the elements are considered as <b>nodes</b> the are called <b>text nodes</b>. <br> Therefore&there4;</I>");
+	jsDomNode("ul", `
+	<li>"The title" is child of &lt;title&gt;</li>
+	<li>"A Header" is a child of &lt;h1&gt;</li>
+	<li>"A Paragraph" is a child of &lt;p&gt;</li>
+	`);
+	jsDomNode("h3", "Everything is a Node");
+	jsDomNode("p", `In a Document Object Model tree, everything is a node. <br>
+	As you already know <b>elements</b> are nodes. <br>
+	Additionally, <b>text, attributes</b> and even <b>comments</b> are considered as <b>nodes</b>.`);
+}
+javaScriptDomNodeFunc();
+
+/*JavaScript Dom navigation nodes*/
+ const javaScriptDomNavigation = () => {
+   const javaScriptDomNavigationDiv = document.getElementById("javaScript-dom-navigating");
+   const jsDomNavNode = (htmlTag, htmlText, classAttr) => {
+     javaScriptDomNavigationDiv.appendChild(createHtmlElem(htmlTag, htmlText, classAttr));
+   }
+   jsDomNavNode("h2", 'JavaScript DOM Navigation');
+   jsDomNavNode("h3", 'JavaScript Navigationg Nodes');
+   jsDomNavNode("p", "<b>Navigating Nodes</b> means reaching nodes in the <b>DOM</b> tree.");
+   jsDomNavNode("p", 'The following <b>document object</b> properties are used to navigate any type of nodes, <I>including element, text, and comment nodes</I>:');
+   jsDomNavNode("ul", `
+    <li>parentNode</li>
+    <li>firstChild</li>
+    <li>lastChild</li>
+    <li>childNodes[index]</li>
+    <li>previousSibling</li>
+    <li>nextSibling</li>
+   `);
+   
+   jsDomNavNode("h3", "Navigating Element Nodes");
+   jsDomNavNode("p", "The following document object properties are used to navigate <b>elements</b> nodes.");
+   jsDomNavNode("ul", `
+    <li class="navItem">parentElement</li>
+    <li>firstElementChild</li>
+    <li>lastElementChild</li>
+    <li>children[index]</li>
+    <li>previousElement</li>
+    <li>nextElement</li>
+   `);
+   const navItem = document.querySelector(".navItem");
+   navItem.parentNode.lastElementChild.style.backgroundColor = "#FF007F";
+   navItem.parentNode.parentElement.style.backgroundColor = '#001';
+   navItem.parentNode.parentElement.firstChild.style.backgroundColor = "#103f73";
+   
+   jsDomNavNode("h3", "Parent and Children");
+   
+   jsDomNavNode("dl", `
+   <dt>The <I>parentElement</I>:</dt>
+   <dd>The <b>parentElement</b> property returns the <b>DOM node's</b> <I>parent element</I>.</dd>
+   <dt>The <I>firstElementChild</I>:</dt>
+   <dd>The <I>firstElementChild</I> property returns the DOM node's first element.</dd>
+   <dt>The <I>lastElementChild</I>:</dt>
+   <dd>The <I>lastElementChild</I> property returns the DOM node's last element.</dd>
+   <dt>The <I>children</I>:</dt>
+   <dd>The <I>children</I> property returns a collection of the selected element's children. <br> The collection is like a <b>array</b>, therfore we can access each item using <I>bracket notation</I></dd>
+   `, "description-list");
+   
+   const descriptionList = document.querySelector(".description-list");
+   descriptionList.style.backgroundColor = "#ffeecc";
+   descriptionList.style.letterSpacing = "1.5px";
+   const dlItem = descriptionList.children;
+   for (let i = 0; i < dlItem.length; i++) {
+     if (dlItem[i].tagName.toLowerCase() === 'dt')  {
+       dlItem[i].style.backgroundColor = "#9F89AD";
+       dlItem[i].style.padding = '4px';
+       dlItem[i].style.fontWeight = "bold";
+     } else {
+       dlItem[i].style.color = "#FF007D";
+     
+     }
+   };
+   
+   jsDomNavNode("h3", "Example");
+   jsDomNavNode("h4", "<span style='background-color:blue'>HTML Structure</span>:");
+   jsDomNavNode("code", `
+   &lt;!DOCTYPE html&gt; <br>
+&lt;html&gt; <br>
+  &lt;head&gt; <br>
+    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt; <br>
+    &lt;title&gt;DOM tree examples&lt;/title&gt; <br>
+    
+  &lt;/head&gt; <br>
+  &lt;body&gt; <br>
+    &lt;div id="parent"&gt; <br>
+  &lt;p id="first"&gt; First child&lt;/p&gt; <br>
+  &lt;span&gt;Middle child&lt;/span&gt; <br>
+  &lt;p id="last"&gt;Last child&lt;/p&gt; <br>
+&lt;/div&gt; <br>
+  &lt;/body&gt; <br>
+&lt;/html&gt; <br>
+   `);
+   jsDomNavNode("h4", "JavaScript Codes:");
+   jsDomNavNode("code", `
+    <br> // Selecting the parent element
+<br> constparent = document.getElementById('parent');
+
+<br> // Accessing various properties
+<br> constparentNode = parent.parentNode; <br> // This would be the body or another element containing the div
+<br> constfirstChild = parent.firstChild; <br> // This would be the text node or first child element (depends on whitespace)
+<br> constlastChild = parent.lastChild; <br> // This would be the text node or last child element (depends on whitespace)
+<br> constfirstElementChild = parent.firstElementChild; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
+<br> constlastElementChild = parent.lastElementChild; <br> // &lt;p id="last"&gt;Last child&lt;/p&gt;
+
+<br> // Accessing children
+<br> constchildren = parent.childNodes; <br> // This includes all child nodes (elements, text nodes, etc.)
+<br> constfirstNode = parent.childNodes[0]; <br> // Could be a text node if there's whitespace
+<br> constsecondNode = parent.childNodes[1]; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
+
+<br> constelements = parent.children; <br> // This includes only child elements (ignores text nodes)
+<br> constfirstElement = parent.children[0]; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
+<br> constsecondElement = parent.children[1]; <br> // &lt;span&gt;Middle child&lt;/span&gt;
+
+<br> // Sibling properties
+<br> constfirstChildNode = parent.firstChild;
+<br> constfirstChildNextSibling = firstChildNode.nextSibling; <br> // Could be a text node or &lt;span&gt; depending on whitespace
+<br> constlastChildNode = parent.lastChild;
+<br> constlastChildPreviousSibling = lastChildNode.previousSibling; <br> // Could be a text node or &lt;span&gt; depending on whitespace
+
+<br> constfirstElementChildNode = parent.firstElementChild;
+<br> constfirstElementChildNextElementSibling = firstElementChildNode.nextElementSibling; <br> // &lt;span&gt;Middle child&lt;/span&gt;
+<br> constlastElementChildNode = parent.lastElementChild;
+<br> constlastElementChildPreviousElementSibling = lastElementChildNode.previousElementSibling; <br> // &lt;span&gt;Middle child&lt;/span&gt;
+   `);
+   
+   jsDomNavNode("h3", "Siblings");
+   jsDomNavNode('p', "The <b>previousElementSibling</b> returns the <I>previous element</I> prior to specified one in a parent's children list.");
+   
+ };
+ javaScriptDomNavigation();
+
+// for loop
+const codeSample = document.getElementsByClassName('code-sample');
+
+for (let i = 0; i < codeSample.length; i++) {
+  const result = codeSample[i];
+  result.innerHTML = "Code Samples";
+}
+
+
+const fetchingData = fetch("https://mdaleardc.github.io/ismail/index.html").then(res => res.text()).then(data => data).catch(err => err);

@@ -1219,40 +1219,40 @@ javaScriptDomNodeFunc();
    `);
    jsDomNavNode("h4", "JavaScript Codes:");
    jsDomNavNode("code", `
-    <br> // Selecting the parent element
-<br> constparent = document.getElementById('parent');
+ <br> // Selecting the parent element
+<br> const parent = document.getElementById('parent');
 
 <br> // Accessing various properties
-<br> constparentNode = parent.parentNode; <br> // This would be the body or another element containing the div
-<br> constfirstChild = parent.firstChild; <br> // This would be the text node or first child element (depends on whitespace)
-<br> constlastChild = parent.lastChild; <br> // This would be the text node or last child element (depends on whitespace)
-<br> constfirstElementChild = parent.firstElementChild; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
-<br> constlastElementChild = parent.lastElementChild; <br> // &lt;p id="last"&gt;Last child&lt;/p&gt;
+<br> const parentNode = parent.parentNode; <br> // This would be the body or another element containing the div
+<br> const firstChild = parent.firstChild; <br> // This would be the text node or first child element (depends on whitespace)
+<br> const lastChild = parent.lastChild; <br> // This would be the text node or last child element (depends on whitespace)
+<br> const firstElementChild = parent.firstElementChild; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
+<br> const lastElementChild = parent.lastElementChild; <br> // &lt;p id="last"&gt;Last child&lt;/p&gt;
 
 <br> // Accessing children
-<br> constchildren = parent.childNodes; <br> // This includes all child nodes (elements, text nodes, etc.)
-<br> constfirstNode = parent.childNodes[0]; <br> // Could be a text node if there's whitespace
-<br> constsecondNode = parent.childNodes[1]; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
+<br> const children = parent.childNodes; <br> // This includes all child nodes (elements, text nodes, etc.)
+<br> const firstNode = parent.childNodes[0]; <br> // Could be a text node if there's whitespace
+<br> const secondNode = parent.childNodes[1]; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
 
-<br> constelements = parent.children; <br> // This includes only child elements (ignores text nodes)
-<br> constfirstElement = parent.children[0]; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
-<br> constsecondElement = parent.children[1]; <br> // &lt;span&gt;Middle child&lt;/span&gt;
+<br> const elements = parent.children; <br> // This includes only child elements (ignores text nodes)
+<br> const firstElement = parent.children[0]; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
+<br> const secondElement = parent.children[1]; <br> // &lt;span&gt;Middle child&lt;/span&gt;
 
 <br> // Sibling properties
-<br> constfirstChildNode = parent.firstChild;
-<br> constfirstChildNextSibling = firstChildNode.nextSibling; <br> // Could be a text node or &lt;span&gt; depending on whitespace
-<br> constlastChildNode = parent.lastChild;
-<br> constlastChildPreviousSibling = lastChildNode.previousSibling; <br> // Could be a text node or &lt;span&gt; depending on whitespace
+<br> const firstChildNode = parent.firstChild;
+<br> const firstChildNextSibling = firstChildNode.nextSibling; <br> // Could be a text node or &lt;span&gt; depending on whitespace
+<br> const lastChildNode = parent.lastChild;
+<br> const lastChildPreviousSibling = lastChildNode.previousSibling; <br> // Could be a text node or &lt;span&gt; depending on whitespace
 
-<br> constfirstElementChildNode = parent.firstElementChild;
-<br> constfirstElementChildNextElementSibling = firstElementChildNode.nextElementSibling; <br> // &lt;span&gt;Middle child&lt;/span&gt;
-<br> constlastElementChildNode = parent.lastElementChild;
-<br> constlastElementChildPreviousElementSibling = lastElementChildNode.previousElementSibling; <br> // &lt;span&gt;Middle child&lt;/span&gt;
+<br> const firstElementChildNode = parent.firstElementChild;
+<br> const firstElementChildNextElementSibling = firstElementChildNode.nextElementSibling; <br> // &lt;span&gt;Middle child&lt;/span&gt;
+<br> const lastElementChildNode = parent.lastElementChild;
+<br> const lastElementChildPreviousElementSibling = lastElementChildNode.previousElementSibling; <br> // &lt;span&gt;Middle child&lt;/span&gt;
    `);
    
    jsDomNavNode("h3", "Siblings");
    jsDomNavNode('p', "The <b>previousElementSibling</b> returns the <I>previous element</I> prior to specified one in a parent's children list.");
-   
+   jsDomNavNode("p", "The <b>nextElementSibling</b> returns the <b>next element</b> prior to specified one in a parent's children list");
  };
  javaScriptDomNavigation();
 

@@ -18,7 +18,9 @@ highlight = document.getElementsByClassName('highlight'),
 fushcia = document.getElementsByClassName('fushcia'),
 table = document.getElementsByTagName('table'),
 tableHead =document.getElementsByTagName("th");
-tableRow = document.getElementsByTagName("td");
+tableRow = document.getElementsByTagName("td"),
+images = document.querySelectorAll("img"),
+button = document.querySelectorAll("button");
 
 
 html.style.backgroundColor = '#222';
@@ -127,4 +129,21 @@ for (let i = 0; i < tableRow.length; i++) {
   tableRow[i].style.border = "2.5px solid #e10";
   tableRow[i].style.padding = "6px"
 } 
+
+images.forEach(image => {
+  image.style.width = "90%";
+  image.style.padding = 6;
+  image.style.margin = "7px auto";
+  
+  if (image.hasAttribute("src")) {
+    image.style.border = "3px solid #FFE100";
+    image.style.borderRadius = '7px';
+  }
+});
+
+button.forEach(btn => {
+  btn.style.display = 'block';
+  btn.style.padding = "4px";
+  btn.style.margin = "4px";
+})
 // test console

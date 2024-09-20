@@ -17,7 +17,7 @@ document.getElementById('js-statement').innerHTML = "JavaScript Statements";
 document.querySelector('.js-statement-p').innerHTML = "JavasScript programs consist of statements with appropriate syntax.<br> A single JavaScript statement may span single or multiple lines. <br> JavaScript statements should be ended or separated by semicolons (;).";
 
 
-document.querySelector('.single-line').innerHTML = "Below is a program that consist of <b>two single-line statements</b>.";
+document.querySelector('.single-line').innerHTML = "Below is a program that consist of <b>two single-line statements</b>."; 
 
 document.querySelector('.basicEx').innerHTML = ` document.getElementById("firstElem").innerHTML = "Hello World!";
 document.getElementById("secondElem").innerHTML = "Hello Everyone!";`;
@@ -1103,160 +1103,418 @@ const javaScriptDomNodeFunc = () => {
     &lt;p&gt;  A Paragraph &lt;/p&gt; <br>
     &lt;/body&gt; <br>
     &lt;/html&gt;`);
-    jsDomNode("p", "The structure of the HTML example above can be represented by this <b>DOM tree</b>.<br>");;
-    jsDomNode("img", "", "image");
-    const image = document.querySelector(".image");
-    image.setAttribute("src", "/storage/emulated/0/Pictures/Screenshots/IMG_20240727_200623.jpg");
-    image.style.width = '98%';
-    image.style.height = "auto";
-    jsDomNode("p", "<br><em><b>In this dome tree:</b></em>");
-    jsDomNode("ul",`
-  <li>&lt;html&gt; is the root or top node meaning it has no parent.</li>
-	<li>&lt;html&gt; is the parent of &lt;head&lt; and &lt;body&gt;.</li>
-	<li>&lt;head&gt; is the first child of the &lt;html&gt;.</li>
-	<li>&lt;body&gt; is the last child of the &lt;html&gt;.</li>
-	<br>
-	<li>&lt;head&gt; has one child: &lt;title&gt;.</li>
-	<li>&lt;body&gt; has tow children &lt;h1&gt; and &lt;p&gt;.</li>
-	<li>&lt;h1&gt; is the first child if the &lt;body&gt;.</li>
-	<li>&lt;p&gt; is the last child of the &lt;body&gt;.</li>
-	<br>
-	<li>&lt;head&gt; and &lt;body&gt; are siblings.</li>
-	<li>&lt;h1&gt; and &lt;p&gt; are siblings.</li><br>`);
-	jsDomNode("p", "<I>Even the text inside the elements are considered as <b>nodes</b> the are called <b>text nodes</b>. <br> Therefore&there4;</I>");
-	jsDomNode("ul", `
-	<li>"The title" is child of &lt;title&gt;</li>
-	<li>"A Header" is a child of &lt;h1&gt;</li>
-	<li>"A Paragraph" is a child of &lt;p&gt;</li>
-	`);
-	jsDomNode("h3", "Everything is a Node");
-	jsDomNode("p", `In a Document Object Model tree, everything is a node. <br>
-	As you already know <b>elements</b> are nodes. <br>
-	Additionally, <b>text, attributes</b> and even <b>comments</b> are considered as <b>nodes</b>.`);
+  jsDomNode("p", "The structure of the HTML example above can be represented by this <b>DOM tree</b>.<br>");;
+  jsDomNode("img", "", "image");
+  const image = document.querySelector(".image");
+  image.setAttribute("src", "/storage/emulated/0/Pictures/Screenshots/IMG_20240727_200623.jpg");
+  image.style.width = '98%';
+  image.style.height = "auto";
+  jsDomNode("p", "<br><em><b>In this dome tree:</b></em>");
+  jsDomNode("ul", `
+    <li>&lt;html&gt; is the root or top node meaning it has no parent.</li>
+    <li>&lt;html&gt; is the parent of &lt;head&lt; and &lt;body&gt;.</li>
+    <li>&lt;head&gt; is the first child of the &lt;html&gt;.</li>
+    <li>&lt;body&gt; is the last child of the &lt;html&gt;.</li>
+    <br>
+    <li>&lt;head&gt; has one child: &lt;title&gt;.</li>
+    <li>&lt;body&gt; has tow children &lt;h1&gt; and &lt;p&gt;.</li>
+    <li>&lt;h1&gt; is the first child if the &lt;body&gt;.</li>
+    <li>&lt;p&gt; is the last child of the &lt;body&gt;.</li>
+    <br>
+    <li>&lt;head&gt; and &lt;body&gt; are siblings.</li>
+    <li>&lt;h1&gt; and &lt;p&gt; are siblings.</li><br>`);
+  jsDomNode("p", "<I>Even the text inside the elements are considered as <b>nodes</b> the are called <b>text nodes</b>. <br> Therefore&there4;</I>");
+  jsDomNode("ul", `
+    <li>"The title" is child of &lt;title&gt;</li>
+    <li>"A Header" is a child of &lt;h1&gt;</li>
+    <li>"A Paragraph" is a child of &lt;p&gt;</li>
+    `);
+  jsDomNode("h3", "Everything is a Node");
+  jsDomNode("p", `In a Document Object Model tree, everything is a node. <br>
+    As you already know <b>elements</b> are nodes. <br>
+    Additionally, <b>text, attributes</b> and even <b>comments</b> are considered as <b>nodes</b>.`);
 }
 javaScriptDomNodeFunc();
 
 /*JavaScript Dom navigation nodes*/
- const javaScriptDomNavigation = () => {
-   const javaScriptDomNavigationDiv = document.getElementById("javaScript-dom-navigating");
-   const jsDomNavNode = (htmlTag, htmlText, classAttr) => {
-     javaScriptDomNavigationDiv.appendChild(createHtmlElem(htmlTag, htmlText, classAttr));
-   }
-   jsDomNavNode("h2", 'JavaScript DOM Navigation');
-   jsDomNavNode("h3", 'JavaScript Navigationg Nodes');
-   jsDomNavNode("p", "<b>Navigating Nodes</b> means reaching nodes in the <b>DOM</b> tree.");
-   jsDomNavNode("p", 'The following <b>document object</b> properties are used to navigate any type of nodes, <I>including element, text, and comment nodes</I>:');
-   jsDomNavNode("ul", `
+const javaScriptDomNavigationDiv = document.getElementById("javaScript-dom-navigating");
+const javaScriptDomNavigation = () => {
+  const jsDomNavNode = (htmlTag, htmlText, classAttr) => {
+    javaScriptDomNavigationDiv.appendChild(createHtmlElem(htmlTag, htmlText, classAttr));
+  }
+  jsDomNavNode("h2", 'JavaScript DOM Navigation');
+  jsDomNavNode("h3", 'JavaScript Navigationg Nodes');
+  jsDomNavNode("p", "<b>Navigating Nodes</b> means reaching nodes in the <b>DOM</b> tree.");
+  jsDomNavNode("p", 'The following <b>document object</b> properties are used to navigate any type of nodes, <I>including element, text, and comment nodes</I>:');
+  jsDomNavNode("ul", `
     <li>parentNode</li>
     <li>firstChild</li>
     <li>lastChild</li>
     <li>childNodes[index]</li>
     <li>previousSibling</li>
     <li>nextSibling</li>
-   `);
-   
-   jsDomNavNode("h3", "Navigating Element Nodes");
-   jsDomNavNode("p", "The following document object properties are used to navigate <b>elements</b> nodes.");
-   jsDomNavNode("ul", `
+    `);
+
+  jsDomNavNode("h3", "Navigating Element Nodes");
+  jsDomNavNode("p", "The following document object properties are used to navigate <b>elements</b> nodes.");
+  jsDomNavNode("ul", `
     <li class="navItem">parentElement</li>
     <li>firstElementChild</li>
     <li>lastElementChild</li>
     <li>children[index]</li>
     <li>previousElement</li>
     <li>nextElement</li>
-   `);
-   const navItem = document.querySelector(".navItem");
-   navItem.parentNode.lastElementChild.style.backgroundColor = "#FF007F";
-   navItem.parentNode.parentElement.style.backgroundColor = '#001';
-   navItem.parentNode.parentElement.firstChild.style.backgroundColor = "#103f73";
-   
-   jsDomNavNode("h3", "Parent and Children");
-   
-   jsDomNavNode("dl", `
-   <dt>The <I>parentElement</I>:</dt>
-   <dd>The <b>parentElement</b> property returns the <b>DOM node's</b> <I>parent element</I>.</dd>
-   <dt>The <I>firstElementChild</I>:</dt>
-   <dd>The <I>firstElementChild</I> property returns the DOM node's first element.</dd>
-   <dt>The <I>lastElementChild</I>:</dt>
-   <dd>The <I>lastElementChild</I> property returns the DOM node's last element.</dd>
-   <dt>The <I>children</I>:</dt>
-   <dd>The <I>children</I> property returns a collection of the selected element's children. <br> The collection is like a <b>array</b>, therfore we can access each item using <I>bracket notation</I></dd>
-   `, "description-list");
-   
-   const descriptionList = document.querySelector(".description-list");
-   descriptionList.style.backgroundColor = "#ffeecc";
-   descriptionList.style.letterSpacing = "1.5px";
-   const dlItem = descriptionList.children;
-   for (let i = 0; i < dlItem.length; i++) {
-     if (dlItem[i].tagName.toLowerCase() === 'dt')  {
-       dlItem[i].style.backgroundColor = "#9F89AD";
-       dlItem[i].style.padding = '4px';
-       dlItem[i].style.fontWeight = "bold";
-     } else {
-       dlItem[i].style.color = "#FF007D";
-     
-     }
-   };
-   
-   jsDomNavNode("h3", "Example");
-   jsDomNavNode("h4", "<span style='background-color:blue'>HTML Structure</span>:");
-   jsDomNavNode("code", `
-   &lt;!DOCTYPE html&gt; <br>
-&lt;html&gt; <br>
-  &lt;head&gt; <br>
+    `);
+  const navItem = document.querySelector(".navItem");
+  navItem.parentNode.lastElementChild.style.backgroundColor = "#FF007F";
+  navItem.parentNode.parentElement.style.backgroundColor = '#001';
+  navItem.parentNode.parentElement.firstChild.style.backgroundColor = "#103f73";
+
+  jsDomNavNode("h3", "Parent and Children");
+
+  jsDomNavNode("dl", `
+    <dt>The <I>parentElement</I>:</dt>
+    <dd>The <b>parentElement</b> property returns the <b>DOM node's</b> <I>parent element</I>.</dd>
+    <dt>The <I>firstElementChild</I>:</dt>
+    <dd>The <I>firstElementChild</I> property returns the DOM node's first element.</dd>
+    <dt>The <I>lastElementChild</I>:</dt>
+    <dd>The <I>lastElementChild</I> property returns the DOM node's last element.</dd>
+    <dt>The <I>children</I>:</dt>
+    <dd>The <I>children</I> property returns a collection of the selected element's children. <br> The collection is like a <b>array</b>, therfore we can access each item using <I>bracket notation</I></dd>
+    `, "description-list");
+
+  const descriptionList = document.querySelector(".description-list");
+  descriptionList.style.backgroundColor = "#ffeecc";
+  descriptionList.style.letterSpacing = "1.5px";
+  const dlItem = descriptionList.children;
+  for (let i = 0; i < dlItem.length; i++) {
+    if (dlItem[i].tagName.toLowerCase() === 'dt') {
+      dlItem[i].style.backgroundColor = "#9F89AD";
+      dlItem[i].style.padding = '4px';
+      dlItem[i].style.fontWeight = "bold";
+    } else {
+      dlItem[i].style.color = "#FF007D";
+
+    }
+  };
+
+  jsDomNavNode("h3", "Example");
+  jsDomNavNode("h4", "<span style='background-color:blue'>HTML Structure</span>:");
+  jsDomNavNode("code", `
+    &lt;!DOCTYPE html&gt; <br>
+    &lt;html&gt; <br>
+    &lt;head&gt; <br>
     &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt; <br>
     &lt;title&gt;DOM tree examples&lt;/title&gt; <br>
-    
-  &lt;/head&gt; <br>
-  &lt;body&gt; <br>
+
+    &lt;/head&gt; <br>
+    &lt;body&gt; <br>
     &lt;div id="parent"&gt; <br>
-  &lt;p id="first"&gt; First child&lt;/p&gt; <br>
-  &lt;span&gt;Middle child&lt;/span&gt; <br>
-  &lt;p id="last"&gt;Last child&lt;/p&gt; <br>
-&lt;/div&gt; <br>
-  &lt;/body&gt; <br>
-&lt;/html&gt; <br>
-   `);
-   jsDomNavNode("h4", "JavaScript Codes:");
-   jsDomNavNode("code", `
- <br> // Selecting the parent element
-<br> const parent = document.getElementById('parent');
+    &lt;p id="first"&gt; First child&lt;/p&gt; <br>
+    &lt;span&gt;Middle child&lt;/span&gt; <br>
+    &lt;p id="last"&gt;Last child&lt;/p&gt; <br>
+    &lt;/div&gt; <br>
+    &lt;/body&gt; <br>
+    &lt;/html&gt; <br>
+    `);
+  jsDomNavNode("h4", "JavaScript Codes:");
+  jsDomNavNode("code", `
+    <br> // Selecting the parent element
+    <br> const parent = document.getElementById('parent');
 
-<br> // Accessing various properties
-<br> const parentNode = parent.parentNode; <br> // This would be the body or another element containing the div
-<br> const firstChild = parent.firstChild; <br> // This would be the text node or first child element (depends on whitespace)
-<br> const lastChild = parent.lastChild; <br> // This would be the text node or last child element (depends on whitespace)
-<br> const firstElementChild = parent.firstElementChild; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
-<br> const lastElementChild = parent.lastElementChild; <br> // &lt;p id="last"&gt;Last child&lt;/p&gt;
+    <br> // Accessing various properties
+    <br> const parentNode = parent.parentNode; <br> // This would be the body or another element containing the div
+    <br> const firstChild = parent.firstChild; <br> // This would be the text node or first child element (depends on whitespace)
+    <br> const lastChild = parent.lastChild; <br> // This would be the text node or last child element (depends on whitespace)
+    <br> const firstElementChild = parent.firstElementChild; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
+    <br> const lastElementChild = parent.lastElementChild; <br> // &lt;p id="last"&gt;Last child&lt;/p&gt;
 
-<br> // Accessing children
-<br> const children = parent.childNodes; <br> // This includes all child nodes (elements, text nodes, etc.)
-<br> const firstNode = parent.childNodes[0]; <br> // Could be a text node if there's whitespace
-<br> const secondNode = parent.childNodes[1]; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
+    <br> // Accessing children
+    <br> const children = parent.childNodes; <br> // This includes all child nodes (elements, text nodes, etc.)
+    <br> const firstNode = parent.childNodes[0]; <br> // Could be a text node if there's whitespace
+    <br> const secondNode = parent.childNodes[1]; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
 
-<br> const elements = parent.children; <br> // This includes only child elements (ignores text nodes)
-<br> const firstElement = parent.children[0]; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
-<br> const secondElement = parent.children[1]; <br> // &lt;span&gt;Middle child&lt;/span&gt;
+    <br> const elements = parent.children; <br> // This includes only child elements (ignores text nodes)
+    <br> const firstElement = parent.children[0]; <br> // &lt;p id="first"&gt;First child&lt;/p&gt;
+    <br> const secondElement = parent.children[1]; <br> // &lt;span&gt;Middle child&lt;/span&gt;
 
-<br> // Sibling properties
-<br> const firstChildNode = parent.firstChild;
-<br> const firstChildNextSibling = firstChildNode.nextSibling; <br> // Could be a text node or &lt;span&gt; depending on whitespace
-<br> const lastChildNode = parent.lastChild;
-<br> const lastChildPreviousSibling = lastChildNode.previousSibling; <br> // Could be a text node or &lt;span&gt; depending on whitespace
+    <br> // Sibling properties
+    <br> const firstChildNode = parent.firstChild;
+    <br> const firstChildNextSibling = firstChildNode.nextSibling; <br> // Could be a text node or &lt;span&gt; depending on whitespace
+    <br> const lastChildNode = parent.lastChild;
+    <br> const lastChildPreviousSibling = lastChildNode.previousSibling; <br> // Could be a text node or &lt;span&gt; depending on whitespace
 
-<br> const firstElementChildNode = parent.firstElementChild;
-<br> const firstElementChildNextElementSibling = firstElementChildNode.nextElementSibling; <br> // &lt;span&gt;Middle child&lt;/span&gt;
-<br> const lastElementChildNode = parent.lastElementChild;
-<br> const lastElementChildPreviousElementSibling = lastElementChildNode.previousElementSibling; <br> // &lt;span&gt;Middle child&lt;/span&gt;
-   `);
+    <br> const firstElementChildNode = parent.firstElementChild;
+    <br> const firstElementChildNextElementSibling = firstElementChildNode.nextElementSibling; <br> // &lt;span&gt;Middle child&lt;/span&gt;
+    <br> const lastElementChildNode = parent.lastElementChild;
+    <br> const lastElementChildPreviousElementSibling = lastElementChildNode.previousElementSibling; <br> // &lt;span&gt;Middle child&lt;/span&gt;
+    `);
+
+  jsDomNavNode("h3", "Siblings");
+  jsDomNavNode('p', "The <b>previousElementSibling</b> returns the <I>previous element</I> prior to specified one in a parent's children list.");
+  jsDomNavNode("p", "The <b>nextElementSibling</b> returns the <b>next element</b> prior to specified one in a parent's children list");
+};
+javaScriptDomNavigation();
+
+/*JavaScript dom html */
+
+const JavaScriptDomHtmlDiv = javaScriptDomNavigationDiv.nextElementSibling.nextElementSibling;
+
+
+const JavaScriptDomHTMLFunc = () => {
+  const jsDomHtml = (htmlTag, htmlText, classAttr) => {
+    JavaScriptDomHtmlDiv.appendChild(createHtmlElem(htmlTag, htmlText, classAttr));
+  }
+  jsDomHtml("h2", "JavaScript DOM HTML");
+  jsDomHtml("p", "In this lesson, we will study about the amazing things that we can do to <b>HTML</b> using the </b>DOM</b>.");
+
+  jsDomHtml("h3", "Getting an Element's  Content");
+  jsDomHtml("p", "The <b>innerHTML</b> returns the content of an HTML element.");
+
+  jsDomHtml("code", `<ul id="list">
+    <li> Mangoes </li>
+    <li> Bananas </li>
+    <li> Oranges </li>
+    </ul>
+    var list = document.getElementById("list"); <br>
+    alert(list.innerHTML);
+    `);
+  var list = document.getElementById("list");
+  console.log(list.innerHTML);
+
+
+  var listItem = document.getElementById("listItem");
+
+  jsDomHtml("h3", "Replacing Element's Content");
+  jsDomHtml("p", "The <b>innerHTML</b> property can also be used to <b>replace</b> the content of an HTML element..");
+  jsDomHtml("code", `
+    <ul id="listItem">
+    <li> Mangoes </li>
+    <li> Bananas </li>
+    <li> Oranges </li>
+    </ul>
+    <button onclick="replaceContent()"> Replace Content </button>
+
+    <script>
+    var listItem = document.getElementById("listItem");
+
+    function replaceContent() {
+    listItem.innerHTML = "
+    <li> Mercury </li>
+    <li> Venus </li>
+    <li> Earth </li>";
+    }
+    </script>
+    `);
+
+  jsDomHtml("h3", "Creating Elements (Nodes)");
+  jsDomHtml("p", "Before we can insert elements (nodes) to the DOM, we should first learn how to create them in JavaScript. <br> To create an element, use the <b>document.createElement(element)</b> method. <br> <br> The code below creates a paragraph <b>&lt;p&gt;</b> element:");
+  jsDomHtml('code', `<span class='fushcia'>var</span> element <span class="fushcia">=</span> document.createElement("p");`);
+  jsDomHtml("p", "<br> Offcourse we need want to add text inside &lt;p&gt; element. <br> To do this, we need to create a <b>text node</b> and insert it to the &lt;p&gt; element.");
+  jsDomHtml("p", "Use the <b>document.createTextNode(string) method to create text node.");
+  jsDomHtml('code', `<span class='fushcia'>var</span> textNode <span class="fushcia">=</span> document.createTextNode("Lorem ipsum dolor sit amet");`);
+  jsDomHtml("p", "Then use <b>appendChild()</b> method to insert text node to the &lt;p&gt; element.");
+  jsDomHtml("code", `<span style="color:#fffff0">element</span>.<span style="color:#5d0">appendChild</span>(<span style="color:#fffff0">textNode</span>);`);
+  jsDomHtml("p", "finally we have successfully created a &lt;p&gt; element with text inside it.");
+  jsDomHtml("p", "We can the created element to another parent element by using, angain, <b>appendChild()</b> method .");
+  jsDomHtml("code", `<span style="color:#fffff0">document</span>.<span style="color:#5d0">getElementById</span>("demo").<span style="color:#5d0">appendChild</span>(element);`);
+  jsDomHtml("h3", "Inserting to Elements");
+  jsDomHtml("p", "Commonly we only want to instert to elements not completely replace its content.");
+  jsDomHtml("p", "The <code>ParentNode.prepend()</code> method inserts an element (node) <b>before the first child</b> of the <em>ParentNode</em>.", "prepend");
+
+
+  const previousElem = document.querySelector(".prepend");
+  const newDiv = document.createElement("div");
+  newDiv.className = "prepend-div";
+  previousElem.insertAdjacentElement("afterend", newDiv);
+
+  const getNewDiv = previousElem.nextElementSibling;
+  const createListElem = getNewDiv.appendChild(createHtmlElem("ul", `
+    <li> Mercury </li>
+    <li> Venus </li>
+    <li> Earth </li>
+    `, "list"));
+
+  const prependList = document.querySelector(".list");
+  const prependFunc = () => {
+    const li = document.createElement("li");
+    const textNode2 = document.createTextNode("Jupiter");
+    li.appendChild(textNode2);
+    prependList.prepend(li);
+  }
+
+  const createButton = document.createElement("button");
+  const createText = document.createTextNode("Prepend");
+  createButton.style.display = "block";
+  createButton.style.padding = "7px";
+
+  createButton.appendChild(createText);
+  getNewDiv.appendChild(createButton);
+  createButton.onclick = prependFunc;
+
+  const removeFirstChild = () => {
+    const newDivFirstChild = prependList.firstElementChild;
+    newDivFirstChild.remove();
+  }
+  const buttonElem1 = document.createElement("button");
+  const buttonText = document.createTextNode("Remove First Child");
+  buttonElem1.style.margin = "4px auto";
+
+  buttonElem1.appendChild(buttonText);
+  getNewDiv.appendChild(buttonElem1);
+  buttonElem1.onclick = removeFirstChild;
+
+  jsDomHtml("p", "The <b>ParentNode.append()</b> method inserts an element (node) <b>after the last child</b> of the <em>ParentNode</em>.", "append");
+
+  const currentElem = document.querySelector(".append");
+  const newDiv1 = document.createElement("div");
+  newDiv1.className = "append-div";
+  currentElem.insertAdjacentElement("afterend", newDiv1);
+  const getNewDiv1 = currentElem.nextElementSibling;
+  const listItem1 = getNewDiv1.appendChild(createHtmlElem("ul", `
+    <li> Mercury </li>
+    <li> Venus </li>
+    <li> Earth </li>
+    `, "list1"));
+
+  const appendList = document.querySelector(".list1");
+  const appendFunc = () => {
+    const li = document.createElement("li");
+    const textNode3 = document.createTextNode("Sun");
+    li.appendChild(textNode3);
+    appendList.append(li);
+  }
+  const buttonElem = document.createElement("button");
+  buttonElem.innerHTML = "append";
+
+  buttonElem.style.display = "block";
+  buttonElem.style.padding = "7px";
+  buttonElem.onclick = appendFunc;
+  getNewDiv1.appendChild(buttonElem);
+
+  const removeLastChild = () => {
+    const lastElement = appendList.lastElementChild;
+    lastElement.remove();
+  }
+
+  const buttonElem2 = document.createElement("button");
+  buttonElem2.textContent = "Remove Last Child";
+  buttonElem2.style.margin = "4px auto";
+  getNewDiv1.appendChild(buttonElem2);
+  buttonElem2.onclick = removeLastChild;
+
+  jsDomHtml("h3", "Removing Elements");
+  jsDomHtml("p", "To remove an element, use the <b>node.remove()</b> method. <br> The <I>node.remove()</I> method removes the node from the tree it belong to.");
+
+  jsDomHtml("code", `To see how it works, click the above buttons.`);
+
+  jsDomHtml("h3", "Working with Attributes");
+  jsDomHtml("p", "With JavaScript and DOM, we can <I>get, set</I>, <I>change</I> attribute's value");
+
+  jsDomHtml("h3", "Getting Attributes Value");
+  jsDomHtml("p", "The <b>node.getAttribute(attributeName)</b> method returns the value of the specified attribute.");
+  jsDomHtml("button", "Get Attribute Value", "get-attr");
+  const getElem = document.querySelector(".get-attr");
+  const getAttrFunc = () => {
+    alert(getElem.getAttribute("class"));
+  }
+  getElem.onclick = getAttrFunc;
+
+  jsDomHtml("h3", "Setting or Changing Attribute Value");
+  jsDomHtml("p", "The <b>node.setAttribute(attributeName, value)</b> set the value of an attribute on the specified element.<br> If the attribute already exist, the value is changed.");
+  jsDomHtml("p", "In this example, we will set <b>src</b> attribute of the <I>&lt;img&gt;</I> element.");
+
+  jsDomHtml("img", "no src attribute.", "image1");
+  const image1 = document.querySelector(".image1");
+  image1.setAttribute("alt", "I don't have an src attribute.")
+
+  const setAttributeValue = () => {
+    image1.setAttribute("src", "/storage/emulated/0/Pictures/Screenshots/Screenshot_2024-08-10-10-47-03-19.jpg");
+
+  }
+
+  jsDomHtml("button", "Set src Attribute Value", "btn1");
+  document.querySelector('.btn1').onclick = setAttributeValue;
+
+  jsDomHtml("p", "In this example, we will change <b>src</b> attribute of the <I>&lt;img&gt;</I> element.");
+
+  jsDomHtml("img", "", "image2");
+  const image2 = document.querySelector(".image2");
+  image2.setAttribute("src", "/storage/emulated/0/Pictures/Screenshots/IMG_20240810_114714.jpg");
+
+  const changeAttrValue = () => {
+    image2.setAttribute("src", "/storage/emulated/0/Pictures/Screenshots/Screenshot_2024-08-10-11-43-44-29.jpg");
+  }
+  jsDomHtml("button", "Change src Attribute Value", "btn2");
+  document.querySelector('.btn2').onclick = changeAttrValue;
+
+}
+
+/*JavaScript dom css or styling */
+const jsDomCssDiv = document.getElementById("js-dom-css");
+
+const javaScriptDomCssFunc = () => {
+  const jsDomCss = (tag, content, attr = {}) => {
+    const element = document.createElement(tag);
+    element.innerHTML = content;
+
+    Object.keys(attr).forEach(key => {
+      element.setAttribute(key, attr[key]);
+    });
+    jsDomCssDiv.appendChild(element);
+    return element;
+  }
+  jsDomCss("h2", "JavaScript DOM CSS or Styling", {
+    class: "h2"
+  });
+  jsDomCss("p", "With JavaScript and DOM, we can style HTML elements");
+  jsDomCss("p", "In CSS, as you already know, styiling means changing their properties.");
+  jsDomCss("p", "It is the same with JavaScript.");
+  jsDomCss("h3", "Styling Elements with DOM");
+  jsDomCss("p", "To change the styles of an element, use the <b>style</b> object of a node.");
+  jsDomCss("p", "Here the syntax:");
+  jsDomCss("code", `node.<span class="fushcia">style.property</span> = "value"`);
+
+  jsDomCss("code", `&lt;script&gt; <br>
+    document.getElementById("demo").style.color = "green";
+    &lt;/script&gt;`);
+    
+    jsDomCss("h3", "Hiding and Showing an Element");
+    jsDomCss("p", "To hide an element, us the <I>display</I> property to <I>none</I> and <I>block</I> respectively.", {class: 'showHide'});
+    const show = () => {
+      document.querySelector(".showHide").style.display = "block";
+    }
+    
+    const hide = () => {
+      document.querySelector(".showHide").style.display = "none";
+    }
+   jsDomCss("button", "Show", {class: "show"});
+   document.querySelector(".show").onclick = show;
+   jsDomCss("button", "Hide", {class: "hide"});
+   document.querySelector(".hide").onclick = hide;
    
-   jsDomNavNode("h3", "Siblings");
-   jsDomNavNode('p', "The <b>previousElementSibling</b> returns the <I>previous element</I> prior to specified one in a parent's children list.");
-   jsDomNavNode("p", "The <b>nextElementSibling</b> returns the <b>next element</b> prior to specified one in a parent's children list");
- };
- javaScriptDomNavigation();
+   jsDomCss("h3", "What about properties with hyphen?");
+   jsDomCss("p", "Properties with hyphen, like <em>font-size, text-decoration</em> and <em>background-color</em> should be written in <b>camelCase</b>.");
+   jsDomCss("p", "For example:");
+   jsDomCss("ul", `
+   <li>font-size = fontSize</li>
+   <li>background-color = backgroundColor</li>
+   <li>text-decoration = textDecoration</li>
+   `);
+}
 
-// for loop
+javaScriptDomCssFunc();
+
+
+const replaceContent = () => {
+  listItem.innerHTML = `
+  <li> Mercury </li>
+  <li> Venus </li>
+  <li> Earth </li>`;
+}
+JavaScriptDomHTMLFunc();
+
+// for loop to add html text
 const codeSample = document.getElementsByClassName('code-sample');
 
 for (let i = 0; i < codeSample.length; i++) {
@@ -1264,5 +1522,25 @@ for (let i = 0; i < codeSample.length; i++) {
   result.innerHTML = "Code Samples";
 }
 
+// to remove class attribute that has Undefined value
 
-const fetchingData = fetch("https://mdaleardc.github.io/ismail/index.html").then(res => res.text()).then(data => data).catch(err => err);
+const elements = document.querySelectorAll(".undefined");
+elements.forEach(element => {
+  element.classList.remove(undefined);
+
+  // remove class attribute also
+  if (element.classList.length === 0) {
+    element.removeAttribute("class");
+  }
+});
+
+//const fetchingData = fetch("https://mdaleardc.github.io/ismail/index.html").then(res => res.text()).then(data => data).catch(err => err);
+
+
+console.log("Width " + window.screen.width);
+console.log("Height " + window.screen.height);
+console.log("Available Width " + window.screen.availWidth);
+console.log("Available Height " + window.screen.availHeight);
+console.log("Pixel Depth " + window.screen.pixelDepth);
+console.log("Color Depth " + window.screen.colorDepth);
+console.dir(window.screen.orientation.unlock());

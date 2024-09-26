@@ -21,7 +21,7 @@ if (dateArr === "11-4-2024" || dateArr === "12-4-2024" || dateArr === "13-4-2024
 };
 
 
-const daysOfTheWeek = ["Sunday", "Monday", "Tuesdy", "Wednesday", "Friday", "Saturday"];
+const daysOfTheWeek = ["Sunday", "Monday", "Tuesdy", "Wednesday", "Thursday", "Friday", "Saturday"];
 const dayIndex = date.getDay();
 const dayName = daysOfTheWeek[dayIndex];
 
